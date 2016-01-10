@@ -13,18 +13,27 @@
         android:id = "@+id/llUserInformationForm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         >
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text = "Enter User Details"/>
 
-    <Button
-        android:id = "@+id/btnSubmitUserInformation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text = "Submit Details"
-        android:onClick="startGames"
+        <EditText
+            android:id = "@+id/etUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint = "Enter your name"/>
+
+        <EditText
+            android:id = "@+id/etUserLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint = "Enter village name"/>
+
+        <Button
+            android:id = "@+id/btnSubmitUserInformation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Submit Details"
+            android:onClick="startGames"
         />
 
     </LinearLayout>

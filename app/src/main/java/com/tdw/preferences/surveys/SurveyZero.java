@@ -1,7 +1,9 @@
-package com.tdw.preferences;
+package com.tdw.preferences.surveys;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.tdw.preferences.R;
 
 public class SurveyZero extends AppCompatActivity {
 
