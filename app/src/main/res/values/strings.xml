@@ -5,7 +5,5 @@
     <!-- DataStore Strings -->
     <string name="preference_file_key_user_information">com.tdw.preferences.user_information</string>
     <string name="preference_file_key_survey_data">com.tdw.preferences.survey_data</string>
-    <string name="user_id">user_id</string>
-    <string name="user_name">user_name</string>
-    <string name="user_location">user_location</string>
+    <string name="users_list">users_list</string>
 </resources>

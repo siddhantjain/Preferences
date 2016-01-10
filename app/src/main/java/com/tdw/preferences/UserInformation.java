@@ -7,8 +7,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
+import com.tdw.preferences.models.user;
 import com.tdw.preferences.surveys.SurveyZero;
 import com.tdw.preferences.utils.DataStore;
+
+import java.util.List;
 
 public class UserInformation extends AppCompatActivity {
 
@@ -31,21 +34,38 @@ public class UserInformation extends AppCompatActivity {
         userName = etUserName.getText().toString();
         userLocation = etUserName.getText().toString();
 
+        /*
+            siddhant: Confirm with Aki on how Datastore works
+            Creating a new user object.
+            Getting list of existing users from datastore
+            adding to that list
+            setting list of users in Datastore
+        */
 
+        List<user> userList = DataStore.getUserList();
+
+        long numberOfUsers = userList.size();
+        user currentUser = new user();
+
+        currentUser.setId(numberOfUsers+1);
 
         if(userName!=null){
-            DataStore.setUserName(userName);
+            currentUser.setName(userName);
         }
         else{
             //TODO: show error message
         }
 
         if(userLocation!=null){
-            DataStore.setUserLocation(userLocation);
+            currentUser.setLocation(userLocation);
         }
         else{
             //TODO: show error message
         }
+
+        userList.add(currentUser);
+        DataStore.setUserList(userList);
+
         Intent intent = new Intent(UserInformation.this,SurveyZero.class);
         startActivity(intent);
     }

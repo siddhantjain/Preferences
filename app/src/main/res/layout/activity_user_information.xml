@@ -11,7 +11,7 @@
 
     <LinearLayout
         android:id = "@+id/llUserInformationForm"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         >
@@ -20,7 +20,8 @@
             android:id = "@+id/etUserName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint = "Enter your name"/>
+            android:hint = "Enter your name"
+            />
 
         <EditText
             android:id = "@+id/etUserLocation"
@@ -35,6 +36,5 @@
             android:text = "Submit Details"
             android:onClick="startGames"
         />
-
     </LinearLayout>
 </RelativeLayout>
