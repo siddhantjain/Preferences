@@ -4,6 +4,7 @@
 
     <!-- DataStore Strings -->
     <string name="preference_file_key_user_information">com.tdw.preferences.user_information</string>
-    <string name="preference_file_key_survey_data">com.tdw.preferences.survey_data</string>
+    <string name="preference_file_key_games_data">com.tdw.preferences.games_data</string>
     <string name="users_list">users_list</string>
+    <string name="games_list">games_list</string>
 </resources>

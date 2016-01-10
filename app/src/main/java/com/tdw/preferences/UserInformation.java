@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
+import com.tdw.preferences.models.game;
 import com.tdw.preferences.models.user;
 import com.tdw.preferences.surveys.SurveyZero;
 import com.tdw.preferences.utils.DataStore;
@@ -66,6 +67,18 @@ public class UserInformation extends AppCompatActivity {
         userList.add(currentUser);
         DataStore.setUserList(userList);
 
+        /* Testing datastore logic
+        userList = DataStore.getUserList();
+        for(int i=0;i<userList.size();i++){
+            System.out.println(userList.get(i).getName());
+        }
+
+        List<game> gamesList = DataStore.getGameList();
+        System.out.println(gamesList.size());
+        for(int i=0;i<gamesList.size();i++){
+            System.out.println(gamesList.get(i).getExchangeRate1());
+        }
+        */
         Intent intent = new Intent(UserInformation.this,SurveyZero.class);
         startActivity(intent);
     }
