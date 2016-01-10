@@ -5,16 +5,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-public class WelcomeScreen extends AppCompatActivity {
+public class UserInformation extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_welcome_screen);
+        setContentView(R.layout.activity_user_information);
     }
 
-    public void getUserInformation (View view) {
-        Intent intent = new Intent(WelcomeScreen.this,UserInformation.class);
+    public void startGames (View view) {
+        Intent intent = new Intent(UserInformation.this,SurveyZero.class);
         startActivity(intent);
     }
 }

@@ -9,18 +9,19 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.tdw.preferences.WelcomeScreen">
 <LinearLayout
+    android:id = "@+id/llStartGames"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
     android:orientation="vertical">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Start Games"
+    <ImageView
+        android:id = "@+id/ivStartGames"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src = "@drawable/button_start_games"
+        android:onClick="getUserInformation"
         />
+
 </LinearLayout>
 </RelativeLayout>
