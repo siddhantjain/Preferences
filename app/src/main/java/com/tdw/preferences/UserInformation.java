@@ -29,7 +29,7 @@ public class UserInformation extends AppCompatActivity {
 
         String userName, userLocation;
         userName = etUserName.getText().toString();
-        userLocation = etUserName.getPrivateImeOptions().toString();
+        userLocation = etUserName.getText().toString();
 
 
 
