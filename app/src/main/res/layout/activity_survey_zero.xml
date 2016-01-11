@@ -9,9 +9,56 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".surveys.SurveyZero">
 
-    <TextView
+
+    <CalendarView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text = "Entire Survey Comes Here"/>
+        android:id="@+id/cvPresentMonth"
+        android:layout_alignParentStart="true" />
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sbSlider1"
+        android:progress="50"
+        android:layout_below="@+id/cvPresentMonth"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etSlider1Initial"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/sbSlider1"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etSlider1Final"
+        android:layout_below="@+id/sbSlider1"
+        android:layout_alignParentEnd="true" />
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sbSlider2"
+        android:progress="50"
+        android:layout_below="@+id/etSlider1Final"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etSlider2Initial"
+        android:layout_below="@+id/sbSlider2"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etSlider2Final"
+        android:layout_below="@+id/sbSlider2"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>
