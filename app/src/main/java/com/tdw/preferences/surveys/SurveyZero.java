@@ -99,10 +99,8 @@ public class SurveyZero extends AppCompatActivity {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progressValue, boolean fromUser){
                 double proportion = (double)progressValue/(double)100;
-                System.out.println(proportion);
-                System.out.println(exchangeRateOne);
-                int IV = (int) ((double)fixedamount + ((double)variableamount*(double)proportion));
-                int FV = (int) ((double)fixedamount + ((double)variableamount*(double)proportion*(double)exchangeRateOne));
+                int IV = (int) ((double)fixedamount + ((double)variableamount*(1-proportion)));
+                int FV = (int) ((double)fixedamount + ((double)variableamount*proportion*(double)exchangeRateOne));
                 mSlider1InitialValue.setText(Integer.toString(IV));
                 mSlider1FinalValue.setText(Integer.toString(FV));
             }
@@ -118,9 +116,9 @@ public class SurveyZero extends AppCompatActivity {
             int progress = 0;
             @Override
             public void onProgressChanged(SeekBar seekBar, int progressValue, boolean fromUser){
-                double proportion = progressValue/100;
-                int IV = (int) (fixedamount + (variableamount*proportion));
-                int FV = (int) (fixedamount + (variableamount*proportion*exchangeRateTwo));
+                double proportion = (double)progressValue/(double)100;
+                int IV = (int) ((double)fixedamount + ((double)variableamount*(1-proportion)));
+                int FV = (int) ((double)fixedamount + ((double)variableamount*proportion*(double)exchangeRateTwo));
                 mSlider2InitialValue.setText(Integer.toString(IV));
                 mSlider2FinalValue.setText(Integer.toString(FV));
             }
