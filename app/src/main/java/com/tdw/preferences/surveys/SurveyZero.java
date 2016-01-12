@@ -7,13 +7,21 @@ import android.widget.CalendarView;
 import android.widget.EditText;
 import android.widget.SeekBar;
 
+import com.squareup.timessquare.CalendarCellDecorator;
+import com.squareup.timessquare.CalendarPickerView;
 import com.tdw.preferences.R;
+import com.tdw.preferences.models.game;
+import com.tdw.preferences.utils.DataStore;
 
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collections;
+import java.util.Date;
+import java.util.List;
 
 public class SurveyZero extends AppCompatActivity {
 
-    private CalendarView mPresentMonth;
+    private CalendarPickerView mCalendar;
 
     private SeekBar mSlider1;
     private EditText mSlider1InitialValue;
@@ -31,19 +39,36 @@ public class SurveyZero extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_survey_zero);
 
+        /*Getting values from data store*/
+        List<game> gameList = DataStore.getGameList();
+        game currGame = gameList.get(0);
+        int numDaysToSoonerDate = currGame.getNumberOfDaystoSoonerDate();
+        int numDaysToLaterDate = currGame.getNumberOfDaystoLaterDate();
+        float interestRateOne = currGame.getExchangeRate1();
+        float interestRateTwo = currGame.getExchangeRate2();
+
+
         /*Calendar View Computation*/
-        mPresentMonth = (CalendarView) findViewById(R.id.cvPresentMonth);
+        mCalendar = (CalendarPickerView) findViewById(R.id.cvCurrentMonth);
 
-        Calendar presentMonth = Calendar.getInstance();
-        Calendar soonerDate = Calendar.getInstance();
-        Calendar laterDate = Calendar.getInstance();
+        Calendar mDateHolder = Calendar.getInstance();
+        Calendar mNextMonth = Calendar.getInstance();
+        //Asssuming we won't need to show a calendars of years beyond a year from today's date on phone
+        mNextMonth.add(Calendar.MONTH,1);
 
-        soonerDate.add(Calendar.WEEK_OF_YEAR,1);
-        final long soonerDateTimeInMillis = soonerDate.getTimeInMillis();
+        ArrayList<Date> dates = new ArrayList<Date>();
+        mDateHolder.add(Calendar.DATE, numDaysToSoonerDate);
+        dates.add(mDateHolder.getTime());
+        mDateHolder.add(Calendar.DATE, numDaysToLaterDate);
+        dates.add(mDateHolder.getTime());
+        mCalendar.setDecorators(Collections.<CalendarCellDecorator>emptyList());
+        mCalendar.init(new Date(), mNextMonth.getTime()) //
+                .inMode(CalendarPickerView.SelectionMode.MULTIPLE) //
+                .withSelectedDates(dates)
+                .displayOnly();
 
-        laterDate.add(Calendar.WEEK_OF_YEAR, 2);
-        long laterDateTimeInMillis = laterDate.getTimeInMillis();
 
+        /*
         mPresentMonth.setMinDate(System.currentTimeMillis());
         mPresentMonth.setDate(soonerDateTimeInMillis);
         mPresentMonth.setMaxDate(laterDateTimeInMillis);
@@ -53,7 +78,7 @@ public class SurveyZero extends AppCompatActivity {
                 mPresentMonth.setDate(soonerDateTimeInMillis);
             }
         });;
-
+        */
         /*SeekBar Computation*/
         mSlider1 = (SeekBar) findViewById(R.id.sbSlider1);
         mSlider1InitialValue = (EditText) findViewById(R.id.etSlider1Initial);
