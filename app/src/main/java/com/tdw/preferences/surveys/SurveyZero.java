@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.CalendarView;
 import android.widget.EditText;
 import android.widget.SeekBar;
+import android.widget.TextView;
 
 import com.squareup.timessquare.CalendarCellDecorator;
 import com.squareup.timessquare.CalendarPickerView;
@@ -24,12 +25,12 @@ public class SurveyZero extends AppCompatActivity {
     private CalendarPickerView mCalendar;
 
     private SeekBar mSlider1;
-    private EditText mSlider1InitialValue;
-    private EditText mSlider1FinalValue;
+    private TextView mSlider1InitialValue;
+    private TextView mSlider1FinalValue;
 
     private SeekBar mSlider2;
-    private EditText mSlider2InitialValue;
-    private EditText mSlider2FinalValue;
+    private TextView mSlider2InitialValue;
+    private TextView mSlider2FinalValue;
 
     /*HardCoded Variables - TO BE REMOVED*/
     int fixedamount = 20;
@@ -44,8 +45,8 @@ public class SurveyZero extends AppCompatActivity {
         game currGame = gameList.get(0);
         int numDaysToSoonerDate = currGame.getNumberOfDaystoSoonerDate();
         int numDaysToLaterDate = currGame.getNumberOfDaystoLaterDate();
-        float interestRateOne = currGame.getExchangeRate1();
-        float interestRateTwo = currGame.getExchangeRate2();
+        final float exchangeRateOne = currGame.getExchangeRate1();
+        final float exchangeRateTwo = currGame.getExchangeRate2();
 
 
         /*Calendar View Computation*/
@@ -68,35 +69,28 @@ public class SurveyZero extends AppCompatActivity {
                 .displayOnly();
 
 
-        /*
-        mPresentMonth.setMinDate(System.currentTimeMillis());
-        mPresentMonth.setDate(soonerDateTimeInMillis);
-        mPresentMonth.setMaxDate(laterDateTimeInMillis);
-
-        mPresentMonth.setOnDateChangeListener(new CalendarView.OnDateChangeListener(){
-            public void onSelectedDayChange(CalendarView view, int year, int month, int dayOfMonth) {
-                mPresentMonth.setDate(soonerDateTimeInMillis);
-            }
-        });;
-        */
         /*SeekBar Computation*/
         mSlider1 = (SeekBar) findViewById(R.id.sbSlider1);
-        mSlider1InitialValue = (EditText) findViewById(R.id.etSlider1Initial);
-        mSlider1FinalValue = (EditText) findViewById(R.id.etSlider1Final);
+        mSlider1InitialValue = (TextView) findViewById(R.id.tvSlider1Left);
+        mSlider1FinalValue = (TextView) findViewById(R.id.tvSlider1Right);
 
         mSlider2 = (SeekBar) findViewById(R.id.sbSlider2);
-        mSlider2InitialValue = (EditText) findViewById(R.id.etSlider2Initial);
-        mSlider2FinalValue = (EditText) findViewById(R.id.etSlider2Final);
+        mSlider2InitialValue = (TextView) findViewById(R.id.tvSlider2Left);
+        mSlider2FinalValue = (TextView) findViewById(R.id.tvSlider2Right);
+
+
 
         int initialSlider1Progress = mSlider1.getProgress();
-        int IV1OnStartup = fixedamount + (variableamount*initialSlider1Progress/100);
-        int FV1OnStartup = fixedamount + (variableamount*(100-initialSlider1Progress)/100);
+        double proportion = (double)initialSlider1Progress/(double)100;
+        int IV1OnStartup = (int) ((double)fixedamount + ((double)variableamount*((double)1-proportion)));
+        int FV1OnStartup = (int)((double)fixedamount + ((double)variableamount*(double)proportion*(double)exchangeRateOne));
         mSlider1InitialValue.setText(Integer.toString(IV1OnStartup));
         mSlider1FinalValue.setText(Integer.toString(FV1OnStartup));
 
         int initialSlider2Progress = mSlider2.getProgress();
-        int IV2OnStartup = fixedamount + (variableamount*initialSlider2Progress/100);
-        int FV2OnStartup = fixedamount + (variableamount*(100-initialSlider2Progress)/100);
+        proportion = (double)initialSlider2Progress/(double)100;
+        int IV2OnStartup = (int) ((double)fixedamount + ((double)variableamount*(double)proportion));
+        int FV2OnStartup = (int) ((double)fixedamount + ((double)variableamount*(double)proportion*(double)exchangeRateTwo));
         mSlider2InitialValue.setText(Integer.toString(IV2OnStartup));
         mSlider2FinalValue.setText(Integer.toString(FV2OnStartup));
 
@@ -104,9 +98,11 @@ public class SurveyZero extends AppCompatActivity {
             int progress = 0;
             @Override
             public void onProgressChanged(SeekBar seekBar, int progressValue, boolean fromUser){
-                System.out.print(progressValue);
-                int IV = fixedamount + (variableamount*progressValue/100);
-                int FV = fixedamount + (variableamount*(100-progressValue)/100);
+                double proportion = (double)progressValue/(double)100;
+                System.out.println(proportion);
+                System.out.println(exchangeRateOne);
+                int IV = (int) ((double)fixedamount + ((double)variableamount*(double)proportion));
+                int FV = (int) ((double)fixedamount + ((double)variableamount*(double)proportion*(double)exchangeRateOne));
                 mSlider1InitialValue.setText(Integer.toString(IV));
                 mSlider1FinalValue.setText(Integer.toString(FV));
             }
@@ -122,9 +118,9 @@ public class SurveyZero extends AppCompatActivity {
             int progress = 0;
             @Override
             public void onProgressChanged(SeekBar seekBar, int progressValue, boolean fromUser){
-                System.out.print(progressValue);
-                int IV = fixedamount + (variableamount*progressValue/100);
-                int FV = fixedamount + (variableamount*(100-progressValue)/100);
+                double proportion = progressValue/100;
+                int IV = (int) (fixedamount + (variableamount*proportion));
+                int FV = (int) (fixedamount + (variableamount*proportion*exchangeRateTwo));
                 mSlider2InitialValue.setText(Integer.toString(IV));
                 mSlider2FinalValue.setText(Integer.toString(FV));
             }
