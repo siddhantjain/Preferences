@@ -1,5 +1,6 @@
 package com.tdw.preferences.surveys;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -50,7 +51,7 @@ public class SurveyZero extends AppCompatActivity {
 
 
         /*Calendar View Computation*/
-        mCalendar = (CalendarPickerView) findViewById(R.id.cvCurrentMonth);
+        mCalendar = (CalendarPickerView) findViewById(R.id.cvGame0CurrentMonth);
 
         Calendar mDateHolder = Calendar.getInstance();
         Calendar mNextMonth = Calendar.getInstance();
@@ -70,13 +71,13 @@ public class SurveyZero extends AppCompatActivity {
 
 
         /*SeekBar Computation*/
-        mSlider1 = (SeekBar) findViewById(R.id.sbSlider1);
-        mSlider1InitialValue = (TextView) findViewById(R.id.tvSurvey0Slider1Left);
-        mSlider1FinalValue = (TextView) findViewById(R.id.tvSurvey0Slider1Right);
+        mSlider1 = (SeekBar) findViewById(R.id.sbGame0Slider1);
+        mSlider1InitialValue = (TextView) findViewById(R.id.tvGame0Slider1Left);
+        mSlider1FinalValue = (TextView) findViewById(R.id.tvGame0Slider1Right);
 
-        mSlider2 = (SeekBar) findViewById(R.id.sbSlider2);
-        mSlider2InitialValue = (TextView) findViewById(R.id.tvSurvey0Slider2Left);
-        mSlider2FinalValue = (TextView) findViewById(R.id.tvSurvey0Slider2Right);
+        mSlider2 = (SeekBar) findViewById(R.id.sbGame0Slider2);
+        mSlider2InitialValue = (TextView) findViewById(R.id.tvGame0Slider2Left);
+        mSlider2FinalValue = (TextView) findViewById(R.id.tvGame0Slider2Right);
 
 
 
@@ -130,6 +131,10 @@ public class SurveyZero extends AppCompatActivity {
             }
         });
 
+    }
 
+    public void startNextGame (View view) {
+        Intent intent = new Intent(SurveyZero.this,SurveyOne.class);
+        startActivity(intent);
     }
 }
