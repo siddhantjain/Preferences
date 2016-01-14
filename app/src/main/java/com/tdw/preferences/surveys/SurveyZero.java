@@ -71,12 +71,12 @@ public class SurveyZero extends AppCompatActivity {
 
         /*SeekBar Computation*/
         mSlider1 = (SeekBar) findViewById(R.id.sbSlider1);
-        mSlider1InitialValue = (TextView) findViewById(R.id.tvSlider1Left);
-        mSlider1FinalValue = (TextView) findViewById(R.id.tvSlider1Right);
+        mSlider1InitialValue = (TextView) findViewById(R.id.tvSurvey0Slider1Left);
+        mSlider1FinalValue = (TextView) findViewById(R.id.tvSurvey0Slider1Right);
 
         mSlider2 = (SeekBar) findViewById(R.id.sbSlider2);
-        mSlider2InitialValue = (TextView) findViewById(R.id.tvSlider2Left);
-        mSlider2FinalValue = (TextView) findViewById(R.id.tvSlider2Right);
+        mSlider2InitialValue = (TextView) findViewById(R.id.tvSurvey0Slider2Left);
+        mSlider2FinalValue = (TextView) findViewById(R.id.tvSurvey0Slider2Right);
 
 
 

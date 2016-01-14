@@ -41,7 +41,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:text = "leftvalue"
-                    android:id="@+id/tvSlider1Left"
+                    android:id="@+id/tvSurvey0Slider1Left"
                      />
                 <TextView
                     android:layout_width="wrap_content"
@@ -49,7 +49,7 @@
                     android:layout_gravity="right"
                     android:layout_alignParentEnd="true"
                     android:text = "rightvalue"
-                    android:id="@+id/tvSlider1Right"
+                    android:id="@+id/tvSurvey0Slider1Right"
                     />
             </RelativeLayout>
 
@@ -75,13 +75,13 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:text = "leftValue"
-                    android:id="@+id/tvSlider2Left"
+                    android:id="@+id/tvSurvey0Slider2Left"
                      />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text = "rightValue"
-                    android:id="@+id/tvSlider2Right"
+                    android:id="@+id/tvSurvey0Slider2Right"
                     android:layout_alignParentEnd="true" />
 
             </RelativeLayout>

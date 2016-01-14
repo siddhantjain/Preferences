@@ -17,7 +17,12 @@
         </activity>
         <activity android:name=".UserInformation" />
         <activity android:name=".surveys.SurveyZero" />
-        <activity android:name=".surveys.SurveyOne"></activity>
+        <activity android:name=".surveys.SurveyOne" />
+        <activity android:name=".surveys.SurveyTwo" />
+        <activity android:name=".surveys.SurveyThree" />
+        <activity android:name=".surveys.SurveyFour" />
+        <activity android:name=".surveys.SurveyFive" />
+        <activity android:name=".surveys.SurveySix"></activity>
     </application>
 
 </manifest>
