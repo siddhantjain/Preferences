@@ -16,7 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".UserInformation" />
-        <activity android:name=".surveys.SurveyZero"></activity>
+        <activity android:name=".surveys.SurveyZero" />
+        <activity android:name=".surveys.SurveyOne"></activity>
     </application>
 
 </manifest>
