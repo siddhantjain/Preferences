@@ -15,7 +15,7 @@
         android:orientation="vertical"
         android:weightSum="100">
         <com.squareup.timessquare.CalendarPickerView
-            android:id="@+id/cvGame3CurrentMonth"
+            android:id="@+id/cvGame4CurrentMonth"
             android:layout_width="300dp"
             android:layout_height="200dp"
             android:layout_gravity="center"
@@ -30,7 +30,7 @@
             <SeekBar
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/sbGame3Slider1"
+                android:id="@+id/sbGame4Slider1"
                 android:progress="50"
                 android:max="100"
                 />
@@ -42,7 +42,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:text = "leftvalue"
-                    android:id="@+id/tvGame3Slider1Left"
+                    android:id="@+id/tvGame4Slider1Left"
                     />
                 <TextView
                     android:layout_width="wrap_content"
@@ -50,7 +50,7 @@
                     android:layout_gravity="right"
                     android:layout_alignParentEnd="true"
                     android:text = "rightvalue"
-                    android:id="@+id/tvGame3Slider1Right"
+                    android:id="@+id/tvGame4Slider1Right"
                     />
             </RelativeLayout>
 
@@ -64,7 +64,7 @@
             <SeekBar
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/sbGame3Slider2"
+                android:id="@+id/sbGame4Slider2"
                 android:progress="50"
                 android:max="100"
                 />
@@ -76,13 +76,13 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:text = "leftValue"
-                    android:id="@+id/tvGame3Slider2Left"
+                    android:id="@+id/tvGame4Slider2Left"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text = "rightValue"
-                    android:id="@+id/tvGame3Slider2Right"
+                    android:id="@+id/tvGame4Slider2Right"
                     android:layout_alignParentEnd="true" />
 
             </RelativeLayout>
@@ -98,7 +98,7 @@
             <SeekBar
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/sbGame3Slider3"
+                android:id="@+id/sbGame4Slider3"
                 android:progress="50"
                 android:max="100"
                 />
@@ -110,13 +110,13 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:text = "leftValue"
-                    android:id="@+id/tvGame3Slider3Left"
+                    android:id="@+id/tvGame4Slider3Left"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text = "rightValue"
-                    android:id="@+id/tvGame3Slider3Right"
+                    android:id="@+id/tvGame4Slider3Right"
                     android:layout_alignParentEnd="true" />
 
             </RelativeLayout>
@@ -132,7 +132,7 @@
             <SeekBar
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/sbGame3Slider4"
+                android:id="@+id/sbGame4Slider4"
                 android:progress="50"
                 android:max="100"
                 />
@@ -144,13 +144,13 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:text = "leftValue"
-                    android:id="@+id/tvGame3Slider4Left"
+                    android:id="@+id/tvGame4Slider4Left"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text = "rightValue"
-                    android:id="@+id/tvGame3Slider4Right"
+                    android:id="@+id/tvGame4Slider4Right"
                     android:layout_alignParentEnd="true" />
 
             </RelativeLayout>
@@ -164,7 +164,7 @@
             <SeekBar
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/sbGame3Slider5"
+                android:id="@+id/sbGame4Slider5"
                 android:progress="50"
                 android:max="100"
                 />
@@ -176,13 +176,13 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:text = "leftValue"
-                    android:id="@+id/tvGame3Slider5Left"
+                    android:id="@+id/tvGame4Slider5Left"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text = "rightValue"
-                    android:id="@+id/tvGame3Slider5Right"
+                    android:id="@+id/tvGame4Slider5Right"
                     android:layout_alignParentEnd="true" />
 
             </RelativeLayout>
@@ -198,7 +198,7 @@
             <SeekBar
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/sbGame3Slider6"
+                android:id="@+id/sbGame4Slider6"
                 android:progress="50"
                 android:max="100"
                 />
@@ -210,13 +210,13 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:text = "leftValue"
-                    android:id="@+id/tvGame3Slider6Left"
+                    android:id="@+id/tvGame4Slider6Left"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text = "rightValue"
-                    android:id="@+id/tvGame3Slider6Right"
+                    android:id="@+id/tvGame4Slider6Right"
                     android:layout_alignParentEnd="true" />
 
             </RelativeLayout>
@@ -226,9 +226,10 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id = "@+id/btnGame3SubmitBtn"
+            android:id = "@+id/btnGame4SubmitBtn"
             android:text = "Submit"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:onClick="startNextGame"/>
     </LinearLayout>
 
 </RelativeLayout>
