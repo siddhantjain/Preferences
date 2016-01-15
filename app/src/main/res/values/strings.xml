@@ -7,4 +7,10 @@
     <string name="preference_file_key_games_data">com.tdw.preferences.games_data</string>
     <string name="users_list">users_list</string>
     <string name="games_list">games_list</string>
+    <string name="game1_result">game1_result</string>
+    <string name="game2_result">game2_result</string>
+    <string name="game3_result">game3_result</string>
+    <string name="game4_result">game4_result</string>
+    <string name="game5_result">game5_result</string>
+    <string name="game6_result">game6_result</string>
 </resources>

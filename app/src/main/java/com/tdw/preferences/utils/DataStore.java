@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 
 import com.tdw.preferences.R;
 import com.tdw.preferences.models.game;
+import com.tdw.preferences.models.gameResult;
 import com.tdw.preferences.models.user;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -71,6 +72,9 @@ public class DataStore {
                 System.out.println("Entered");
         }
         setGameList(gameList);
+
+        //Initialising game results based on game defaults here
+
     }
     public static SharedPreferences getGameDataStore(Context mContext){
         if (gameDataStore ==null){
@@ -87,7 +91,7 @@ public class DataStore {
     }
     public static void setUserList(List<user> users_list){
         Gson gson = new Gson();
-        String UserList = gson.toJson(users_list,listUsers);
+        String UserList = gson.toJson(users_list, listUsers);
         SharedPreferences.Editor SPEditor = userInformationStore.edit();
         SPEditor.putString(mContext.getString(R.string.users_list),UserList);
         SPEditor.commit();
@@ -98,12 +102,18 @@ public class DataStore {
         String gameList = gameDataStore.getString(mContext.getString(R.string.games_list), null);
         return gson.fromJson(gameList, listGames);
     }
-    public static void setGameList(List<game> games_list){
+    public static void setGameList(List<game> games_list) {
         Gson gson = new Gson();
-        String gamesList = gson.toJson(games_list,listGames);
+        String gamesList = gson.toJson(games_list, listGames);
         SharedPreferences.Editor SPEditor = gameDataStore.edit();
-        SPEditor.putString(mContext.getString(R.string.games_list),gamesList);
+        SPEditor.putString(mContext.getString(R.string.games_list), gamesList);
         SPEditor.commit();
     }
-
+    public static void setSurveyOneResult(gameResult gr1){
+        Gson gson = new Gson();
+        String gr1str = gson.toJson(gr1);
+        SharedPreferences.Editor SPEditor = gameDataStore.edit();
+        SPEditor.putString(mContext.getString(R.string.game1_result), gr1str);
+        SPEditor.commit();
+    }
 }
