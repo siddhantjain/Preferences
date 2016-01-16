@@ -22,7 +22,8 @@
         <activity android:name=".surveys.SurveyThree" />
         <activity android:name=".surveys.SurveyFour" />
         <activity android:name=".surveys.SurveyFive" />
-        <activity android:name=".surveys.SurveySix"></activity>
+        <activity android:name=".surveys.SurveySix" />
+        <activity android:name=".surveys.SurveyOneF"></activity>
     </application>
 
 </manifest>

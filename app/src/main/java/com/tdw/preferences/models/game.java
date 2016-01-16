@@ -5,7 +5,7 @@ package com.tdw.preferences.models;
  */
 public class game {
 
-    public game(float er1,float er2,float er3,float er4,float er5,float er6,int soonerDays, int laterDays){
+    public game(float er1,float er2,float er3,float er4,float er5,float er6,int soonerDays, int laterDays, int gameType){
         exchangeRate1 = er1;
         exchangeRate2 = er2;
         exchangeRate3 = er3;
@@ -14,6 +14,7 @@ public class game {
         exchangeRate6 = er6;
         numberOfDaystoSoonerDate = soonerDays;
         numberOfDaystoLaterDate = laterDays;
+        this.gameType = gameType;
     }
 
     public float getExchangeRate1() {
@@ -80,6 +81,14 @@ public class game {
         this.numberOfDaystoLaterDate = numberOfDaystoLaterDate;
     }
 
+    public int getNumberOfDaystoCashRewardDate() {
+        return numberOfDaystoCashRewardDate;
+    }
+
+    public void setNumberOfDaystoCashRewardDate(int numberOfDaystoCashRewardDate) {
+        this.numberOfDaystoCashRewardDate = numberOfDaystoCashRewardDate;
+    }
+
     float exchangeRate1;
     float exchangeRate2;
     float exchangeRate3;
@@ -88,4 +97,6 @@ public class game {
     float exchangeRate6;
     int numberOfDaystoSoonerDate;
     int numberOfDaystoLaterDate;
+    int gameType;
+    int numberOfDaystoCashRewardDate; //only for section F Games
 }

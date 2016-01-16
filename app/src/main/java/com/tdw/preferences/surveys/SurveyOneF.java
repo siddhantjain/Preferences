@@ -11,6 +11,7 @@ import com.squareup.timessquare.CalendarCellDecorator;
 import com.squareup.timessquare.CalendarPickerView;
 import com.tdw.preferences.R;
 import com.tdw.preferences.models.game;
+import com.tdw.preferences.models.gameResult;
 import com.tdw.preferences.utils.DataStore;
 
 import java.util.ArrayList;
@@ -19,7 +20,7 @@ import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
-public class SurveySix extends AppCompatActivity {
+public class SurveyOneF extends AppCompatActivity {
 
     private CalendarPickerView mCalendar;
 
@@ -53,16 +54,20 @@ public class SurveySix extends AppCompatActivity {
     int variableamount = 100;
 
     final int GAME_NUMBER = 1;
+    final int GAME_TYPE = 1; //game type for section F
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_survey_one);
+        setContentView(R.layout.activity_survey_one_f);
 
         /*Getting values from data store*/
         List<game> gameList = DataStore.getGameList();
-        game currGame = gameList.get(GAME_NUMBER);
+        game currGame = gameList.get((GAME_TYPE*5) + GAME_TYPE);
         int numDaysToSoonerDate = currGame.getNumberOfDaystoSoonerDate();
         int numDaysToLaterDate = currGame.getNumberOfDaystoLaterDate();
+        int numDaysToCashRewardDate = currGame.getNumberOfDaystoCashRewardDate();
+        System.out.println(numDaysToCashRewardDate);
         final float exchangeRateOne = currGame.getExchangeRate1();
         final float exchangeRateTwo = currGame.getExchangeRate2();
         final float exchangeRateThree = currGame.getExchangeRate3();
@@ -72,7 +77,7 @@ public class SurveySix extends AppCompatActivity {
 
 
         /*Calendar View Computation*/
-        mCalendar = (CalendarPickerView) findViewById(R.id.cvGame1CurrentMonth);
+        mCalendar = (CalendarPickerView) findViewById(R.id.cvGame1FCurrentMonth);
 
         Calendar mDateHolder = Calendar.getInstance();
         Calendar mNextMonth = Calendar.getInstance();
@@ -82,8 +87,12 @@ public class SurveySix extends AppCompatActivity {
         ArrayList<Date> dates = new ArrayList<Date>();
         mDateHolder.add(Calendar.DATE, numDaysToSoonerDate);
         dates.add(mDateHolder.getTime());
+        //temp hack. Look in to why is the delta behaving weirdly.
         mDateHolder.add(Calendar.DATE, numDaysToLaterDate-numDaysToSoonerDate);
         dates.add(mDateHolder.getTime());
+        mDateHolder.add(Calendar.DATE, numDaysToCashRewardDate-numDaysToLaterDate);
+        dates.add(mDateHolder.getTime());
+
         mCalendar.setDecorators(Collections.<CalendarCellDecorator>emptyList());
         mCalendar.init(new Date(), mNextMonth.getTime()) //
                 .inMode(CalendarPickerView.SelectionMode.MULTIPLE) //
@@ -91,30 +100,32 @@ public class SurveySix extends AppCompatActivity {
                 .displayOnly();
 
 
+
+
         /*SeekBar Computation*/
-        mSlider1 = (SeekBar) findViewById(R.id.sbGame1Slider1);
-        mSlider1InitialValue = (TextView) findViewById(R.id.tvGame1Slider1Left);
-        mSlider1FinalValue = (TextView) findViewById(R.id.tvGame1Slider1Right);
+        mSlider1 = (SeekBar) findViewById(R.id.sbGame1FSlider1);
+        mSlider1InitialValue = (TextView) findViewById(R.id.tvGame1FSlider1Left);
+        mSlider1FinalValue = (TextView) findViewById(R.id.tvGame1FSlider1Right);
 
-        mSlider2 = (SeekBar) findViewById(R.id.sbGame1Slider2);
-        mSlider2InitialValue = (TextView) findViewById(R.id.tvGame1Slider2Left);
-        mSlider2FinalValue = (TextView) findViewById(R.id.tvGame1Slider2Right);
+        mSlider2 = (SeekBar) findViewById(R.id.sbGame1FSlider2);
+        mSlider2InitialValue = (TextView) findViewById(R.id.tvGame1FSlider2Left);
+        mSlider2FinalValue = (TextView) findViewById(R.id.tvGame1FSlider2Right);
 
-        mSlider3 = (SeekBar) findViewById(R.id.sbGame1Slider3);
-        mSlider3InitialValue = (TextView) findViewById(R.id.tvGame1Slider3Left);
-        mSlider3FinalValue = (TextView) findViewById(R.id.tvGame1Slider3Right);
+        mSlider3 = (SeekBar) findViewById(R.id.sbGame1FSlider3);
+        mSlider3InitialValue = (TextView) findViewById(R.id.tvGame1FSlider3Left);
+        mSlider3FinalValue = (TextView) findViewById(R.id.tvGame1FSlider3Right);
 
-        mSlider4 = (SeekBar) findViewById(R.id.sbGame1Slider4);
-        mSlider4InitialValue = (TextView) findViewById(R.id.tvGame1Slider4Left);
-        mSlider4FinalValue = (TextView) findViewById(R.id.tvGame1Slider4Right);
+        mSlider4 = (SeekBar) findViewById(R.id.sbGame1FSlider4);
+        mSlider4InitialValue = (TextView) findViewById(R.id.tvGame1FSlider4Left);
+        mSlider4FinalValue = (TextView) findViewById(R.id.tvGame1FSlider4Right);
 
-        mSlider5 = (SeekBar) findViewById(R.id.sbGame1Slider5);
-        mSlider5InitialValue = (TextView) findViewById(R.id.tvGame1Slider5Left);
-        mSlider5FinalValue = (TextView) findViewById(R.id.tvGame1Slider5Right);
+        mSlider5 = (SeekBar) findViewById(R.id.sbGame1FSlider5);
+        mSlider5InitialValue = (TextView) findViewById(R.id.tvGame1FSlider5Left);
+        mSlider5FinalValue = (TextView) findViewById(R.id.tvGame1FSlider5Right);
 
-        mSlider6 = (SeekBar) findViewById(R.id.sbGame1Slider6);
-        mSlider6InitialValue = (TextView) findViewById(R.id.tvGame1Slider6Left);
-        mSlider6FinalValue = (TextView) findViewById(R.id.tvGame1Slider6Right);
+        mSlider6 = (SeekBar) findViewById(R.id.sbGame1FSlider6);
+        mSlider6InitialValue = (TextView) findViewById(R.id.tvGame1FSlider6Left);
+        mSlider6FinalValue = (TextView) findViewById(R.id.tvGame1FSlider6Right);
 
 
 
@@ -274,7 +285,6 @@ public class SurveySix extends AppCompatActivity {
     }
 
     public void startNextGame (View view) {
-        Intent intent = new Intent(SurveySix.this,SurveyOneF.class);
-        startActivity(intent);
+
     }
 }

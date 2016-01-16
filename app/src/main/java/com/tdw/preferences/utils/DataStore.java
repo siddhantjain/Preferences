@@ -23,6 +23,8 @@ public class DataStore {
     private static Context mContext;
     static Type listUsers = new TypeToken<List<user>>(){}.getType();
     static Type listGames = new TypeToken<List<game>>(){}.getType();
+    final static int GAME_TYPE_E = 1;
+    final static int GAME_TYPE_F = 2;
 
     private DataStore() {} //Prevent Instantiation
 
@@ -48,14 +50,26 @@ public class DataStore {
         if(getGameList()==null){
             List<game> gamesList = new ArrayList<game>();
             setGameList(gamesList);
+            initGameDefaults();
         }
-        initGameDefaults();
+
     }
 
     public static void initGameDefaults(){
         int numberOfGames =6;
         List<game> gameList = getGameList();
-        float[][] interestRates = new float[][]{
+        float[][] interestRatesSectionE = new float[][]{
+                {1.0f, 1.1f, 1.25f, 1.0f, 1.0f, 1.0f},
+                {1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f},
+                {1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f},
+                {1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f},
+                {1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f},
+                {1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f}
+        };
+        int[] soonerDatesSectionE = {7,7,7,7,7,7};
+        int[] laterDatesSectionE = {14,14,14,14,14,14};
+
+        float[][] interestRatesSectionF = new float[][]{
                 {1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f},
                 {1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f},
                 {1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f},
@@ -63,14 +77,23 @@ public class DataStore {
                 {1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f},
                 {1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f}
         };
-        int[] soonerDates = {7,7,7,7,7,7};
-        int[] laterDates = {14,14,14,14,14,14};
+        int[] soonerDatesSectionF = {7,7,7,7,7,7};
+        int[] laterDatesSectionF = {14,14,14,14,14,14};
+        int[] cashRewardDatesSectionF = {28,28,28,28,28,28};
         for(int i=0;i<numberOfGames;i++){
-            game tempGame = new game(interestRates[i][0],interestRates[i][1],interestRates[i][2],interestRates[i][3],interestRates[i][4],interestRates[i][5]
-                    ,soonerDates[i],laterDates[i]);
-            gameList.add(tempGame);
-                System.out.println("Entered");
+            game tempGameE = new game(interestRatesSectionE[i][0],interestRatesSectionE[i][1],interestRatesSectionE[i][2],interestRatesSectionE[i][3],interestRatesSectionE[i][4],interestRatesSectionE[i][5]
+                    ,soonerDatesSectionE[i],laterDatesSectionE[i], GAME_TYPE_E);
+            gameList.add(tempGameE);
         }
+
+        for(int i=0;i<numberOfGames;i++){
+            game tempGameF = new game(interestRatesSectionF[i][0],interestRatesSectionF[i][1],interestRatesSectionF[i][2],interestRatesSectionF[i][3],interestRatesSectionF[i][4],interestRatesSectionF[i][5]
+                    ,soonerDatesSectionF[i],laterDatesSectionF[i], GAME_TYPE_F);
+            tempGameF.setNumberOfDaystoCashRewardDate(cashRewardDatesSectionF[i]);
+            gameList.add(tempGameF);
+        }
+
+
         setGameList(gameList);
 
         //Initialising game results based on game defaults here
