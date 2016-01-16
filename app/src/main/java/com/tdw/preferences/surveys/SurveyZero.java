@@ -42,12 +42,10 @@ public class SurveyZero extends AppCompatActivity {
         setContentView(R.layout.activity_survey_zero);
 
         /*Getting values from data store*/
-        List<game> gameList = DataStore.getGameList();
-        game currGame = gameList.get(0);
-        int numDaysToSoonerDate = currGame.getNumberOfDaystoSoonerDate();
-        int numDaysToLaterDate = currGame.getNumberOfDaystoLaterDate();
-        final float exchangeRateOne = currGame.getExchangeRate1();
-        final float exchangeRateTwo = currGame.getExchangeRate2();
+        int numDaysToSoonerDate = 7;
+        int numDaysToLaterDate = 28;
+        final float exchangeRateOne = 1.0f;
+        final float exchangeRateTwo = 1.25f;
 
 
         /*Calendar View Computation*/

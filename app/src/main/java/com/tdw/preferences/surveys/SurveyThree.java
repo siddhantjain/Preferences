@@ -60,7 +60,7 @@ public class SurveyThree extends AppCompatActivity {
 
         /*Getting values from data store*/
         List<game> gameList = DataStore.getGameList();
-        game currGame = gameList.get(GAME_NUMBER);
+        game currGame = gameList.get(GAME_NUMBER-1);
         int numDaysToSoonerDate = currGame.getNumberOfDaystoSoonerDate();
         int numDaysToLaterDate = currGame.getNumberOfDaystoLaterDate();
         final float exchangeRateOne = currGame.getExchangeRate1();

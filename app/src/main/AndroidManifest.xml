@@ -23,7 +23,8 @@
         <activity android:name=".surveys.SurveyFour" />
         <activity android:name=".surveys.SurveyFive" />
         <activity android:name=".surveys.SurveySix" />
-        <activity android:name=".surveys.SurveyOneF"></activity>
+        <activity android:name=".surveys.SurveyOneF" />
+        <activity android:name=".TestUserUnderstanding"></activity>
     </application>
 
 </manifest>

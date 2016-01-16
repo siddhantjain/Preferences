@@ -52,7 +52,7 @@ public class SurveySix extends AppCompatActivity {
     int fixedamount = 20;
     int variableamount = 100;
 
-    final int GAME_NUMBER = 1;
+    final int GAME_NUMBER = 6;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,7 +60,7 @@ public class SurveySix extends AppCompatActivity {
 
         /*Getting values from data store*/
         List<game> gameList = DataStore.getGameList();
-        game currGame = gameList.get(GAME_NUMBER);
+        game currGame = gameList.get(GAME_NUMBER-1);
         int numDaysToSoonerDate = currGame.getNumberOfDaystoSoonerDate();
         int numDaysToLaterDate = currGame.getNumberOfDaystoLaterDate();
         final float exchangeRateOne = currGame.getExchangeRate1();

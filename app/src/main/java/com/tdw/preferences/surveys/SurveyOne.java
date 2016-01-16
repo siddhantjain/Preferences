@@ -64,7 +64,7 @@ public class SurveyOne extends AppCompatActivity {
 
         /*Getting values from data store*/
         List<game> gameList = DataStore.getGameList();
-        game currGame = gameList.get(GAME_NUMBER);
+        game currGame = gameList.get(GAME_NUMBER-1);
         int numDaysToSoonerDate = currGame.getNumberOfDaystoSoonerDate();
         int numDaysToLaterDate = currGame.getNumberOfDaystoLaterDate();
         final float exchangeRateOne = currGame.getExchangeRate1();
@@ -283,7 +283,10 @@ public class SurveyOne extends AppCompatActivity {
     public void startNextGame (View view) {
         gameResult gr1 = new gameResult(mSlider1InitialValue.getText().toString(),mSlider1FinalValue.getText().toString(),mSlider2InitialValue.getText().toString(),mSlider2FinalValue.getText().toString(),mSlider3InitialValue.getText().toString(),mSlider3FinalValue.getText().toString(),mSlider4InitialValue.getText().toString(),mSlider4FinalValue.getText().toString(),mSlider5InitialValue.getText().toString(),mSlider5FinalValue.getText().toString(),mSlider6InitialValue.getText().toString(),mSlider6FinalValue.getText().toString());
         DataStore.setSurveyOneResult(gr1);
-        Intent intent = new Intent(SurveyOne.this,SurveyTwo.class);
+        //Just for Beta version
+        Intent intent = new Intent(SurveyOne.this,SurveyOneF.class);
+        //For the normal app
+        //Intent intent = new Intent(SurveyOne.this,SurveyOneF.class);
         startActivity(intent);
     }
 }
