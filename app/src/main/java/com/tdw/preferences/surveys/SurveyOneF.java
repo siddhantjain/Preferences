@@ -1,6 +1,7 @@
 package com.tdw.preferences.surveys;
 
 import android.content.Intent;
+import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -308,7 +309,7 @@ public class SurveyOneF extends AppCompatActivity {
         //String baseDir = android.os.Environment.getExternalStorageDirectory().getAbsolutePath();
         String fileName = "SurveyResults.csv";
         //String filePath = baseDir + File.separator + fileName;
-        File f = new File(getApplicationContext().getFilesDir(),fileName);
+        File f = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS),fileName);
         Log.v("FILE",f.getAbsolutePath());
         CSVWriter writer;
         // File exist
