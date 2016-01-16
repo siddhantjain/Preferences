@@ -50,8 +50,8 @@ public class SurveyOneF extends AppCompatActivity {
 
 
     /*HardCoded Variables - TO BE REMOVED*/
-    int fixedamount = 20;
-    int variableamount = 100;
+    int fixedamount = 2000;
+    int variableamount = 10000;
 
     final int GAME_NUMBER = 1;
     final int GAME_TYPE = 1; //game type for section F

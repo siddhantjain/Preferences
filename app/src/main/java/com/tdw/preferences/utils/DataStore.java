@@ -23,8 +23,8 @@ public class DataStore {
     private static Context mContext;
     static Type listUsers = new TypeToken<List<user>>(){}.getType();
     static Type listGames = new TypeToken<List<game>>(){}.getType();
-    final static int GAME_TYPE_E = 1;
-    final static int GAME_TYPE_F = 2;
+    final static int GAME_TYPE_E = 0;
+    final static int GAME_TYPE_F = 1;
 
     private DataStore() {} //Prevent Instantiation
 
