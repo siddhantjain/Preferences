@@ -33,7 +33,7 @@ public class UserInformation extends AppCompatActivity {
 
         String userName, userLocation;
         userName = etUserName.getText().toString();
-        userLocation = etUserName.getText().toString();
+        userLocation = etUserLocation.getText().toString();
 
         /*
             siddhant: Confirm with Aki on how Datastore works
@@ -67,10 +67,11 @@ public class UserInformation extends AppCompatActivity {
         userList.add(currentUser);
         DataStore.setUserList(userList);
 
-        /* Testing datastore logic
+        // Testing datastore logic
         userList = DataStore.getUserList();
         for(int i=0;i<userList.size();i++){
             System.out.println(userList.get(i).getName());
+            System.out.println(userList.get(i).getLocation());
         }
 
         List<game> gamesList = DataStore.getGameList();
@@ -78,7 +79,7 @@ public class UserInformation extends AppCompatActivity {
         for(int i=0;i<gamesList.size();i++){
             System.out.println(gamesList.get(i).getExchangeRate1());
         }
-        */
+
         Intent intent = new Intent(UserInformation.this,SurveyZero.class);
         startActivity(intent);
     }

@@ -70,7 +70,7 @@ public class DataStore {
         int[] laterDatesSectionE = {14,14,14,14,14,14};
 
         float[][] interestRatesSectionF = new float[][]{
-                {1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f},
+                {1.0f, 1.1f, 1.25f, 1.0f, 1.0f, 1.0f},
                 {1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f},
                 {1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f},
                 {1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f},
