@@ -234,4 +234,21 @@ public class DataStore {
         SPEditor.putString(mContext.getString(R.string.game6_result), gr1str);
         SPEditor.commit();
     }
+    public static gameResult getSurveyOneFResult(){
+        if(!gameDataStore.contains(mContext.getString(R.string.game1f_result))){
+            gameResult gr = new gameResult();
+            gr.initToNull();
+            return gr;
+        }
+        Gson gson = new Gson();
+        String grstr = gameDataStore.getString(mContext.getString(R.string.game1f_result), null);
+        return gson.fromJson(grstr,gameResult.class);
+    }
+    public static void setSurveyOneFResult(gameResult gr){
+        Gson gson = new Gson();
+        String gr1str = gson.toJson(gr);
+        SharedPreferences.Editor SPEditor = gameDataStore.edit();
+        SPEditor.putString(mContext.getString(R.string.game1f_result), gr1str);
+        SPEditor.commit();
+    }
 }

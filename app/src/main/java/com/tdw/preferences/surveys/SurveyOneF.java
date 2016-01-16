@@ -291,6 +291,8 @@ public class SurveyOneF extends AppCompatActivity {
     }
 
     public void startNextGame (View view) throws IOException {
+        gameResult gr = new gameResult(mSlider1InitialValue.getText().toString(),mSlider1FinalValue.getText().toString(),mSlider2InitialValue.getText().toString(),mSlider2FinalValue.getText().toString(),mSlider3InitialValue.getText().toString(),mSlider3FinalValue.getText().toString(),mSlider4InitialValue.getText().toString(),mSlider4FinalValue.getText().toString(),mSlider5InitialValue.getText().toString(),mSlider5FinalValue.getText().toString(),mSlider6InitialValue.getText().toString(),mSlider6FinalValue.getText().toString());
+        DataStore.setSurveyOneFResult(gr);
         WriteResultsToFile();
     }
     private void WriteResultsToFile() throws IOException {
@@ -299,7 +301,8 @@ public class SurveyOneF extends AppCompatActivity {
         gameResult gr3 = DataStore.getSurveyThreeResult();
         gameResult gr4 = DataStore.getSurveyFourResult();
         gameResult gr5 = DataStore.getSurveyFiveResult();
-        gameResult gr6 = DataStore.getSurveyFiveResult();
+        gameResult gr6 = DataStore.getSurveySixResult();
+        gameResult gr1f = DataStore.getSurveyOneFResult();
 
         List<user> users = DataStore.getUserList();
         user u = users.get(users.size() - 1);
@@ -310,13 +313,18 @@ public class SurveyOneF extends AppCompatActivity {
         String fileName = "SurveyResults.csv";
         //String filePath = baseDir + File.separator + fileName;
         File f = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS),fileName);
-        Log.v("FILE",f.getAbsolutePath());
+        Log.v("FILEWRITE",f.getAbsolutePath());
         CSVWriter writer;
         // File exist
         if(f.exists() && !f.isDirectory()){
+            Log.v("FILEWRITE","File_exists");
             FileWriter mFileWriter = new FileWriter(f,true);
             writer = new CSVWriter(mFileWriter);
-            String [] headers = {"timestamp",
+        }
+        else {
+            Log.v("FILEWRITE","New file created");
+            writer = new CSVWriter(new FileWriter(f));
+            String[] headers = {"timestamp",
                     "user_id","user_name","user_location",
                     "e1_days_to_sooner_date","e1_days_to_later_date",
                     "e1_exchange_rate1","e1_exchange_rate2","e1_exchange_rate3","e1_exchange_rate4","e1_exchange_rate5","e1_exchange_rate6",
@@ -366,11 +374,17 @@ public class SurveyOneF extends AppCompatActivity {
                     "e6_slider4_iv","e6_slider4_fv",
                     "e6_slider5_iv","e6_slider5_fv",
                     "e6_slider6_iv","e6_slider6_fv",
+                    "f1_days_to_sooner_date","f1_days_to_later_date","f1_days_to_cashrewards_date",
+                    "f1_exchange_rate1","f1_exchange_rate2","f1_exchange_rate3","f1_exchange_rate4","f1_exchange_rate5","f1_exchange_rate6",
+                    "f1_slider1_iv","f1_slider1_fv",
+                    "f1_slider2_iv","f1_slider2_fv",
+                    "f1_slider3_iv","f1_slider3_fv",
+                    "f1_slider4_iv","f1_slider4_fv",
+                    "f1_slider5_iv","f1_slider5_fv",
+                    "f1_slider6_iv","f1_slider6_fv",
             };
             writer.writeNext(headers);
-        }
-        else {
-            writer = new CSVWriter(new FileWriter(f));
+            Log.v("FILEWRITE","Wrote headers");
         }
         SimpleDateFormat s = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String datestr = s.format(new Date());
@@ -424,6 +438,14 @@ public class SurveyOneF extends AppCompatActivity {
                 String.valueOf(gr6.getSlider4Iv()),String.valueOf(gr6.getSlider4Fv()),
                 String.valueOf(gr6.getSlider5Iv()),String.valueOf(gr6.getSlider5Fv()),
                 String.valueOf(gr6.getSlider6Iv()),String.valueOf(gr6.getSlider6Fv()),
+                String.valueOf(games.get(6).getNumberOfDaystoSoonerDate()),String.valueOf(games.get(6).getNumberOfDaystoLaterDate()),String.valueOf(games.get(6).getNumberOfDaystoCashRewardDate()),
+                String.valueOf(games.get(6).getExchangeRate1()),String.valueOf(games.get(6).getExchangeRate2()),String.valueOf(games.get(6).getExchangeRate3()),String.valueOf(games.get(6).getExchangeRate4()),String.valueOf(games.get(6).getExchangeRate5()),String.valueOf(games.get(6).getExchangeRate6()),
+                String.valueOf(gr1f.getSlider1Iv()),String.valueOf(gr1f.getSlider1Fv()),
+                String.valueOf(gr1f.getSlider2Iv()),String.valueOf(gr1f.getSlider2Fv()),
+                String.valueOf(gr1f.getSlider3Iv()),String.valueOf(gr1f.getSlider3Fv()),
+                String.valueOf(gr1f.getSlider4Iv()),String.valueOf(gr1f.getSlider4Fv()),
+                String.valueOf(gr1f.getSlider5Iv()),String.valueOf(gr1f.getSlider5Fv()),
+                String.valueOf(gr1f.getSlider6Iv()),String.valueOf(gr1f.getSlider6Fv()),
         };
         writer.writeNext(data);
         writer.close();
