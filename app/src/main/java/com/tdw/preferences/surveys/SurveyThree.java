@@ -11,6 +11,7 @@ import com.squareup.timessquare.CalendarCellDecorator;
 import com.squareup.timessquare.CalendarPickerView;
 import com.tdw.preferences.R;
 import com.tdw.preferences.models.game;
+import com.tdw.preferences.models.gameResult;
 import com.tdw.preferences.utils.DataStore;
 
 import java.util.ArrayList;
@@ -274,6 +275,8 @@ public class SurveyThree extends AppCompatActivity {
     }
 
     public void startNextGame (View view) {
+        gameResult gr = new gameResult(mSlider1InitialValue.getText().toString(),mSlider1FinalValue.getText().toString(),mSlider2InitialValue.getText().toString(),mSlider2FinalValue.getText().toString(),mSlider3InitialValue.getText().toString(),mSlider3FinalValue.getText().toString(),mSlider4InitialValue.getText().toString(),mSlider4FinalValue.getText().toString(),mSlider5InitialValue.getText().toString(),mSlider5FinalValue.getText().toString(),mSlider6InitialValue.getText().toString(),mSlider6FinalValue.getText().toString());
+        DataStore.setSurveyThreeResult(gr);
         Intent intent = new Intent(SurveyThree.this,SurveyFour.class);
         startActivity(intent);
     }

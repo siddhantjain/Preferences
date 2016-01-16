@@ -109,7 +109,7 @@ public class DataStore {
 
     public static List<user> getUserList(){
         Gson gson = new Gson();
-        String UserList = userInformationStore.getString(mContext.getString(R.string.users_list),null);
+        String UserList = userInformationStore.getString(mContext.getString(R.string.users_list), null);
         return gson.fromJson(UserList, listUsers);
     }
     public static void setUserList(List<user> users_list){
@@ -132,11 +132,106 @@ public class DataStore {
         SPEditor.putString(mContext.getString(R.string.games_list), gamesList);
         SPEditor.commit();
     }
-    public static void setSurveyOneResult(gameResult gr1){
+    public static gameResult getSurveyOneResult(){
+        if(!gameDataStore.contains(mContext.getString(R.string.game1_result))){
+            gameResult gr = new gameResult();
+            gr.initToNull();
+            return gr;
+        }
         Gson gson = new Gson();
-        String gr1str = gson.toJson(gr1);
+        String grstr = gameDataStore.getString(mContext.getString(R.string.game1_result), null);
+        return gson.fromJson(grstr,gameResult.class);
+    }
+    public static void setSurveyOneResult(gameResult gr){
+        Gson gson = new Gson();
+        String gr1str = gson.toJson(gr);
         SharedPreferences.Editor SPEditor = gameDataStore.edit();
         SPEditor.putString(mContext.getString(R.string.game1_result), gr1str);
+        SPEditor.commit();
+    }
+    public static gameResult getSurveyTwoResult(){
+        if(!gameDataStore.contains(mContext.getString(R.string.game2_result))){
+            gameResult gr = new gameResult();
+            gr.initToNull();
+            return gr;
+        }
+        Gson gson = new Gson();
+        String grstr = gameDataStore.getString(mContext.getString(R.string.game2_result), null);
+        return gson.fromJson(grstr,gameResult.class);
+    }
+    public static void setSurveyTwoResult(gameResult gr){
+        Gson gson = new Gson();
+        String gr1str = gson.toJson(gr);
+        SharedPreferences.Editor SPEditor = gameDataStore.edit();
+        SPEditor.putString(mContext.getString(R.string.game2_result), gr1str);
+        SPEditor.commit();
+    }
+    public static gameResult getSurveyThreeResult(){
+        if(!gameDataStore.contains(mContext.getString(R.string.game3_result))){
+            gameResult gr = new gameResult();
+            gr.initToNull();
+            return gr;
+        }
+        Gson gson = new Gson();
+        String grstr = gameDataStore.getString(mContext.getString(R.string.game3_result), null);
+        return gson.fromJson(grstr,gameResult.class);
+    }
+    public static void setSurveyThreeResult(gameResult gr){
+        Gson gson = new Gson();
+        String gr1str = gson.toJson(gr);
+        SharedPreferences.Editor SPEditor = gameDataStore.edit();
+        SPEditor.putString(mContext.getString(R.string.game3_result), gr1str);
+        SPEditor.commit();
+    }
+    public static gameResult getSurveyFourResult(){
+        if(!gameDataStore.contains(mContext.getString(R.string.game4_result))){
+            gameResult gr = new gameResult();
+            gr.initToNull();
+            return gr;
+        }
+        Gson gson = new Gson();
+        String grstr = gameDataStore.getString(mContext.getString(R.string.game4_result), null);
+        return gson.fromJson(grstr,gameResult.class);
+    }
+    public static void setSurveyFourResult(gameResult gr){
+        Gson gson = new Gson();
+        String gr1str = gson.toJson(gr);
+        SharedPreferences.Editor SPEditor = gameDataStore.edit();
+        SPEditor.putString(mContext.getString(R.string.game4_result), gr1str);
+        SPEditor.commit();
+    }
+    public static gameResult getSurveyFiveResult(){
+        if(!gameDataStore.contains(mContext.getString(R.string.game5_result))){
+            gameResult gr = new gameResult();
+            gr.initToNull();
+            return gr;
+        }
+        Gson gson = new Gson();
+        String grstr = gameDataStore.getString(mContext.getString(R.string.game5_result), null);
+        return gson.fromJson(grstr,gameResult.class);
+    }
+    public static void setSurveyFiveResult(gameResult gr){
+        Gson gson = new Gson();
+        String gr1str = gson.toJson(gr);
+        SharedPreferences.Editor SPEditor = gameDataStore.edit();
+        SPEditor.putString(mContext.getString(R.string.game5_result), gr1str);
+        SPEditor.commit();
+    }
+    public static gameResult getSurveySixResult(){
+        if(!gameDataStore.contains(mContext.getString(R.string.game6_result))){
+            gameResult gr = new gameResult();
+            gr.initToNull();
+            return gr;
+        }
+        Gson gson = new Gson();
+        String grstr = gameDataStore.getString(mContext.getString(R.string.game6_result), null);
+        return gson.fromJson(grstr,gameResult.class);
+    }
+    public static void setSurveySixResult(gameResult gr){
+        Gson gson = new Gson();
+        String gr1str = gson.toJson(gr);
+        SharedPreferences.Editor SPEditor = gameDataStore.edit();
+        SPEditor.putString(mContext.getString(R.string.game6_result), gr1str);
         SPEditor.commit();
     }
 }

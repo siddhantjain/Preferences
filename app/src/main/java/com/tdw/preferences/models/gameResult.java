@@ -5,6 +5,10 @@ package com.tdw.preferences.models;
  */
 public class gameResult {
 
+    public gameResult(){
+
+    }
+
     public gameResult(String sl1Iv, String sl1fv,String sl2Iv, String sl2fv,String sl3Iv, String sl3fv,String sl4Iv, String sl4fv,String sl5Iv, String sl5fv,String sl6Iv, String sl6fv){
         slider1Iv = sl1Iv;
         slider1Fv = sl1fv;
@@ -18,6 +22,21 @@ public class gameResult {
         slider5Fv = sl5fv;
         slider6Iv = sl6Iv;
         slider6Fv = sl6fv;
+    }
+
+    public void initToNull(){
+        slider1Iv = "";
+        slider1Fv = "";
+        slider2Iv = "";
+        slider2Fv = "";
+        slider3Iv = "";
+        slider3Fv = "";
+        slider4Iv = "";
+        slider4Fv = "";
+        slider5Iv = "";
+        slider5Fv = "";
+        slider6Iv = "";
+        slider6Fv = "";
     }
 
     public String getSlider1Iv() {
