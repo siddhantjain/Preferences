@@ -86,13 +86,16 @@ public class SurveyOne extends AppCompatActivity {
         ArrayList<Date> dates = new ArrayList<Date>();
         mDateHolder.add(Calendar.DATE, numDaysToSoonerDate);
         dates.add(mDateHolder.getTime());
-        mDateHolder.add(Calendar.DATE, numDaysToLaterDate);
+        //temp hack. Lock in to why is the delta behaving weirdly.
+        mDateHolder.add(Calendar.DATE, numDaysToLaterDate-numDaysToSoonerDate);
         dates.add(mDateHolder.getTime());
         mCalendar.setDecorators(Collections.<CalendarCellDecorator>emptyList());
         mCalendar.init(new Date(), mNextMonth.getTime()) //
                 .inMode(CalendarPickerView.SelectionMode.MULTIPLE) //
                 .withSelectedDates(dates)
                 .displayOnly();
+
+
 
 
         /*SeekBar Computation*/

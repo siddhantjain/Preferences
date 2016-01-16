@@ -82,7 +82,7 @@ public class SurveyThree extends AppCompatActivity {
         ArrayList<Date> dates = new ArrayList<Date>();
         mDateHolder.add(Calendar.DATE, numDaysToSoonerDate);
         dates.add(mDateHolder.getTime());
-        mDateHolder.add(Calendar.DATE, numDaysToLaterDate);
+        mDateHolder.add(Calendar.DATE, numDaysToLaterDate-numDaysToSoonerDate);
         dates.add(mDateHolder.getTime());
         mCalendar.setDecorators(Collections.<CalendarCellDecorator>emptyList());
         mCalendar.init(new Date(), mNextMonth.getTime()) //
