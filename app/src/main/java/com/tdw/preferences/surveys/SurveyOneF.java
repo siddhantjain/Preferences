@@ -63,7 +63,7 @@ public class SurveyOneF extends AppCompatActivity {
 
         /*Getting values from data store*/
         List<game> gameList = DataStore.getGameList();
-        game currGame = gameList.get((GAME_TYPE*5) + GAME_TYPE);
+        game currGame = gameList.get((GAME_TYPE*5) + GAME_NUMBER);
         int numDaysToSoonerDate = currGame.getNumberOfDaystoSoonerDate();
         int numDaysToLaterDate = currGame.getNumberOfDaystoLaterDate();
         int numDaysToCashRewardDate = currGame.getNumberOfDaystoCashRewardDate();
