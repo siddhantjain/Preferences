@@ -31,6 +31,8 @@ import java.util.List;
 public class SurveyOneF extends AppCompatActivity {
 
     private CalendarPickerView mCalendar;
+    private TextView mTVSoonerDate;
+    private TextView mTVLaterDate;
 
     private SeekBar mSlider1;
     private TextView mSlider1InitialValue;
@@ -89,6 +91,8 @@ public class SurveyOneF extends AppCompatActivity {
 
         /*Calendar View Computation*/
         mCalendar = (CalendarPickerView) findViewById(R.id.cvGame1FCurrentMonth);
+        mTVSoonerDate = (TextView) findViewById(R.id.tvGame1FSoonerDateLabel);
+        mTVLaterDate = (TextView) findViewById(R.id.tvGame1FLaterDateLabel);
 
         Calendar mDateHolder = Calendar.getInstance();
         Calendar mNextMonth = Calendar.getInstance();
@@ -101,7 +105,7 @@ public class SurveyOneF extends AppCompatActivity {
         //temp hack. Look in to why is the delta behaving weirdly.
         mDateHolder.add(Calendar.DATE, numDaysToLaterDate-numDaysToSoonerDate);
         dates.add(mDateHolder.getTime());
-        mDateHolder.add(Calendar.DATE, numDaysToCashRewardDate-numDaysToLaterDate);
+        mDateHolder.add(Calendar.DATE, numDaysToCashRewardDate - numDaysToLaterDate);
         dates.add(mDateHolder.getTime());
 
         mCalendar.setDecorators(Collections.<CalendarCellDecorator>emptyList());
@@ -110,6 +114,8 @@ public class SurveyOneF extends AppCompatActivity {
                 .withSelectedDates(dates)
                 .displayOnly();
 
+        mTVSoonerDate.setText("Recharge in " + Integer.toString(numDaysToSoonerDate) + " days");
+        mTVLaterDate.setText("Recharge in " + Integer.toString(numDaysToLaterDate) + " days");
 
 
 

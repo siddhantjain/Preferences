@@ -26,6 +26,8 @@ import java.util.List;
 public class SurveyOne extends AppCompatActivity {
 
     private CalendarPickerView mCalendar;
+    private TextView mTVSoonerDate;
+    private TextView mTVLaterDate;
 
     private SeekBar mSlider1;
     private TextView mSlider1InitialValue;
@@ -80,6 +82,9 @@ public class SurveyOne extends AppCompatActivity {
 
         /*Calendar View Computation*/
         mCalendar = (CalendarPickerView) findViewById(R.id.cvGame1CurrentMonth);
+        mTVSoonerDate = (TextView) findViewById(R.id.tvGame1SoonerDateLabel);
+        mTVLaterDate = (TextView) findViewById(R.id.tvGame1LaterDateLabel);
+
 
         Calendar mDateHolder = Calendar.getInstance();
         Calendar mNextMonth = Calendar.getInstance();
@@ -98,7 +103,8 @@ public class SurveyOne extends AppCompatActivity {
                 .withSelectedDates(dates)
                 .displayOnly();
 
-
+        mTVSoonerDate.setText("Recharge in " + Integer.toString(numDaysToSoonerDate) + " days");
+        mTVLaterDate.setText("Recharge in " + Integer.toString(numDaysToLaterDate) + " days");
 
 
         /*SeekBar Computation*/
