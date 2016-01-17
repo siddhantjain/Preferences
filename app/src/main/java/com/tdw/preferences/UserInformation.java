@@ -9,6 +9,7 @@ import android.widget.EditText;
 
 import com.tdw.preferences.models.game;
 import com.tdw.preferences.models.user;
+import com.tdw.preferences.surveys.SurveyOne;
 import com.tdw.preferences.surveys.SurveyZero;
 import com.tdw.preferences.utils.DataStore;
 
@@ -80,7 +81,7 @@ public class UserInformation extends AppCompatActivity {
             System.out.println(gamesList.get(i).getExchangeRate1());
         }
 
-        Intent intent = new Intent(UserInformation.this,SurveyZero.class);
+        Intent intent = new Intent(UserInformation.this,SurveyOne.class);
         startActivity(intent);
     }
 }
