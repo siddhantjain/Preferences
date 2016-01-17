@@ -35,14 +35,17 @@ public class SurveyOneF extends AppCompatActivity {
     private SeekBar mSlider1;
     private TextView mSlider1InitialValue;
     private TextView mSlider1FinalValue;
+    private TextView mSlider1ExchangeRateValue;
 
     private SeekBar mSlider2;
     private TextView mSlider2InitialValue;
     private TextView mSlider2FinalValue;
+    private TextView mSlider2ExchangeRateValue;
 
     private SeekBar mSlider3;
     private TextView mSlider3InitialValue;
     private TextView mSlider3FinalValue;
+    private TextView mSlider3ExchangeRateValue;
 
     private SeekBar mSlider4;
     private TextView mSlider4InitialValue;
@@ -114,14 +117,17 @@ public class SurveyOneF extends AppCompatActivity {
         mSlider1 = (SeekBar) findViewById(R.id.sbGame1FSlider1);
         mSlider1InitialValue = (TextView) findViewById(R.id.tvGame1FSlider1Left);
         mSlider1FinalValue = (TextView) findViewById(R.id.tvGame1FSlider1Right);
+        mSlider1ExchangeRateValue  = (TextView) findViewById(R.id.tvGame1FSlider1Center);
 
         mSlider2 = (SeekBar) findViewById(R.id.sbGame1FSlider2);
         mSlider2InitialValue = (TextView) findViewById(R.id.tvGame1FSlider2Left);
         mSlider2FinalValue = (TextView) findViewById(R.id.tvGame1FSlider2Right);
+        mSlider2ExchangeRateValue  = (TextView) findViewById(R.id.tvGame1FSlider2Center);
 
         mSlider3 = (SeekBar) findViewById(R.id.sbGame1FSlider3);
         mSlider3InitialValue = (TextView) findViewById(R.id.tvGame1FSlider3Left);
         mSlider3FinalValue = (TextView) findViewById(R.id.tvGame1FSlider3Right);
+        mSlider3ExchangeRateValue  = (TextView) findViewById(R.id.tvGame1FSlider3Center);
 
         mSlider4 = (SeekBar) findViewById(R.id.sbGame1FSlider4);
         mSlider4InitialValue = (TextView) findViewById(R.id.tvGame1FSlider4Left);
@@ -143,6 +149,7 @@ public class SurveyOneF extends AppCompatActivity {
         int FV1OnStartup = (int)((double)fixedamount + ((double)variableamount*(double)proportion*(double)exchangeRateOne));
         mSlider1InitialValue.setText(Integer.toString(IV1OnStartup));
         mSlider1FinalValue.setText(Integer.toString(FV1OnStartup));
+        mSlider1ExchangeRateValue.setText("Exchange Rate: 1:" + Float.toString(exchangeRateOne));
 
         int initialSlider2Progress = mSlider2.getProgress();
         proportion = (double)initialSlider2Progress/(double)100;
@@ -150,6 +157,7 @@ public class SurveyOneF extends AppCompatActivity {
         int FV2OnStartup = (int) ((double)fixedamount + ((double)variableamount*(double)proportion*(double)exchangeRateTwo));
         mSlider2InitialValue.setText(Integer.toString(IV2OnStartup));
         mSlider2FinalValue.setText(Integer.toString(FV2OnStartup));
+        mSlider2ExchangeRateValue.setText("Exchange Rate: 1:" + Float.toString(exchangeRateTwo));
 
         int initialSlider3Progress = mSlider3.getProgress();
         proportion = (double)initialSlider3Progress/(double)100;
@@ -157,6 +165,7 @@ public class SurveyOneF extends AppCompatActivity {
         int FV3OnStartup = (int) ((double)fixedamount + ((double)variableamount*(double)proportion*(double)exchangeRateThree));
         mSlider3InitialValue.setText(Integer.toString(IV3OnStartup));
         mSlider3FinalValue.setText(Integer.toString(FV3OnStartup));
+        mSlider3ExchangeRateValue.setText("Exchange Rate: 1:" + Float.toString(exchangeRateThree));
 
         int initialSlider4Progress = mSlider4.getProgress();
         proportion = (double)initialSlider4Progress/(double)100;

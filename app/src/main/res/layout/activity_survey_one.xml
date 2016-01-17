@@ -47,6 +47,12 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text = "Exchange Rate"
+                    android:id="@+id/tvGame1Slider1Center"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="right"
                     android:layout_alignParentEnd="true"
                     android:text = "rightvalue"
@@ -81,6 +87,12 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text = "Exchange Rate"
+                    android:id="@+id/tvGame1Slider2Center"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text = "rightValue"
                     android:id="@+id/tvGame1Slider2Right"
                     android:layout_alignParentEnd="true" />
@@ -112,6 +124,12 @@
                     android:text = "leftValue"
                     android:id="@+id/tvGame1Slider3Left"
                     />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text = "Exchange Rate"
+                    android:id="@+id/tvGame1Slider3Center"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
