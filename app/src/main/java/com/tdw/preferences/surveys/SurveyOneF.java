@@ -13,6 +13,7 @@ import com.opencsv.CSVWriter;
 import com.squareup.timessquare.CalendarCellDecorator;
 import com.squareup.timessquare.CalendarPickerView;
 import com.tdw.preferences.R;
+import com.tdw.preferences.WelcomeScreen;
 import com.tdw.preferences.models.game;
 import com.tdw.preferences.models.gameResult;
 import com.tdw.preferences.models.user;
@@ -309,6 +310,11 @@ public class SurveyOneF extends AppCompatActivity {
         gameResult gr = new gameResult(mSlider1InitialValue.getText().toString(),mSlider1FinalValue.getText().toString(),mSlider2InitialValue.getText().toString(),mSlider2FinalValue.getText().toString(),mSlider3InitialValue.getText().toString(),mSlider3FinalValue.getText().toString(),mSlider4InitialValue.getText().toString(),mSlider4FinalValue.getText().toString(),mSlider5InitialValue.getText().toString(),mSlider5FinalValue.getText().toString(),mSlider6InitialValue.getText().toString(),mSlider6FinalValue.getText().toString());
         DataStore.setSurveyOneFResult(gr);
         WriteResultsToFile();
+
+
+        //start-over - Just for BETA
+        Intent intent = new Intent(SurveyOneF.this,WelcomeScreen.class);
+        startActivity(intent);
     }
     private void WriteResultsToFile() throws IOException {
         gameResult gr1 = DataStore.getSurveyOneResult();
