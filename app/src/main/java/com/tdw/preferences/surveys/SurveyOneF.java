@@ -115,8 +115,8 @@ public class SurveyOneF extends AppCompatActivity {
                 .withSelectedDates(dates)
                 .displayOnly();
 
-        mTVSoonerDate.setText("Recharge in " + Integer.toString(numDaysToSoonerDate) + " days");
-        mTVLaterDate.setText("Recharge in " + Integer.toString(numDaysToLaterDate) + " days");
+        mTVSoonerDate.setText("Steps on " + Integer.toString(numDaysToSoonerDate) + " days");
+        mTVLaterDate.setText("Steps on " + Integer.toString(numDaysToLaterDate) + " days");
 
 
 
