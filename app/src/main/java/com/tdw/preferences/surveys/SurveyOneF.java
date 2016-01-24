@@ -17,6 +17,7 @@ import com.tdw.preferences.WelcomeScreen;
 import com.tdw.preferences.models.game;
 import com.tdw.preferences.models.gameResult;
 import com.tdw.preferences.models.user;
+import com.tdw.preferences.utils.CalendarDecorator;
 import com.tdw.preferences.utils.DataStore;
 
 import java.io.File;
@@ -24,6 +25,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Collections;
 import java.util.Date;
@@ -109,7 +111,7 @@ public class SurveyOneF extends AppCompatActivity {
         mDateHolder.add(Calendar.DATE, numDaysToCashRewardDate - numDaysToLaterDate);
         dates.add(mDateHolder.getTime());
 
-        mCalendar.setDecorators(Collections.<CalendarCellDecorator>emptyList());
+        mCalendar.setDecorators(Arrays.<CalendarCellDecorator>asList(new CalendarDecorator()));
         mCalendar.init(new Date(), mNextMonth.getTime()) //
                 .inMode(CalendarPickerView.SelectionMode.MULTIPLE) //
                 .withSelectedDates(dates)

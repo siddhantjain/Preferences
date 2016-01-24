@@ -594,6 +594,12 @@ public class CalendarPickerView extends ListView {
       if (selectedCells.size() == 0 || !selectedCells.get(0).equals(cell)) {
         selectedCells.add(cell);
         cell.setSelected(true);
+        if(selectedCells.size()==1)
+          cell.setIsSooner(true);
+        if(selectedCells.size()==2)
+          cell.setIsLater(true);
+        if(selectedCells.size()==3)
+          cell.setIsCashReward(true);
       }
       selectedCals.add(newlySelectedCal);
 

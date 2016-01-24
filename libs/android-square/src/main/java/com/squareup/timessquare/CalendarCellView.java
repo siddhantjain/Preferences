@@ -20,6 +20,16 @@ public class CalendarCellView extends TextView {
   private static final int[] STATE_HIGHLIGHTED = {
       R.attr.tsquare_state_highlighted
   };
+  private static final int[] STATE_SOONER = {
+          R.attr.tsquare_state_sooner
+  };
+  private static final int[] STATE_LATER = {
+          R.attr.tsquare_state_later
+  };
+  private static final int[] STATE_CASHREWARD = {
+          R.attr.tsquare_state_cashreward
+  };
+
   private static final int[] STATE_RANGE_FIRST = {
       R.attr.tsquare_state_range_first
   };
@@ -33,7 +43,40 @@ public class CalendarCellView extends TextView {
   private boolean isSelectable = false;
   private boolean isCurrentMonth = false;
   private boolean isToday = false;
+
+  public boolean isHighlighted() {
+    return isHighlighted;
+  }
+
+  public boolean isSooner() {
+    return isSooner;
+  }
+
+  public boolean isLater() {
+    return isLater;
+  }
+
+  public boolean isCashRewards() {
+    return isRewards;
+  }
+
   private boolean isHighlighted = false;
+  private boolean isSooner = false;
+
+  public void setIsCashRewards(boolean isRewards) {
+    this.isRewards = isRewards;
+  }
+
+  public void setIsLater(boolean isLater) {
+    this.isLater = isLater;
+  }
+
+  public void setIsSooner(boolean isSooner) {
+    this.isSooner = isSooner;
+  }
+
+  private boolean isLater = false;
+  private boolean isRewards = false;
   private RangeState rangeState = RangeState.NONE;
 
   @SuppressWarnings("UnusedDeclaration") //

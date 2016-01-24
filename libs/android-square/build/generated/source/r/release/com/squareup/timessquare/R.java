@@ -55,6 +55,14 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
+        public static int tsquare_state_cashreward=0x7f01000f;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
         public static int tsquare_state_current_month=0x7f010007;
         /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
@@ -64,6 +72,14 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static int tsquare_state_highlighted=0x7f01000c;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int tsquare_state_later=0x7f01000e;
         /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -103,6 +119,14 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
+        public static int tsquare_state_sooner=0x7f01000d;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
         public static int tsquare_state_today=0x7f010008;
         /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
@@ -117,17 +141,23 @@ containing a value of this type.
     public static final class color {
         public static int calendar_active_month_bg=0x7f050000;
         public static int calendar_bg=0x7f050001;
-        public static int calendar_divider=0x7f050002;
-        public static int calendar_highlighted_day_bg=0x7f050003;
-        public static int calendar_inactive_month_bg=0x7f050004;
-        public static int calendar_selected_day_bg=0x7f050005;
-        public static int calendar_selected_range_bg=0x7f050006;
-        public static int calendar_text_active=0x7f050007;
-        public static int calendar_text_highlighted=0x7f050008;
-        public static int calendar_text_inactive=0x7f050009;
-        public static int calendar_text_selected=0x7f05000a;
-        public static int calendar_text_selector=0x7f05000c;
-        public static int calendar_text_unselectable=0x7f05000b;
+        public static int calendar_cashreward_day_bg=0x7f050002;
+        public static int calendar_divider=0x7f050003;
+        public static int calendar_highlighted_day_bg=0x7f050004;
+        public static int calendar_inactive_month_bg=0x7f050005;
+        public static int calendar_later_day_bg=0x7f050006;
+        public static int calendar_selected_day_bg=0x7f050007;
+        public static int calendar_selected_range_bg=0x7f050008;
+        public static int calendar_sooner_day_bg=0x7f050009;
+        public static int calendar_text_active=0x7f05000a;
+        public static int calendar_text_cashreward=0x7f05000b;
+        public static int calendar_text_highlighted=0x7f05000c;
+        public static int calendar_text_inactive=0x7f05000d;
+        public static int calendar_text_later=0x7f05000e;
+        public static int calendar_text_selected=0x7f05000f;
+        public static int calendar_text_selector=0x7f050012;
+        public static int calendar_text_sooner=0x7f050010;
+        public static int calendar_text_unselectable=0x7f050011;
     }
     public static final class dimen {
         public static int calendar_day_headers_paddingbottom=0x7f060000;
@@ -281,26 +311,47 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #calendar_cell_tsquare_state_cashreward com.squareup.timessquare:tsquare_state_cashreward}</code></td><td></td></tr>
            <tr><td><code>{@link #calendar_cell_tsquare_state_current_month com.squareup.timessquare:tsquare_state_current_month}</code></td><td></td></tr>
            <tr><td><code>{@link #calendar_cell_tsquare_state_highlighted com.squareup.timessquare:tsquare_state_highlighted}</code></td><td></td></tr>
+           <tr><td><code>{@link #calendar_cell_tsquare_state_later com.squareup.timessquare:tsquare_state_later}</code></td><td></td></tr>
            <tr><td><code>{@link #calendar_cell_tsquare_state_range_first com.squareup.timessquare:tsquare_state_range_first}</code></td><td></td></tr>
            <tr><td><code>{@link #calendar_cell_tsquare_state_range_last com.squareup.timessquare:tsquare_state_range_last}</code></td><td></td></tr>
            <tr><td><code>{@link #calendar_cell_tsquare_state_range_middle com.squareup.timessquare:tsquare_state_range_middle}</code></td><td></td></tr>
            <tr><td><code>{@link #calendar_cell_tsquare_state_selectable com.squareup.timessquare:tsquare_state_selectable}</code></td><td></td></tr>
+           <tr><td><code>{@link #calendar_cell_tsquare_state_sooner com.squareup.timessquare:tsquare_state_sooner}</code></td><td></td></tr>
            <tr><td><code>{@link #calendar_cell_tsquare_state_today com.squareup.timessquare:tsquare_state_today}</code></td><td></td></tr>
            </table>
+           @see #calendar_cell_tsquare_state_cashreward
            @see #calendar_cell_tsquare_state_current_month
            @see #calendar_cell_tsquare_state_highlighted
+           @see #calendar_cell_tsquare_state_later
            @see #calendar_cell_tsquare_state_range_first
            @see #calendar_cell_tsquare_state_range_last
            @see #calendar_cell_tsquare_state_range_middle
            @see #calendar_cell_tsquare_state_selectable
+           @see #calendar_cell_tsquare_state_sooner
            @see #calendar_cell_tsquare_state_today
          */
         public static final int[] calendar_cell = {
             0x7f010006, 0x7f010007, 0x7f010008, 0x7f010009,
-            0x7f01000a, 0x7f01000b, 0x7f01000c
+            0x7f01000a, 0x7f01000b, 0x7f01000c, 0x7f01000d,
+            0x7f01000e, 0x7f01000f
         };
+        /**
+          <p>This symbol is the offset where the {@link com.squareup.timessquare.R.attr#tsquare_state_cashreward}
+          attribute's value can be found in the {@link #calendar_cell} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.squareup.timessquare:tsquare_state_cashreward
+        */
+        public static int calendar_cell_tsquare_state_cashreward = 9;
         /**
           <p>This symbol is the offset where the {@link com.squareup.timessquare.R.attr#tsquare_state_current_month}
           attribute's value can be found in the {@link #calendar_cell} array.
@@ -329,6 +380,20 @@ containing a value of this type.
           @attr name com.squareup.timessquare:tsquare_state_highlighted
         */
         public static int calendar_cell_tsquare_state_highlighted = 6;
+        /**
+          <p>This symbol is the offset where the {@link com.squareup.timessquare.R.attr#tsquare_state_later}
+          attribute's value can be found in the {@link #calendar_cell} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.squareup.timessquare:tsquare_state_later
+        */
+        public static int calendar_cell_tsquare_state_later = 8;
         /**
           <p>This symbol is the offset where the {@link com.squareup.timessquare.R.attr#tsquare_state_range_first}
           attribute's value can be found in the {@link #calendar_cell} array.
@@ -385,6 +450,20 @@ containing a value of this type.
           @attr name com.squareup.timessquare:tsquare_state_selectable
         */
         public static int calendar_cell_tsquare_state_selectable = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.squareup.timessquare.R.attr#tsquare_state_sooner}
+          attribute's value can be found in the {@link #calendar_cell} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.squareup.timessquare:tsquare_state_sooner
+        */
+        public static int calendar_cell_tsquare_state_sooner = 7;
         /**
           <p>This symbol is the offset where the {@link com.squareup.timessquare.R.attr#tsquare_state_today}
           attribute's value can be found in the {@link #calendar_cell} array.

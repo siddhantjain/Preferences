@@ -14,6 +14,34 @@ class MonthCellDescriptor {
   private final int value;
   private final boolean isCurrentMonth;
   private boolean isSelected;
+    private boolean isSooner;
+    private boolean isLater;
+
+    public boolean isSooner() {
+        return isSooner;
+    }
+
+    public void setIsSooner(boolean isSooner) {
+        this.isSooner = isSooner;
+    }
+
+    public boolean isLater() {
+        return isLater;
+    }
+
+    public void setIsLater(boolean isLater) {
+        this.isLater = isLater;
+    }
+
+    public boolean isCashReward() {
+        return isCashReward;
+    }
+
+    public void setIsCashReward(boolean isCashReward) {
+        this.isCashReward = isCashReward;
+    }
+
+    private boolean isCashReward;
   private final boolean isToday;
   private final boolean isSelectable;
   private boolean isHighlighted;

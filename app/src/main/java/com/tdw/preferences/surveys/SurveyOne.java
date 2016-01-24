@@ -15,9 +15,11 @@ import com.tdw.preferences.R;
 import com.tdw.preferences.UserInformation;
 import com.tdw.preferences.models.game;
 import com.tdw.preferences.models.gameResult;
+import com.tdw.preferences.utils.CalendarDecorator;
 import com.tdw.preferences.utils.DataStore;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Collections;
 import java.util.Date;
@@ -97,7 +99,7 @@ public class SurveyOne extends AppCompatActivity {
         //temp hack. Lock in to why is the delta behaving weirdly.
         mDateHolder.add(Calendar.DATE, numDaysToLaterDate - numDaysToSoonerDate);
         dates.add(mDateHolder.getTime());
-        mCalendar.setDecorators(Collections.<CalendarCellDecorator>emptyList());
+        mCalendar.setDecorators(Arrays.<CalendarCellDecorator>asList(new CalendarDecorator()));
         mCalendar.init(new Date(), mNextMonth.getTime()) //
                 .inMode(CalendarPickerView.SelectionMode.MULTIPLE) //
                 .withSelectedDates(dates)

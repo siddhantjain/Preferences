@@ -18,6 +18,15 @@
   <item app:tsquare_state_highlighted="true">
     <color android:color="@color/calendar_highlighted_day_bg"/>
   </item>
+  <item app:tsquare_state_sooner="true">
+    <color android:color="@color/calendar_sooner_day_bg"/>
+  </item>
+  <item app:tsquare_state_later="true">
+    <color android:color="@color/calendar_later_day_bg"/>
+  </item>
+  <item app:tsquare_state_later="true">
+    <color android:color="@color/calendar_cashreward_day_bg"/>
+  </item>
   <item app:tsquare_state_today="true">
     <color android:color="@color/calendar_text_active"/>
   </item>
