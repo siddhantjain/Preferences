@@ -1,6 +1,8 @@
 package com.tdw.preferences.surveys;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,10 +14,12 @@ import com.opencsv.CSVWriter;
 import com.squareup.timessquare.CalendarCellDecorator;
 import com.squareup.timessquare.CalendarPickerView;
 import com.tdw.preferences.R;
+import com.tdw.preferences.WelcomeScreen;
 import com.tdw.preferences.models.game;
 import com.tdw.preferences.models.gameResult;
 import com.tdw.preferences.models.user;
 import com.tdw.preferences.utils.DataStore;
+import com.tdw.preferences.surveys.SurveyOneF;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -64,7 +68,7 @@ public class SurveySix extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_survey_one);
+        setContentView(R.layout.activity_survey_six);
 
         /*Getting values from data store*/
         List<game> gameList = DataStore.getGameList();
@@ -80,7 +84,7 @@ public class SurveySix extends AppCompatActivity {
 
 
         /*Calendar View Computation*/
-        mCalendar = (CalendarPickerView) findViewById(R.id.cvGame1CurrentMonth);
+        mCalendar = (CalendarPickerView) findViewById(R.id.cvGame6CurrentMonth);
 
         Calendar mDateHolder = Calendar.getInstance();
         Calendar mNextMonth = Calendar.getInstance();
@@ -100,29 +104,29 @@ public class SurveySix extends AppCompatActivity {
 
 
         /*SeekBar Computation*/
-        mSlider1 = (SeekBar) findViewById(R.id.sbGame1Slider1);
-        mSlider1InitialValue = (TextView) findViewById(R.id.tvGame1Slider1Left);
-        mSlider1FinalValue = (TextView) findViewById(R.id.tvGame1Slider1Right);
+        mSlider1 = (SeekBar) findViewById(R.id.sbGame6Slider1);
+        mSlider1InitialValue = (TextView) findViewById(R.id.tvGame6Slider1Left);
+        mSlider1FinalValue = (TextView) findViewById(R.id.tvGame6Slider1Right);
 
-        mSlider2 = (SeekBar) findViewById(R.id.sbGame1Slider2);
-        mSlider2InitialValue = (TextView) findViewById(R.id.tvGame1Slider2Left);
-        mSlider2FinalValue = (TextView) findViewById(R.id.tvGame1Slider2Right);
+        mSlider2 = (SeekBar) findViewById(R.id.sbGame6Slider2);
+        mSlider2InitialValue = (TextView) findViewById(R.id.tvGame6Slider2Left);
+        mSlider2FinalValue = (TextView) findViewById(R.id.tvGame6Slider2Right);
 
-        mSlider3 = (SeekBar) findViewById(R.id.sbGame1Slider3);
-        mSlider3InitialValue = (TextView) findViewById(R.id.tvGame1Slider3Left);
-        mSlider3FinalValue = (TextView) findViewById(R.id.tvGame1Slider3Right);
+        mSlider3 = (SeekBar) findViewById(R.id.sbGame6Slider3);
+        mSlider3InitialValue = (TextView) findViewById(R.id.tvGame6Slider3Left);
+        mSlider3FinalValue = (TextView) findViewById(R.id.tvGame6Slider3Right);
 
-        mSlider4 = (SeekBar) findViewById(R.id.sbGame1Slider4);
-        mSlider4InitialValue = (TextView) findViewById(R.id.tvGame1Slider4Left);
-        mSlider4FinalValue = (TextView) findViewById(R.id.tvGame1Slider4Right);
+        mSlider4 = (SeekBar) findViewById(R.id.sbGame6Slider4);
+        mSlider4InitialValue = (TextView) findViewById(R.id.tvGame6Slider4Left);
+        mSlider4FinalValue = (TextView) findViewById(R.id.tvGame6Slider4Right);
 
-        mSlider5 = (SeekBar) findViewById(R.id.sbGame1Slider5);
-        mSlider5InitialValue = (TextView) findViewById(R.id.tvGame1Slider5Left);
-        mSlider5FinalValue = (TextView) findViewById(R.id.tvGame1Slider5Right);
+        mSlider5 = (SeekBar) findViewById(R.id.sbGame6Slider5);
+        mSlider5InitialValue = (TextView) findViewById(R.id.tvGame6Slider5Left);
+        mSlider5FinalValue = (TextView) findViewById(R.id.tvGame6Slider5Right);
 
-        mSlider6 = (SeekBar) findViewById(R.id.sbGame1Slider6);
-        mSlider6InitialValue = (TextView) findViewById(R.id.tvGame1Slider6Left);
-        mSlider6FinalValue = (TextView) findViewById(R.id.tvGame1Slider6Right);
+        mSlider6 = (SeekBar) findViewById(R.id.sbGame6Slider6);
+        mSlider6InitialValue = (TextView) findViewById(R.id.tvGame6Slider6Left);
+        mSlider6FinalValue = (TextView) findViewById(R.id.tvGame6Slider6Right);
 
 
 
@@ -277,153 +281,27 @@ public class SurveySix extends AppCompatActivity {
             public void onStopTrackingTouch(SeekBar seekBar) {
             }
         });
-
-
     }
 
     public void startNextGame (View view) throws IOException {
         gameResult gr = new gameResult(mSlider1InitialValue.getText().toString(),mSlider1FinalValue.getText().toString(),mSlider2InitialValue.getText().toString(),mSlider2FinalValue.getText().toString(),mSlider3InitialValue.getText().toString(),mSlider3FinalValue.getText().toString(),mSlider4InitialValue.getText().toString(),mSlider4FinalValue.getText().toString(),mSlider5InitialValue.getText().toString(),mSlider5FinalValue.getText().toString(),mSlider6InitialValue.getText().toString(),mSlider6FinalValue.getText().toString());
         DataStore.setSurveySixResult(gr);
-        //Add code to finish game, store everything to csv and start over
-        //WriteResultsToFile();
+
+        AlertDialog alertDialog = new AlertDialog.Builder(this).create();
+        alertDialog.setTitle(getApplicationContext().getString(R.string.instructions_title));
+        alertDialog.setMessage(getApplicationContext().getString(R.string.instructions_f_body));
+        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "Continue",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+
+                        //For the Beta version
+                        Intent intent = new Intent(SurveySix.this,WelcomeScreen.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        intent.putExtra("StartF",true);
+                        startActivity(intent);
+                    }
+                });
+        alertDialog.show();
     }
-    /*
-    private void WriteResultsToFile() throws IOException {
-        gameResult gr1 = DataStore.getSurveyOneResult();
-        gameResult gr2 = DataStore.getSurveyTwoResult();
-        gameResult gr3 = DataStore.getSurveyThreeResult();
-        gameResult gr4 = DataStore.getSurveyFourResult();
-        gameResult gr5 = DataStore.getSurveyFiveResult();
-        gameResult gr6 = DataStore.getSurveyFiveResult();
-
-        List<user> users = DataStore.getUserList();
-        user u = users.get(users.size() - 1);
-
-        List<game> games = DataStore.getGameList();
-
-        //String baseDir = android.os.Environment.getExternalStorageDirectory().getAbsolutePath();
-        String fileName = "SurveyResults.csv";
-        //String filePath = baseDir + File.separator + fileName;
-        File f = new File(getApplicationContext().getFilesDir(),fileName);
-        CSVWriter writer;
-        // File exist
-        if(f.exists() && !f.isDirectory()){
-            FileWriter mFileWriter = new FileWriter(f,true);
-            writer = new CSVWriter(mFileWriter);
-            String [] headers = {"timestamp",
-                    "user_id","user_name","user_location",
-                    "e1_days_to_sooner_date","e1_days_to_later_date",
-                    "e1_exchange_rate1","e1_exchange_rate2","e1_exchange_rate3","e1_exchange_rate4","e1_exchange_rate5","e1_exchange_rate6",
-                    "e1_slider1_iv","e1_slider1_fv",
-                    "e1_slider2_iv","e1_slider2_fv",
-                    "e1_slider3_iv","e1_slider3_fv",
-                    "e1_slider4_iv","e1_slider4_fv",
-                    "e1_slider5_iv","e1_slider5_fv",
-                    "e1_slider6_iv","e1_slider6_fv",
-                    "e2_days_to_sooner_date","e2_days_to_later_date",
-                    "e2_exchange_rate1","e2_exchange_rate2","e2_exchange_rate3","e2_exchange_rate4","e2_exchange_rate5","e2_exchange_rate6",
-                    "e2_slider1_iv","e2_slider1_fv",
-                    "e2_slider2_iv","e2_slider2_fv",
-                    "e2_slider3_iv","e2_slider3_fv",
-                    "e2_slider4_iv","e2_slider4_fv",
-                    "e2_slider5_iv","e2_slider5_fv",
-                    "e2_slider6_iv","e2_slider6_fv",
-                    "e3_days_to_sooner_date","e3_days_to_later_date",
-                    "e3_exchange_rate1","e3_exchange_rate2","e3_exchange_rate3","e3_exchange_rate4","e3_exchange_rate5","e3_exchange_rate6",
-                    "e3_slider1_iv","e3_slider1_fv",
-                    "e3_slider2_iv","e3_slider2_fv",
-                    "e3_slider3_iv","e3_slider3_fv",
-                    "e3_slider4_iv","e3_slider4_fv",
-                    "e3_slider5_iv","e3_slider5_fv",
-                    "e3_slider6_iv","e3_slider6_fv",
-                    "e4_days_to_sooner_date","e4_days_to_later_date",
-                    "e4_exchange_rate1","e4_exchange_rate2","e4_exchange_rate3","e4_exchange_rate4","e4_exchange_rate5","e4_exchange_rate6",
-                    "e4_slider1_iv","e4_slider1_fv",
-                    "e4_slider2_iv","e4_slider2_fv",
-                    "e4_slider3_iv","e4_slider3_fv",
-                    "e4_slider4_iv","e4_slider4_fv",
-                    "e4_slider5_iv","e4_slider5_fv",
-                    "e4_slider6_iv","e4_slider6_fv",
-                    "e5_days_to_sooner_date","e5_days_to_later_date",
-                    "e5_exchange_rate1","e5_exchange_rate2","e5_exchange_rate3","e5_exchange_rate4","e5_exchange_rate5","e5_exchange_rate6",
-                    "e5_slider1_iv","e5_slider1_fv",
-                    "e5_slider2_iv","e5_slider2_fv",
-                    "e5_slider3_iv","e5_slider3_fv",
-                    "e5_slider4_iv","e5_slider4_fv",
-                    "e5_slider5_iv","e5_slider5_fv",
-                    "e5_slider6_iv","e5_slider6_fv",
-                    "e6_days_to_sooner_date","e6_days_to_later_date",
-                    "e6_exchange_rate1","e6_exchange_rate2","e6_exchange_rate3","e6_exchange_rate4","e6_exchange_rate5","e6_exchange_rate6",
-                    "e6_slider1_iv","e6_slider1_fv",
-                    "e6_slider2_iv","e6_slider2_fv",
-                    "e6_slider3_iv","e6_slider3_fv",
-                    "e6_slider4_iv","e6_slider4_fv",
-                    "e6_slider5_iv","e6_slider5_fv",
-                    "e6_slider6_iv","e6_slider6_fv",
-            };
-            writer.writeNext(headers);
-        }
-        else {
-            writer = new CSVWriter(new FileWriter(f));
-        }
-        SimpleDateFormat s = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        String datestr = s.format(new Date());
-        String[] data = {String.valueOf(datestr),
-                String.valueOf(u.getId()),String.valueOf(u.getName()),String.valueOf(u.getLocation()),
-                String.valueOf(games.get(0).getNumberOfDaystoSoonerDate()),String.valueOf(games.get(0).getNumberOfDaystoLaterDate()),
-                String.valueOf(games.get(0).getExchangeRate1()),String.valueOf(games.get(0).getExchangeRate2()),String.valueOf(games.get(0).getExchangeRate3()),String.valueOf(games.get(0).getExchangeRate4()),String.valueOf(games.get(0).getExchangeRate5()),String.valueOf(games.get(0).getExchangeRate6()),
-                String.valueOf(gr1.getSlider1Iv()),String.valueOf(gr1.getSlider1Fv()),
-                String.valueOf(gr1.getSlider2Iv()),String.valueOf(gr1.getSlider2Fv()),
-                String.valueOf(gr1.getSlider3Iv()),String.valueOf(gr1.getSlider3Fv()),
-                String.valueOf(gr1.getSlider4Iv()),String.valueOf(gr1.getSlider4Fv()),
-                String.valueOf(gr1.getSlider5Iv()),String.valueOf(gr1.getSlider5Fv()),
-                String.valueOf(gr1.getSlider6Iv()),String.valueOf(gr1.getSlider6Fv()),
-                String.valueOf(games.get(1).getNumberOfDaystoSoonerDate()),String.valueOf(games.get(1).getNumberOfDaystoLaterDate()),
-                String.valueOf(games.get(1).getExchangeRate1()),String.valueOf(games.get(1).getExchangeRate2()),String.valueOf(games.get(1).getExchangeRate3()),String.valueOf(games.get(1).getExchangeRate4()),String.valueOf(games.get(1).getExchangeRate5()),String.valueOf(games.get(1).getExchangeRate6()),
-                String.valueOf(gr2.getSlider1Iv()),String.valueOf(gr2.getSlider1Fv()),
-                String.valueOf(gr2.getSlider2Iv()),String.valueOf(gr2.getSlider2Fv()),
-                String.valueOf(gr2.getSlider3Iv()),String.valueOf(gr2.getSlider3Fv()),
-                String.valueOf(gr2.getSlider4Iv()),String.valueOf(gr2.getSlider4Fv()),
-                String.valueOf(gr2.getSlider5Iv()),String.valueOf(gr2.getSlider5Fv()),
-                String.valueOf(gr2.getSlider6Iv()),String.valueOf(gr2.getSlider6Fv()),
-                String.valueOf(games.get(2).getNumberOfDaystoSoonerDate()),String.valueOf(games.get(2).getNumberOfDaystoLaterDate()),
-                String.valueOf(games.get(2).getExchangeRate1()),String.valueOf(games.get(2).getExchangeRate2()),String.valueOf(games.get(2).getExchangeRate3()),String.valueOf(games.get(2).getExchangeRate4()),String.valueOf(games.get(2).getExchangeRate5()),String.valueOf(games.get(2).getExchangeRate6()),
-                String.valueOf(gr3.getSlider1Iv()),String.valueOf(gr3.getSlider1Fv()),
-                String.valueOf(gr3.getSlider2Iv()),String.valueOf(gr3.getSlider2Fv()),
-                String.valueOf(gr3.getSlider3Iv()),String.valueOf(gr3.getSlider3Fv()),
-                String.valueOf(gr3.getSlider4Iv()),String.valueOf(gr3.getSlider4Fv()),
-                String.valueOf(gr3.getSlider5Iv()),String.valueOf(gr3.getSlider5Fv()),
-                String.valueOf(gr3.getSlider6Iv()),String.valueOf(gr3.getSlider6Fv()),
-                String.valueOf(games.get(3).getNumberOfDaystoSoonerDate()),String.valueOf(games.get(3).getNumberOfDaystoLaterDate()),
-                String.valueOf(games.get(3).getExchangeRate1()),String.valueOf(games.get(3).getExchangeRate2()),String.valueOf(games.get(3).getExchangeRate3()),String.valueOf(games.get(3).getExchangeRate4()),String.valueOf(games.get(3).getExchangeRate5()),String.valueOf(games.get(3).getExchangeRate6()),
-                String.valueOf(gr4.getSlider1Iv()),String.valueOf(gr4.getSlider1Fv()),
-                String.valueOf(gr4.getSlider2Iv()),String.valueOf(gr4.getSlider2Fv()),
-                String.valueOf(gr4.getSlider3Iv()),String.valueOf(gr4.getSlider3Fv()),
-                String.valueOf(gr4.getSlider4Iv()),String.valueOf(gr4.getSlider4Fv()),
-                String.valueOf(gr4.getSlider5Iv()),String.valueOf(gr4.getSlider5Fv()),
-                String.valueOf(gr4.getSlider6Iv()),String.valueOf(gr4.getSlider6Fv()),
-                String.valueOf(games.get(4).getNumberOfDaystoSoonerDate()),String.valueOf(games.get(4).getNumberOfDaystoLaterDate()),
-                String.valueOf(games.get(4).getExchangeRate1()),String.valueOf(games.get(4).getExchangeRate2()),String.valueOf(games.get(4).getExchangeRate3()),String.valueOf(games.get(4).getExchangeRate4()),String.valueOf(games.get(4).getExchangeRate5()),String.valueOf(games.get(4).getExchangeRate6()),
-                String.valueOf(gr5.getSlider1Iv()),String.valueOf(gr5.getSlider1Fv()),
-                String.valueOf(gr5.getSlider2Iv()),String.valueOf(gr5.getSlider2Fv()),
-                String.valueOf(gr5.getSlider3Iv()),String.valueOf(gr5.getSlider3Fv()),
-                String.valueOf(gr5.getSlider4Iv()),String.valueOf(gr5.getSlider4Fv()),
-                String.valueOf(gr5.getSlider5Iv()),String.valueOf(gr5.getSlider5Fv()),
-                String.valueOf(gr5.getSlider6Iv()),String.valueOf(gr5.getSlider6Fv()),
-                String.valueOf(games.get(5).getNumberOfDaystoSoonerDate()),String.valueOf(games.get(5).getNumberOfDaystoLaterDate()),
-                String.valueOf(games.get(5).getExchangeRate1()),String.valueOf(games.get(5).getExchangeRate2()),String.valueOf(games.get(5).getExchangeRate3()),String.valueOf(games.get(5).getExchangeRate4()),String.valueOf(games.get(5).getExchangeRate5()),String.valueOf(games.get(5).getExchangeRate6()),
-                String.valueOf(gr6.getSlider1Iv()),String.valueOf(gr6.getSlider1Fv()),
-                String.valueOf(gr6.getSlider2Iv()),String.valueOf(gr6.getSlider2Fv()),
-                String.valueOf(gr6.getSlider3Iv()),String.valueOf(gr6.getSlider3Fv()),
-                String.valueOf(gr6.getSlider4Iv()),String.valueOf(gr6.getSlider4Fv()),
-                String.valueOf(gr6.getSlider5Iv()),String.valueOf(gr6.getSlider5Fv()),
-                String.valueOf(gr6.getSlider6Iv()),String.valueOf(gr6.getSlider6Fv()),
-        };
-
-
-        writer.writeNext(data);
-
-        writer.close();
-    }
-    */
 }
