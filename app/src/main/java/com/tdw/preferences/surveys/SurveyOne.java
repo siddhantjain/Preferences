@@ -1,11 +1,20 @@
 package com.tdw.preferences.surveys;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
+import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -17,6 +26,7 @@ import com.tdw.preferences.models.game;
 import com.tdw.preferences.models.gameResult;
 import com.tdw.preferences.utils.CalendarDecorator;
 import com.tdw.preferences.utils.DataStore;
+import com.tdw.preferences.utils.InstructionsDialog;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -293,8 +303,6 @@ public class SurveyOne extends AppCompatActivity {
             public void onStopTrackingTouch(SeekBar seekBar) {
             }
         });
-
-
     }
 
     public void startNextGame (View view) {
@@ -305,5 +313,9 @@ public class SurveyOne extends AppCompatActivity {
         //For the normal app
         //Intent intent = new Intent(SurveyOne.this,SurveyOneF.class);
         startActivity(intent);
+    }
+
+    public void showInstructionsDialog(View view){
+        InstructionsDialog.showDialog(this);
     }
 }

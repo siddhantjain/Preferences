@@ -1,5 +1,7 @@
 package com.tdw.preferences;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
@@ -28,60 +30,60 @@ public class UserInformation extends AppCompatActivity {
     }
 
     public void startGames (View view) {
+        AlertDialog alertDialog = new AlertDialog.Builder(this).create();
+        alertDialog.setTitle(getApplicationContext().getString(R.string.instructions_title));
+        alertDialog.setMessage(getApplicationContext().getString(R.string.instructions_body));
+        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "Continue",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        etUserName = (EditText) findViewById(R.id.etUserName);
+                        etUserLocation = (EditText) findViewById(R.id.etUserLocation);
 
-        etUserName = (EditText) findViewById(R.id.etUserName);
-        etUserLocation = (EditText) findViewById(R.id.etUserLocation);
+                        String userName, userLocation;
+                        userName = etUserName.getText().toString();
+                        userLocation = etUserLocation.getText().toString();
 
-        String userName, userLocation;
-        userName = etUserName.getText().toString();
-        userLocation = etUserLocation.getText().toString();
+                        List<user> userList = DataStore.getUserList();
 
-        /*
-            siddhant: Confirm with Aki on how Datastore works
-            Creating a new user object.
-            Getting list of existing users from datastore
-            adding to that list
-            setting list of users in Datastore
-        */
+                        long numberOfUsers = userList.size();
+                        user currentUser = new user();
 
-        List<user> userList = DataStore.getUserList();
+                        currentUser.setId(numberOfUsers+1);
 
-        long numberOfUsers = userList.size();
-        user currentUser = new user();
+                        if(userName!=null){
+                            currentUser.setName(userName);
+                        }
+                        else{
+                            //TODO: show error message
+                        }
 
-        currentUser.setId(numberOfUsers+1);
+                        if(userLocation!=null){
+                            currentUser.setLocation(userLocation);
+                        }
+                        else{
+                            //TODO: show error message
+                        }
 
-        if(userName!=null){
-            currentUser.setName(userName);
-        }
-        else{
-            //TODO: show error message
-        }
+                        userList.add(currentUser);
+                        DataStore.setUserList(userList);
 
-        if(userLocation!=null){
-            currentUser.setLocation(userLocation);
-        }
-        else{
-            //TODO: show error message
-        }
+                        // Testing datastore logic
+                        userList = DataStore.getUserList();
+                        for(int i=0;i<userList.size();i++){
+                            System.out.println(userList.get(i).getName());
+                            System.out.println(userList.get(i).getLocation());
+                        }
 
-        userList.add(currentUser);
-        DataStore.setUserList(userList);
-
-        // Testing datastore logic
-        userList = DataStore.getUserList();
-        for(int i=0;i<userList.size();i++){
-            System.out.println(userList.get(i).getName());
-            System.out.println(userList.get(i).getLocation());
-        }
-
-        List<game> gamesList = DataStore.getGameList();
-        System.out.println(gamesList.size());
-        for(int i=0;i<gamesList.size();i++){
-            System.out.println(gamesList.get(i).getExchangeRate1());
-        }
-
-        Intent intent = new Intent(UserInformation.this,SurveyOne.class);
-        startActivity(intent);
+                        List<game> gamesList = DataStore.getGameList();
+                        System.out.println(gamesList.size());
+                        for(int i=0;i<gamesList.size();i++){
+                            System.out.println(gamesList.get(i).getExchangeRate1());
+                        }
+                        dialog.dismiss();
+                        Intent intent = new Intent(UserInformation.this, SurveyOne.class);
+                        startActivity(intent);
+                    }
+                });
+        alertDialog.show();
     }
 }

@@ -14,4 +14,13 @@
     <string name="game5_result">game5_result</string>
     <string name="game6_result">game6_result</string>
     <string name="game1f_result">game1f_result</string>
+    <string name="full_screen_popup">full_screen_popup</string>
+    <string name="instructions_title">Instructions</string>
+    <string name="instructions_body">Instructions
+    Instruction Instructions
+    More Instructions</string>
+    <string name="instructions_button_text">Close</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
 </resources>
