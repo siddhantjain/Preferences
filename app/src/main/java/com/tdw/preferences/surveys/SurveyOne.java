@@ -309,13 +309,24 @@ public class SurveyOne extends AppCompatActivity {
         gameResult gr1 = new gameResult(mSlider1InitialValue.getText().toString(),mSlider1FinalValue.getText().toString(),mSlider2InitialValue.getText().toString(),mSlider2FinalValue.getText().toString(),mSlider3InitialValue.getText().toString(),mSlider3FinalValue.getText().toString(),mSlider4InitialValue.getText().toString(),mSlider4FinalValue.getText().toString(),mSlider5InitialValue.getText().toString(),mSlider5FinalValue.getText().toString(),mSlider6InitialValue.getText().toString(),mSlider6FinalValue.getText().toString());
         DataStore.setSurveyOneResult(gr1);
         //Just for Beta version
-        Intent intent = new Intent(SurveyOne.this,SurveyOneF.class);
+        AlertDialog alertDialog = new AlertDialog.Builder(this).create();
+        alertDialog.setTitle(getApplicationContext().getString(R.string.instructions_title));
+        alertDialog.setMessage(getApplicationContext().getString(R.string.instructions_f_body));
+        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "Continue",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                        Intent intent = new Intent(SurveyOne.this,SurveyOneF.class);
+                        startActivity(intent);
+                    }
+                });
+        alertDialog.show();
         //For the normal app
         //Intent intent = new Intent(SurveyOne.this,SurveyOneF.class);
-        startActivity(intent);
+        //startActivity(intent);
     }
 
     public void showInstructionsDialog(View view){
-        InstructionsDialog.showDialog(this);
+        InstructionsDialog.showDialog(this,"E");
     }
 }

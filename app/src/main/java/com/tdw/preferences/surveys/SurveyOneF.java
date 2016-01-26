@@ -19,6 +19,7 @@ import com.tdw.preferences.models.gameResult;
 import com.tdw.preferences.models.user;
 import com.tdw.preferences.utils.CalendarDecorator;
 import com.tdw.preferences.utils.DataStore;
+import com.tdw.preferences.utils.InstructionsDialog;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -472,5 +473,8 @@ public class SurveyOneF extends AppCompatActivity {
         };
         writer.writeNext(data);
         writer.close();
+    }
+    public void showInstructionsDialog(View view){
+        InstructionsDialog.showDialog(this, "F");
     }
 }

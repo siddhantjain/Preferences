@@ -16,10 +16,9 @@
     <string name="game1f_result">game1f_result</string>
     <string name="full_screen_popup">full_screen_popup</string>
     <string name="instructions_title">Instructions</string>
-    <string name="instructions_body">Instructions
-    Instruction Instructions
-    More Instructions</string>
+    <string name="instructions_body">1. Use the sliders to allocate your mobile recharge gift between today and the Later date in each question.\n\n2. The base recharge is 20 INR each day.\n\n3. Please be sure to complete the decisions in each group before submitting. You can go back and change the answers before submission.</string>
     <string name="instructions_button_text">Close</string>
+    <string name="instructions_f_body">1. Use the sliders to allocate your steps between Sooner and Later days.\n\n2. The base steps are 4000 steps each day.\n\n3. You would receive 2000 INR cash in exchange for completing the steps as specified.\n\n4. Please be sure to complete the decisions in each group before submitting. You can go back and change the answers before submission.</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
