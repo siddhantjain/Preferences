@@ -15,9 +15,11 @@ import com.squareup.timessquare.CalendarPickerView;
 import com.tdw.preferences.models.game;
 import com.tdw.preferences.models.user;
 import com.tdw.preferences.surveys.SurveyOne;
+import com.tdw.preferences.utils.CalendarDecorator;
 import com.tdw.preferences.utils.DataStore;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Collections;
 import java.util.Date;
@@ -65,7 +67,7 @@ public class TestUserUnderstanding extends AppCompatActivity {
         dates.add(mDateHolder.getTime());
         mDateHolder.add(Calendar.DATE, numDaysToLaterDate-numDaysToSoonerDate);
         dates.add(mDateHolder.getTime());
-        mCalendar.setDecorators(Collections.<CalendarCellDecorator>emptyList());
+        mCalendar.setDecorators(Arrays.<CalendarCellDecorator>asList(new CalendarDecorator()));
         mCalendar.init(new Date(), mNextMonth.getTime()) //
                 .inMode(CalendarPickerView.SelectionMode.MULTIPLE) //
                 .withSelectedDates(dates)
@@ -188,13 +190,13 @@ public class TestUserUnderstanding extends AppCompatActivity {
         foDialogBuilder.setTitle(surveyorDialogTitleReference);
         foDialogBuilder.setMessage(surveyorDialogBodyReference);
         foDialogBuilder.setButton(AlertDialog.BUTTON_POSITIVE, "Yes",
-                    new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int which) {
-                            dialog.dismiss();
-                            Intent intent = new Intent(TestUserUnderstanding.this, SurveyOne.class);
-                            startActivity(intent);
-                        }
-                    });
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                        Intent intent = new Intent(TestUserUnderstanding.this, SurveyOne.class);
+                        startActivity(intent);
+                    }
+                });
 
         foDialogBuilder.setButton(AlertDialog.BUTTON_NEGATIVE, "No",
                 new DialogInterface.OnClickListener() {
