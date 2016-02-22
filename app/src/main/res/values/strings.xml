@@ -14,8 +14,28 @@
     <string name="game5_result">game5_result</string>
     <string name="game6_result">game6_result</string>
     <string name="game1f_result">game1f_result</string>
+
+    <!--Dialog box strings-->
     <string name="full_screen_popup">full_screen_popup</string>
     <string name="instructions_title">Instructions</string>
+    <string name="E0C_title">Are you the surveyor?</string>
+    <string name="E0C_body">Press continue if you are the surveyor\n\n Please hand over the tablet to the surveyor if you are not the surveyor</string>
+    <string name="E0D_title">Does the respondent understand their allocation?</string>
+    <string name="E0D_body">FO, ask: How much recharge did you decide to receive in 7 days when the exchange rate was 1:1.25 (i.e. in question E0b), and how much in 28 days?</string>
+    <string name="E0E_title">Does the respondent understand their allocation?</string>
+    <string name="E0E_body">FO, ask: How much recharge did you decide to receive in 7 days when the exchange rate was 1:1.25 (i.e. in question E0b), and how much in 28 days?
+\n\n(FO, note: The allocation to the later date is quite large in E0a. Please make sure the respondent understands this and has a reason.
+</string>
+    <string name="E0F_title">Does the respondent understand their allocation?</string>
+    <string name="E0F_body">FO, ask: How much recharge did you decide to receive in 7 days when the exchange rate was 1:1.25 (i.e. in question E0b), and how much in 28 days?
+\n\n(FO, note: The respondent chose less later recharge in E0b than in E0a, even though they could start from the same amount of later recharge as the had in E0a and still get more sooner recharge than they had in E0a.)
+</string>
+    <string name="E0G_title">Does the respondent understand their allocation?</string>
+    <string name="E0G_body">FO, ask: How much recharge did you decide to receive in 7 days when the exchange rate was 1:1.25 (i.e. in question E0b), and how much in 28 days?
+\n\n(FO, note: The allocation to the later date is quite large in E0a. Please make sure the respondent understands this and has a reason.
+\n\nAlso, the respondent chose less “later” recharge in E0b than in E0a, even though they could start from the same amount of later recharge as the had in E0a and still get more sooner recharge than they had in E0a.)
+</string>
+    <string name="instructions_test_body">1. Use the sliders to allocate your mobile recharge gift between today and the Later date in each question.\n\n2. The base recharge is 20 INR each day.\n\n3. When you are finished with the first two choices, please hand the surveyor back the tablet for review.</string>
     <string name="instructions_body">1. Use the sliders to allocate your mobile recharge gift between today and the Later date in each question.\n\n2. The base recharge is 20 INR each day.\n\n3. Please be sure to complete the decisions in each group before submitting. You can go back and change the answers before submission.</string>
     <string name="instructions_button_text">Close</string>
     <string name="instructions_f_body">1. Use the sliders to allocate your steps between Sooner and Later days.\n\n2. The base steps are 4000 steps each day.\n\n3. You would receive 2000 INR cash in exchange for completing the steps as specified.\n\n4. Please be sure to complete the decisions in each group before submitting. You can go back and change the answers before submission.</string>

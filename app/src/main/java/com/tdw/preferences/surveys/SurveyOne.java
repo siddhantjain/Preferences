@@ -21,9 +21,11 @@ import android.widget.TextView;
 import com.squareup.timessquare.CalendarCellDecorator;
 import com.squareup.timessquare.CalendarPickerView;
 import com.tdw.preferences.R;
+import com.tdw.preferences.TestUserUnderstanding;
 import com.tdw.preferences.UserInformation;
 import com.tdw.preferences.models.game;
 import com.tdw.preferences.models.gameResult;
+import com.tdw.preferences.models.user;
 import com.tdw.preferences.utils.CalendarDecorator;
 import com.tdw.preferences.utils.DataStore;
 import com.tdw.preferences.utils.InstructionsDialog;
@@ -78,6 +80,20 @@ public class SurveyOne extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_survey_one);
+
+        /*showing instructions*/
+
+        AlertDialog alertDialog = new AlertDialog.Builder(this).create();
+        alertDialog.setTitle(getApplicationContext().getString(R.string.instructions_title));
+        alertDialog.setMessage(getApplicationContext().getString(R.string.instructions_body));
+        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "Continue",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+        alertDialog.show();
+
 
         /*Getting values from data store*/
         List<game> gameList = DataStore.getGameList();

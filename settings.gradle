@@ -1,2 +1,1 @@
-include ':app'
-include ':libs:android-square'
+include ':libs:android-square', ':app', ':libs'

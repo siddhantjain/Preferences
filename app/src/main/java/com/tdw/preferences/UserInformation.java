@@ -32,7 +32,7 @@ public class UserInformation extends AppCompatActivity {
     public void startGames (View view) {
         AlertDialog alertDialog = new AlertDialog.Builder(this).create();
         alertDialog.setTitle(getApplicationContext().getString(R.string.instructions_title));
-        alertDialog.setMessage(getApplicationContext().getString(R.string.instructions_body));
+        alertDialog.setMessage(getApplicationContext().getString(R.string.instructions_test_body));
         alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "Continue",
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
@@ -80,7 +80,7 @@ public class UserInformation extends AppCompatActivity {
                             System.out.println(gamesList.get(i).getExchangeRate1());
                         }
                         dialog.dismiss();
-                        Intent intent = new Intent(UserInformation.this, SurveyOne.class);
+                        Intent intent = new Intent(UserInformation.this, TestUserUnderstanding.class);
                         startActivity(intent);
                     }
                 });

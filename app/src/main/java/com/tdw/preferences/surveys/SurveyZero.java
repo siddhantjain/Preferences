@@ -41,7 +41,7 @@ public class SurveyZero extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_survey_zero);
 
-        /*Getting values from data store*/
+
         int numDaysToSoonerDate = 7;
         int numDaysToLaterDate = 28;
         final float exchangeRateOne = 1.0f;
