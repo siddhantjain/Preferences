@@ -83,7 +83,6 @@
                     android:text = "rightValue"
                     android:id="@+id/tvGame0Slider2Right"
                     android:layout_alignParentEnd="true" />
-
             </RelativeLayout>
 
         </LinearLayout>

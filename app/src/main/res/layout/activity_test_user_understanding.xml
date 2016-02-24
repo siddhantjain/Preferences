@@ -16,16 +16,33 @@
         android:weightSum="100">
         <com.squareup.timessquare.CalendarPickerView
             android:id="@+id/cvGame0CurrentMonth"
-            android:layout_width="400dp"
-            android:layout_height="400dp"
-            android:layout_centerInParent="true"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:layout_gravity = "center"
             android:layout_weight="30"
+            android:layout_marginBottom="20dp"
             />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Recharge in X days"
+            android:layout_alignParentStart="true"
+            android:id = "@+id/tvGame0SoonerDateLabel"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Recharge in X days"
+            android:layout_alignParentEnd="true"
+            android:id = "@+id/tvGame0LaterDateLabel"/>
+        </RelativeLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_weight="30">
+            android:layout_weight="20">
             <SeekBar
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -46,6 +63,12 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text = "Exchange Rate"
+                    android:id="@+id/tvGame0Slider1Center"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="right"
                     android:layout_alignParentEnd="true"
                     android:text = "rightvalue"
@@ -59,7 +82,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_weight="40">
+            android:layout_weight="20">
             <SeekBar
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -80,6 +103,12 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text = "Exchange Rate"
+                    android:id="@+id/tvGame0Slider2Center"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text = "rightValue"
                     android:id="@+id/tvGame0Slider2Right"
                     android:layout_alignParentEnd="true" />
@@ -87,13 +116,34 @@
             </RelativeLayout>
 
         </LinearLayout>
-        <Button
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:id = "@+id/btnGame0SubmitBtn"
-            android:layout_gravity="center"
-            android:text="Submit"
-            android:onClick="doUnderstandingCheck"/>
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_weight="30">
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id = "@+id/btnGame0SubmitBtn"
+                android:layout_gravity="center"
+                android:text="Submit"
+                android:onClick="doUnderstandingCheck"
+                android:layout_weight="1"
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"/>
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id = "@+id/btnGame0InstructionsBtn"
+                android:text = "Instructions"
+                android:layout_gravity="center"
+                android:onClick="showInstructionsDialog"
+                android:layout_weight="1"
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"/>
+
+        </LinearLayout>
     </LinearLayout>
 </RelativeLayout>
 

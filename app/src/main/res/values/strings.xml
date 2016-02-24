@@ -35,7 +35,9 @@
 \n\n(FO, note: The allocation to the later date is quite large in E0a. Please make sure the respondent understands this and has a reason.
 \n\nAlso, the respondent chose less “later” recharge in E0b than in E0a, even though they could start from the same amount of later recharge as the had in E0a and still get more sooner recharge than they had in E0a.)
 </string>
-    <string name="instructions_test_body">1. Use the sliders to allocate your mobile recharge gift between today and the Later date in each question.\n\n2. The base recharge is 20 INR each day.\n\n3. When you are finished with the first two choices, please hand the surveyor back the tablet for review.</string>
+    <string name="instructions_test_body"> 1. Use the sliders to allocate your mobile recharge gift between 7 and 28 days from today.\n\n 2. The base recharge is 20 INR each day; the extra gift can be divided between the “Sooner” and “Later” date according to the Exchange Rate.
+\n\n 3. When you are finished with the first two choices, please hand the surveyor back the tablet for review.
+</string>
     <string name="instructions_body">1. Use the sliders to allocate your mobile recharge gift between today and the Later date in each question.\n\n2. The base recharge is 20 INR each day.\n\n3. Please be sure to complete the decisions in each group before submitting. You can go back and change the answers before submission.</string>
     <string name="instructions_button_text">Close</string>
     <string name="instructions_f_body">1. Use the sliders to allocate your steps between Sooner and Later days.\n\n2. The base steps are 4000 steps each day.\n\n3. You would receive 2000 INR cash in exchange for completing the steps as specified.\n\n4. Please be sure to complete the decisions in each group before submitting. You can go back and change the answers before submission.</string>

@@ -139,6 +139,20 @@ public class TestUserUnderstanding extends AppCompatActivity {
 
     private AlertDialog foDialogBuilder;
 
+    public void showInstructionsDialog(View view)
+    {
+        AlertDialog alertDialog = new AlertDialog.Builder(this).create();
+        alertDialog.setTitle(getApplicationContext().getString(R.string.instructions_title));
+        alertDialog.setMessage(getApplicationContext().getString(R.string.instructions_test_body));
+        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL,"Ok",
+                new DialogInterface.OnClickListener(){
+                    public void onClick(DialogInterface dialog, int which)
+                    {
+                        dialog.dismiss();
+                    }
+                });
+        alertDialog.show();
+    }
     public void doUnderstandingCheck (View view) {
 
         AlertDialog alertDialog = new AlertDialog.Builder(this).create();
