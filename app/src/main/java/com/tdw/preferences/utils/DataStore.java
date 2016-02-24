@@ -52,7 +52,6 @@ public class DataStore {
             setGameList(gamesList);
             initGameDefaults();
         }
-
     }
 
     public static void initGameDefaults(){
@@ -250,5 +249,13 @@ public class DataStore {
         SharedPreferences.Editor SPEditor = gameDataStore.edit();
         SPEditor.putString(mContext.getString(R.string.game1f_result), gr1str);
         SPEditor.commit();
+    }
+    public static String getAndroidId(){
+        return gameDataStore.getString(mContext.getString(R.string.android_id),"");
+    }
+    public static void setAndroidId(String androidId){
+        SharedPreferences.Editor editor = gameDataStore.edit();
+        editor.putString(mContext.getString(R.string.android_id), androidId);
+        editor.commit();
     }
 }

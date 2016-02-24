@@ -1,7 +1,10 @@
 package com.tdw.preferences.utils;
 
 import android.os.Environment;
+import android.provider.Settings;
 import android.util.Log;
+import android.app.Activity;
+import android.content.Context;
 
 import com.opencsv.CSVWriter;
 import com.tdw.preferences.models.game;
@@ -19,7 +22,7 @@ import java.util.List;
  * Created by akash.jatangi on 1/26/16.
  */
 public class SurveyResults {
-    public static void writeToFile() throws IOException {
+    public void writeToFile() throws IOException {
         gameResult gr1 = DataStore.getSurveyOneResult();
         gameResult gr2 = DataStore.getSurveyTwoResult();
         gameResult gr3 = DataStore.getSurveyThreeResult();
@@ -27,6 +30,10 @@ public class SurveyResults {
         gameResult gr5 = DataStore.getSurveyFiveResult();
         gameResult gr6 = DataStore.getSurveySixResult();
         gameResult gr1f = DataStore.getSurveyOneFResult();
+        SimpleDateFormat s = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        SimpleDateFormat fnft = new SimpleDateFormat("yyyy-MM-dd");
+        String datestr = s.format(new Date());
+        String fNameDateStr = fnft.format(new Date());
 
         List<user> users = DataStore.getUserList();
         user u = users.get(users.size() - 1);
@@ -34,7 +41,7 @@ public class SurveyResults {
         List<game> games = DataStore.getGameList();
 
         //String baseDir = android.os.Environment.getExternalStorageDirectory().getAbsolutePath();
-        String fileName = "SurveyResults.csv";
+        String fileName = String.valueOf(DataStore.getAndroidId())+"_"+fNameDateStr+"_SurveyResults.csv";
         //String filePath = baseDir + File.separator + fileName;
         File f = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS),fileName);
         Log.v("FILEWRITE", f.getAbsolutePath());
@@ -110,8 +117,6 @@ public class SurveyResults {
             writer.writeNext(headers);
             Log.v("FILEWRITE","Wrote headers");
         }
-        SimpleDateFormat s = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        String datestr = s.format(new Date());
         String[] data = {String.valueOf(datestr),
                 String.valueOf(u.getId()),String.valueOf(u.getName()),String.valueOf(u.getLocation()),
                 String.valueOf(games.get(0).getNumberOfDaystoSoonerDate()),String.valueOf(games.get(0).getNumberOfDaystoLaterDate()),
