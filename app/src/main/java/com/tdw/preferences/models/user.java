@@ -31,4 +31,14 @@ public class user {
     private long id;
     private String name;
     private String location;
+
+    public int getBaselineSteps() {
+        return baselineSteps;
+    }
+
+    public void setBaselineSteps(int baselineSteps) {
+        this.baselineSteps = baselineSteps;
+    }
+
+    private int baselineSteps;
 }

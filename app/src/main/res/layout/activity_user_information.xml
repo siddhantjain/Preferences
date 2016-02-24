@@ -17,19 +17,19 @@
         >
 
         <EditText
-            android:id = "@+id/etUserName"
+            android:id = "@+id/etUserID"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:hint = "Enter your name"
+            android:hint = "Enter Unique ID of respondent"
             />
 
         <EditText
-            android:id = "@+id/etUserLocation"
+            android:id = "@+id/etBaseLineSteps"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:hint = "Enter village name"/>
+            android:hint = "Enter baseline steps of section F"/>
 
         <Button
             android:id = "@+id/btnSubmitUserInformation"

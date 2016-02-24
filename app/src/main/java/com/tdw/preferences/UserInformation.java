@@ -19,8 +19,8 @@ import java.util.List;
 
 public class UserInformation extends AppCompatActivity {
 
-    private EditText etUserName;
-    private EditText etUserLocation;
+    private EditText etUserID;
+    private EditText etBaselineSteps;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,12 +36,13 @@ public class UserInformation extends AppCompatActivity {
         alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "Continue",
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
-                        etUserName = (EditText) findViewById(R.id.etUserName);
-                        etUserLocation = (EditText) findViewById(R.id.etUserLocation);
+                        etUserID = (EditText) findViewById(R.id.etUserID);
+                        etBaselineSteps = (EditText) findViewById(R.id.etBaseLineSteps);
 
-                        String userName, userLocation;
-                        userName = etUserName.getText().toString();
-                        userLocation = etUserLocation.getText().toString();
+                        String userID;
+                        Integer userBaselineSteps;
+                        userID = etUserID.getText().toString();
+                        userBaselineSteps = Integer.valueOf(etBaselineSteps.getText().toString());
 
                         List<user> userList = DataStore.getUserList();
 
@@ -50,15 +51,15 @@ public class UserInformation extends AppCompatActivity {
 
                         currentUser.setId(numberOfUsers+1);
 
-                        if(userName!=null){
-                            currentUser.setName(userName);
+                        if(userID!=null){
+                            currentUser.setName(userID);
                         }
                         else{
                             //TODO: show error message
                         }
 
-                        if(userLocation!=null){
-                            currentUser.setLocation(userLocation);
+                        if(userBaselineSteps!=null){
+                            currentUser.setBaselineSteps(userBaselineSteps);
                         }
                         else{
                             //TODO: show error message
