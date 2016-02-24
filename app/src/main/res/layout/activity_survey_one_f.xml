@@ -50,6 +50,7 @@
                 android:id="@+id/sbGame1FSlider1"
                 android:progress="50"
                 android:max="100"
+                android:progressTint="@color/seekBarTint"
                 />
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -90,6 +91,7 @@
                 android:id="@+id/sbGame1FSlider2"
                 android:progress="50"
                 android:max="100"
+                android:progressTint="@color/seekBarTint"
                 />
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -130,6 +132,7 @@
                 android:id="@+id/sbGame1FSlider3"
                 android:progress="50"
                 android:max="100"
+                android:progressTint="@color/seekBarTint"
                 />
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -171,6 +174,7 @@
                 android:id="@+id/sbGame1FSlider4"
                 android:progress="50"
                 android:max="100"
+                android:progressTint="@color/seekBarTint"
                 />
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -204,6 +208,7 @@
                 android:id="@+id/sbGame1FSlider5"
                 android:progress="50"
                 android:max="100"
+                android:progressTint="@color/seekBarTint"
                 />
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -239,6 +244,7 @@
                 android:id="@+id/sbGame1FSlider6"
                 android:progress="50"
                 android:max="100"
+                android:progressTint="@color/seekBarTint"
                 />
             <RelativeLayout
                 android:layout_width="match_parent"
