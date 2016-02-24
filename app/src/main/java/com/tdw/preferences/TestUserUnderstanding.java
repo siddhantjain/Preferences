@@ -80,12 +80,12 @@ public class TestUserUnderstanding extends AppCompatActivity {
         mSlider1 = (SeekBar) findViewById(R.id.sbGame0Slider1);
         mSlider1InitialValue = (TextView) findViewById(R.id.tvGame0Slider1Left);
         mSlider1FinalValue = (TextView) findViewById(R.id.tvGame0Slider1Right);
-        mSlider2ExchangeRateValue = (TextView) findViewById(R.id.tvGame1Slider1Center);
+        mSlider1ExchangeRateValue = (TextView) findViewById(R.id.tvGame0Slider1Center);
 
         mSlider2 = (SeekBar) findViewById(R.id.sbGame0Slider2);
         mSlider2InitialValue = (TextView) findViewById(R.id.tvGame0Slider2Left);
         mSlider2FinalValue = (TextView) findViewById(R.id.tvGame0Slider2Right);
-        mSlider2ExchangeRateValue = (TextView) findViewById(R.id.tvGame1Slider1Center);
+        mSlider2ExchangeRateValue = (TextView) findViewById(R.id.tvGame0Slider2Center);
 
 
         int initialSlider1Progress = mSlider1.getProgress();
@@ -223,7 +223,7 @@ public class TestUserUnderstanding extends AppCompatActivity {
                         Intent intent = new Intent(TestUserUnderstanding.this, TestUserUnderstanding.class);
                         startActivity(intent);
                     }
-                    });
+                });
 
 
         foDialogBuilder.show();
