@@ -33,10 +33,12 @@ public class TestUserUnderstanding extends AppCompatActivity {
     private SeekBar mSlider1;
     private TextView mSlider1InitialValue;
     private TextView mSlider1FinalValue;
+    private TextView mSlider1ExchangeRateValue;
 
     private SeekBar mSlider2;
     private TextView mSlider2InitialValue;
     private TextView mSlider2FinalValue;
+    private TextView mSlider2ExchangeRateValue;
 
     private String surveyorDialogTitleReference;
     private String surveyorDialogBodyReference;
@@ -78,11 +80,12 @@ public class TestUserUnderstanding extends AppCompatActivity {
         mSlider1 = (SeekBar) findViewById(R.id.sbGame0Slider1);
         mSlider1InitialValue = (TextView) findViewById(R.id.tvGame0Slider1Left);
         mSlider1FinalValue = (TextView) findViewById(R.id.tvGame0Slider1Right);
+        mSlider2ExchangeRateValue = (TextView) findViewById(R.id.tvGame1Slider1Center);
 
         mSlider2 = (SeekBar) findViewById(R.id.sbGame0Slider2);
         mSlider2InitialValue = (TextView) findViewById(R.id.tvGame0Slider2Left);
         mSlider2FinalValue = (TextView) findViewById(R.id.tvGame0Slider2Right);
-
+        mSlider2ExchangeRateValue = (TextView) findViewById(R.id.tvGame1Slider1Center);
 
 
         int initialSlider1Progress = mSlider1.getProgress();
@@ -91,6 +94,7 @@ public class TestUserUnderstanding extends AppCompatActivity {
         int FV1OnStartup = (int)((double)fixedamount + ((double)variableamount*(double)proportion*(double)exchangeRateOne));
         mSlider1InitialValue.setText(Integer.toString(IV1OnStartup));
         mSlider1FinalValue.setText(Integer.toString(FV1OnStartup));
+        mSlider1ExchangeRateValue.setText("Exchange Rate: 1:" + Float.toString(exchangeRateOne));
 
         int initialSlider2Progress = mSlider2.getProgress();
         proportion = (double)initialSlider2Progress/(double)100;
@@ -98,6 +102,7 @@ public class TestUserUnderstanding extends AppCompatActivity {
         int FV2OnStartup = (int) ((double)fixedamount + ((double)variableamount*(double)proportion*(double)exchangeRateTwo));
         mSlider2InitialValue.setText(Integer.toString(IV2OnStartup));
         mSlider2FinalValue.setText(Integer.toString(FV2OnStartup));
+        mSlider2ExchangeRateValue.setText("Exchange Rate: 1:" + Float.toString(exchangeRateTwo));
 
         mSlider1.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             int progress = 0;
@@ -144,10 +149,9 @@ public class TestUserUnderstanding extends AppCompatActivity {
         AlertDialog alertDialog = new AlertDialog.Builder(this).create();
         alertDialog.setTitle(getApplicationContext().getString(R.string.instructions_title));
         alertDialog.setMessage(getApplicationContext().getString(R.string.instructions_test_body));
-        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL,"Ok",
-                new DialogInterface.OnClickListener(){
-                    public void onClick(DialogInterface dialog, int which)
-                    {
+        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "Ok",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();
                     }
                 });
