@@ -69,7 +69,7 @@ public class SurveyOneF extends AppCompatActivity {
 
 
     /*HardCoded Variables - TO BE REMOVED*/
-    int fixedamount = 2000;
+    int fixedamount = DataStore.getSurveyFBaselineSteps();
     int variableamount = 10000;
 
     final int GAME_NUMBER = 1;
@@ -315,7 +315,7 @@ public class SurveyOneF extends AppCompatActivity {
         gameResult gr = new gameResult(mSlider1InitialValue.getText().toString(),mSlider1FinalValue.getText().toString(),mSlider2InitialValue.getText().toString(),mSlider2FinalValue.getText().toString(),mSlider3InitialValue.getText().toString(),mSlider3FinalValue.getText().toString(),mSlider4InitialValue.getText().toString(),mSlider4FinalValue.getText().toString(),mSlider5InitialValue.getText().toString(),mSlider5FinalValue.getText().toString(),mSlider6InitialValue.getText().toString(),mSlider6FinalValue.getText().toString());
         DataStore.setSurveyOneFResult(gr);
 //        WriteResultsToFile();
-        String android_id = Settings.Secure.getString(this.getContentResolver(), Settings.Secure.ANDROID_ID);
+//        String android_id = Settings.Secure.getString(this.getContentResolver(), Settings.Secure.ANDROID_ID);
         SurveyResults sr = new SurveyResults();
         sr.writeToFile();
 

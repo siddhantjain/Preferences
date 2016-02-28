@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 import com.tdw.preferences.R;
+import com.tdw.preferences.models.TestUserResult;
 import com.tdw.preferences.models.game;
 import com.tdw.preferences.models.gameResult;
 import com.tdw.preferences.models.user;
@@ -242,7 +243,7 @@ public class DataStore {
         }
         Gson gson = new Gson();
         String grstr = gameDataStore.getString(mContext.getString(R.string.game1f_result), null);
-        return gson.fromJson(grstr,gameResult.class);
+        return gson.fromJson(grstr, gameResult.class);
     }
     public static void setSurveyOneFResult(gameResult gr){
         Gson gson = new Gson();
@@ -250,5 +251,53 @@ public class DataStore {
         SharedPreferences.Editor SPEditor = gameDataStore.edit();
         SPEditor.putString(mContext.getString(R.string.game1f_result), gr1str);
         SPEditor.commit();
+    }
+    public static String getAndroidId(){
+        return gameDataStore.getString(mContext.getString(R.string.android_id), "");
+    }
+    public static void setAndroidId(String androidId){
+        SharedPreferences.Editor editor = gameDataStore.edit();
+        editor.putString(mContext.getString(R.string.android_id), androidId);
+        editor.commit();
+    }
+    public static TestUserResult getTestUserResultOne(){
+        if(!gameDataStore.contains(mContext.getString(R.string.test_user_result_one))){
+            TestUserResult testUserResult = new TestUserResult();
+            return testUserResult;
+        }
+        Gson gson = new Gson();
+        String trstr = gameDataStore.getString(mContext.getString(R.string.test_user_result_one), null);
+        return gson.fromJson(trstr, TestUserResult.class);
+    }
+    public static void setTestUserResultOne(TestUserResult testUserResult){
+        Gson gson = new Gson();
+        String trstr = gson.toJson(testUserResult);
+        SharedPreferences.Editor SPEditor = gameDataStore.edit();
+        SPEditor.putString(mContext.getString(R.string.test_user_result_one), trstr);
+        SPEditor.commit();
+    }
+    public static TestUserResult getTestUserResultTwo(){
+        if(!gameDataStore.contains(mContext.getString(R.string.test_user_result_two))){
+            TestUserResult testUserResult = new TestUserResult();
+            return testUserResult;
+        }
+        Gson gson = new Gson();
+        String trstr = gameDataStore.getString(mContext.getString(R.string.test_user_result_two), null);
+        return gson.fromJson(trstr, TestUserResult.class);
+    }
+    public static void setTestUserResultTwo(TestUserResult testUserResult){
+        Gson gson = new Gson();
+        String trstr = gson.toJson(testUserResult);
+        SharedPreferences.Editor SPEditor = gameDataStore.edit();
+        SPEditor.putString(mContext.getString(R.string.test_user_result_two), trstr);
+        SPEditor.commit();
+    }
+    public static int getSurveyFBaselineSteps(){
+        return gameDataStore.getInt(mContext.getString(R.string.surveyf_baseline_steps), 2000);
+    }
+    public static void setSurveyFBaselineSteps(int surveyfBaselineSteps){
+        SharedPreferences.Editor editor = gameDataStore.edit();
+        editor.putInt(mContext.getString(R.string.surveyf_baseline_steps), surveyfBaselineSteps);
+        editor.commit();
     }
 }

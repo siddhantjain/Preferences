@@ -46,6 +46,7 @@ public class UserInformation extends AppCompatActivity {
                         Integer userBaselineSteps;
                         userID = etUserID.getText().toString();
                         userBaselineSteps = Integer.valueOf(etBaselineSteps.getText().toString());
+                        DataStore.setSurveyFBaselineSteps(userBaselineSteps);
 
                         List<user> userList = DataStore.getUserList();
 

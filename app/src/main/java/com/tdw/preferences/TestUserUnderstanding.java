@@ -12,7 +12,9 @@ import android.widget.TextView;
 
 import com.squareup.timessquare.CalendarCellDecorator;
 import com.squareup.timessquare.CalendarPickerView;
+import com.tdw.preferences.models.TestUserResult;
 import com.tdw.preferences.models.game;
+import com.tdw.preferences.models.gameResult;
 import com.tdw.preferences.models.user;
 import com.tdw.preferences.surveys.SurveyOne;
 import com.tdw.preferences.utils.CalendarDecorator;
@@ -45,6 +47,9 @@ public class TestUserUnderstanding extends AppCompatActivity {
 
     int fixedamount = 20;
     int variableamount = 100;
+
+    public static int maxTriesTest = 2;
+    public static int currTry = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -158,10 +163,13 @@ public class TestUserUnderstanding extends AppCompatActivity {
         alertDialog.show();
     }
     public void doUnderstandingCheck (View view) {
+        currTry+=1;
 
         AlertDialog alertDialog = new AlertDialog.Builder(this).create();
         alertDialog.setTitle(getApplicationContext().getString(R.string.E0C_title));
         alertDialog.setMessage(getApplicationContext().getString(R.string.E0C_body));
+
+        final TestUserResult testUserResult = new TestUserResult(mSlider1InitialValue.getText().toString(),mSlider1FinalValue.getText().toString(),mSlider2InitialValue.getText().toString(),mSlider2FinalValue.getText().toString());
 
         alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "Continue",
                 new DialogInterface.OnClickListener() {
@@ -193,6 +201,13 @@ public class TestUserUnderstanding extends AppCompatActivity {
                         }
                         /*old stuff*/
                         dialog.dismiss();
+                        if(currTry < maxTriesTest) {
+                            surveyorDialogBodyReference += "\n\nRespondent has " + String.valueOf(maxTriesTest - currTry) + " try left.\n\nDoes the respondent understand their allocation?";
+                            DataStore.setTestUserResultOne(testUserResult);
+                        }else{
+                            surveyorDialogBodyReference += "\n\nStarting survey now. Please hand the device to the respondent";
+                            DataStore.setTestUserResultTwo(testUserResult);
+                        }
                         showFODialog();
                     }
 
@@ -207,25 +222,34 @@ public class TestUserUnderstanding extends AppCompatActivity {
         foDialogBuilder = new AlertDialog.Builder(this).create();
         foDialogBuilder.setTitle(surveyorDialogTitleReference);
         foDialogBuilder.setMessage(surveyorDialogBodyReference);
-        foDialogBuilder.setButton(AlertDialog.BUTTON_POSITIVE, "Yes",
-                new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                        Intent intent = new Intent(TestUserUnderstanding.this, SurveyOne.class);
-                        startActivity(intent);
-                    }
-                });
+        if(currTry < maxTriesTest){
+            foDialogBuilder.setButton(AlertDialog.BUTTON_POSITIVE, "Yes",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                            Intent intent = new Intent(TestUserUnderstanding.this, SurveyOne.class);
+                            startActivity(intent);
+                        }
+                    });
 
-        foDialogBuilder.setButton(AlertDialog.BUTTON_NEGATIVE, "No",
-                new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                        Intent intent = new Intent(TestUserUnderstanding.this, TestUserUnderstanding.class);
-                        startActivity(intent);
-                    }
-                });
-
-
+            foDialogBuilder.setButton(AlertDialog.BUTTON_NEGATIVE, "No",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                            Intent intent = new Intent(TestUserUnderstanding.this, TestUserUnderstanding.class);
+                            startActivity(intent);
+                        }
+                    });
+        }else {
+            foDialogBuilder.setButton(AlertDialog.BUTTON_NEUTRAL, "Continue",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                            Intent intent = new Intent(TestUserUnderstanding.this, SurveyOne.class);
+                            startActivity(intent);
+                        }
+                    });
+        }
         foDialogBuilder.show();
     }
 }
