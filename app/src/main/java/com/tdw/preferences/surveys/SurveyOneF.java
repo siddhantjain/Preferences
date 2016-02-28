@@ -2,6 +2,7 @@ package com.tdw.preferences.surveys;
 
 import android.content.Intent;
 import android.os.Environment;
+import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -314,7 +315,9 @@ public class SurveyOneF extends AppCompatActivity {
         gameResult gr = new gameResult(mSlider1InitialValue.getText().toString(),mSlider1FinalValue.getText().toString(),mSlider2InitialValue.getText().toString(),mSlider2FinalValue.getText().toString(),mSlider3InitialValue.getText().toString(),mSlider3FinalValue.getText().toString(),mSlider4InitialValue.getText().toString(),mSlider4FinalValue.getText().toString(),mSlider5InitialValue.getText().toString(),mSlider5FinalValue.getText().toString(),mSlider6InitialValue.getText().toString(),mSlider6FinalValue.getText().toString());
         DataStore.setSurveyOneFResult(gr);
 //        WriteResultsToFile();
-        SurveyResults.writeToFile();
+        String android_id = Settings.Secure.getString(this.getContentResolver(), Settings.Secure.ANDROID_ID);
+        SurveyResults sr = new SurveyResults();
+        sr.writeToFile();
 
         //start-over - Just for BETA
         Intent intent = new Intent(SurveyOneF.this,WelcomeScreen.class);
