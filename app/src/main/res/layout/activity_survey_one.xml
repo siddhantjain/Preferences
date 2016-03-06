@@ -22,28 +22,29 @@
             android:layout_weight="20"
             android:layout_marginBottom="20dp"
             />
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text = "Recharge in X days"
-                android:layout_alignParentStart="true"
-                android:id = "@+id/tvGame1SoonerDateLabel"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text = "Recharge in X days"
-                android:layout_alignParentEnd="true"
-                android:id = "@+id/tvGame1LaterDateLabel"/>
 
-        </RelativeLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_weight="10">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text = "Recharge in X days"
+                    android:layout_alignParentStart="true"
+                    android:id = "@+id/tvGame1SoonerDateLabel"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text = "Recharge in X days"
+                    android:layout_alignParentEnd="true"
+                    android:id = "@+id/tvGame1LaterDateLabel"/>
+
+            </RelativeLayout>
             <SeekBar
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -85,6 +86,23 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_weight="10">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text = "Recharge in X days"
+                    android:layout_alignParentStart="true"
+                    android:id = "@+id/tvGame1SoonerDateLabel"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text = "Recharge in X days"
+                    android:layout_alignParentEnd="true"
+                    android:id = "@+id/tvGame1LaterDateLabel"/>
+
+            </RelativeLayout>
             <SeekBar
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -126,6 +144,23 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_weight="10">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text = "Recharge in X days"
+                    android:layout_alignParentStart="true"
+                    android:id = "@+id/tvGame1SoonerDateLabel"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text = "Recharge in X days"
+                    android:layout_alignParentEnd="true"
+                    android:id = "@+id/tvGame1LaterDateLabel"/>
+
+            </RelativeLayout>
             <SeekBar
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -168,6 +203,23 @@
             android:orientation="vertical"
             android:layout_weight="10"
             android:visibility="invisible">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text = "Recharge in X days"
+                    android:layout_alignParentStart="true"
+                    android:id = "@+id/tvGame1SoonerDateLabel"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text = "Recharge in X days"
+                    android:layout_alignParentEnd="true"
+                    android:id = "@+id/tvGame1LaterDateLabel"/>
+
+            </RelativeLayout>
             <SeekBar
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -202,6 +254,23 @@
             android:orientation="vertical"
             android:layout_weight="10"
             android:visibility="invisible">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text = "Recharge in X days"
+                    android:layout_alignParentStart="true"
+                    android:id = "@+id/tvGame1SoonerDateLabel"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text = "Recharge in X days"
+                    android:layout_alignParentEnd="true"
+                    android:id = "@+id/tvGame1LaterDateLabel"/>
+
+            </RelativeLayout>
             <SeekBar
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -238,6 +307,23 @@
             android:orientation="vertical"
             android:layout_weight="10"
             android:visibility="invisible">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text = "Recharge in X days"
+                    android:layout_alignParentStart="true"
+                    android:id = "@+id/tvGame1SoonerDateLabel"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text = "Recharge in X days"
+                    android:layout_alignParentEnd="true"
+                    android:id = "@+id/tvGame1LaterDateLabel"/>
+
+            </RelativeLayout>
             <SeekBar
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
