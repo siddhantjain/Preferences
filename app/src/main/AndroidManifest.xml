@@ -27,6 +27,11 @@
         <activity android:name=".surveys.SurveyFive" />
         <activity android:name=".surveys.SurveySix" />
         <activity android:name=".surveys.SurveyOneF" />
+        <activity android:name=".surveys.SurveyTwoF" />
+        <activity android:name=".surveys.SurveyThreeF" />
+        <activity android:name=".surveys.SurveyFourF" />
+        <activity android:name=".surveys.SurveyFiveF" />
+        <activity android:name=".surveys.SurveySixF" />
         <activity android:name=".TestUserUnderstanding" />
         <!--</activity>-->
     </application>

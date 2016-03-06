@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.tdw.preferences.surveys.SurveyOneF">
+    tools:context="com.tdw.preferences.surveys.SurveyFiveF">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,7 +15,7 @@
         android:orientation="vertical"
         android:weightSum="100">
         <com.squareup.timessquare.CalendarPickerView
-            android:id="@+id/cvGame1FCurrentMonth"
+            android:id="@+id/cvGame5FCurrentMonth"
             android:layout_width="300dp"
             android:layout_height="200dp"
             android:layout_gravity="center"
@@ -30,13 +30,13 @@
                 android:layout_height="wrap_content"
                 android:text = "Recharge in X days"
                 android:layout_alignParentStart="true"
-                android:id = "@+id/tvGame1FSoonerDateLabel"/>
+                android:id = "@+id/tvGame5FSoonerDateLabel"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text = "Recharge in X days"
                 android:layout_alignParentEnd="true"
-                android:id = "@+id/tvGame1FLaterDateLabel"/>
+                android:id = "@+id/tvGame5FLaterDateLabel"/>
 
         </RelativeLayout>
         <LinearLayout
@@ -47,7 +47,7 @@
             <SeekBar
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/sbGame2FSlider1"
+                android:id="@+id/sbGame5FSlider1"
                 android:progress="50"
                 android:max="100"
                 android:progressTint="@color/seekBarTint"
@@ -60,21 +60,21 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:text = "leftvalue"
-                    android:id="@+id/tvGame1FSlider1Left"
+                    android:id="@+id/tvGame5FSlider1Left"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:text = "Exchange Rate"
-                    android:id="@+id/tvGame1FSlider1Center"/>
+                    android:id="@+id/tvGame5FSlider1Center"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"
                     android:layout_alignParentEnd="true"
                     android:text = "rightvalue"
-                    android:id="@+id/tvGame1FSlider1Right"
+                    android:id="@+id/tvGame5FSlider1Right"
                     />
             </RelativeLayout>
 
@@ -88,7 +88,7 @@
             <SeekBar
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/sbGame1FSlider2"
+                android:id="@+id/sbGame5FSlider2"
                 android:progress="50"
                 android:max="100"
                 android:progressTint="@color/seekBarTint"
@@ -101,19 +101,19 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:text = "leftValue"
-                    android:id="@+id/tvGame1FSlider2Left"
+                    android:id="@+id/tvGame5FSlider2Left"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:text = "Exchange Rate"
-                    android:id="@+id/tvGame1FSlider2Center"/>
+                    android:id="@+id/tvGame5FSlider2Center"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text = "rightValue"
-                    android:id="@+id/tvGame1FSlider2Right"
+                    android:id="@+id/tvGame5FSlider2Right"
                     android:layout_alignParentEnd="true" />
 
             </RelativeLayout>
@@ -129,7 +129,7 @@
             <SeekBar
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/sbGame1FSlider3"
+                android:id="@+id/sbGame5FSlider3"
                 android:progress="50"
                 android:max="100"
                 android:progressTint="@color/seekBarTint"
@@ -142,19 +142,19 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:text = "leftValue"
-                    android:id="@+id/tvGame1FSlider3Left"
+                    android:id="@+id/tvGame5FSlider3Left"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:text = "Exchange Rate"
-                    android:id="@+id/tvGame1FSlider3Center"/>
+                    android:id="@+id/tvGame5FSlider3Center"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text = "rightValue"
-                    android:id="@+id/tvGame1FSlider3Right"
+                    android:id="@+id/tvGame5FSlider3Right"
                     android:layout_alignParentEnd="true" />
 
             </RelativeLayout>
@@ -171,7 +171,7 @@
             <SeekBar
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/sbGame1FSlider4"
+                android:id="@+id/sbGame5FSlider4"
                 android:progress="50"
                 android:max="100"
                 android:progressTint="@color/seekBarTint"
@@ -184,13 +184,13 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:text = "leftValue"
-                    android:id="@+id/tvGame1FSlider4Left"
+                    android:id="@+id/tvGame5FSlider4Left"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text = "rightValue"
-                    android:id="@+id/tvGame1FSlider4Right"
+                    android:id="@+id/tvGame5FSlider4Right"
                     android:layout_alignParentEnd="true" />
 
             </RelativeLayout>
@@ -205,7 +205,7 @@
             <SeekBar
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/sbGame1FSlider5"
+                android:id="@+id/sbGame5FSlider5"
                 android:progress="50"
                 android:max="100"
                 android:progressTint="@color/seekBarTint"
@@ -218,13 +218,13 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:text = "leftValue"
-                    android:id="@+id/tvGame1FSlider5Left"
+                    android:id="@+id/tvGame5FSlider5Left"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text = "rightValue"
-                    android:id="@+id/tvGame1FSlider5Right"
+                    android:id="@+id/tvGame5FSlider5Right"
                     android:layout_alignParentEnd="true" />
 
             </RelativeLayout>
@@ -241,7 +241,7 @@
             <SeekBar
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/sbGame1FSlider6"
+                android:id="@+id/sbGame5FSlider6"
                 android:progress="50"
                 android:max="100"
                 android:progressTint="@color/seekBarTint"
@@ -254,13 +254,13 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:text = "leftValue"
-                    android:id="@+id/tvGame1FSlider6Left"
+                    android:id="@+id/tvGame5FSlider6Left"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text = "rightValue"
-                    android:id="@+id/tvGame1FSlider6Right"
+                    android:id="@+id/tvGame5FSlider6Right"
                     android:layout_alignParentEnd="true" />
 
             </RelativeLayout>
@@ -275,7 +275,7 @@
             <Button
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:id = "@+id/btnGame1FSubmitBtn"
+                android:id = "@+id/btnGame5FSubmitBtn"
                 android:text = "Submit"
                 android:layout_gravity="center"
                 android:onClick="startNextGame"
@@ -285,7 +285,7 @@
             <Button
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:id = "@+id/btnGame1FInstructionsBtn"
+                android:id = "@+id/btnGame5FInstructionsBtn"
                 android:text = "Instructions"
                 android:layout_gravity="center"
                 android:onClick="showInstructionsDialog"

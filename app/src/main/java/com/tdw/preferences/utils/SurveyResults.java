@@ -27,6 +27,11 @@ public class SurveyResults {
         gameResult gr5 = DataStore.getSurveyFiveResult();
         gameResult gr6 = DataStore.getSurveySixResult();
         gameResult gr1f = DataStore.getSurveyOneFResult();
+        gameResult gr2f = DataStore.getSurveyTwoFResult();
+        gameResult gr3f = DataStore.getSurveyThreeFResult();
+        gameResult gr4f = DataStore.getSurveyFourFResult();
+        gameResult gr5f = DataStore.getSurveyFiveFResult();
+        gameResult gr6f = DataStore.getSurveySixFResult();
         SimpleDateFormat s = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         SimpleDateFormat fnft = new SimpleDateFormat("yyyy-MM-dd");
         String datestr = s.format(new Date());
@@ -110,6 +115,46 @@ public class SurveyResults {
                     "f1_slider4_iv","f1_slider4_fv",
                     "f1_slider5_iv","f1_slider5_fv",
                     "f1_slider6_iv","f1_slider6_fv",
+                    "f2_days_to_sooner_date","f2_days_to_later_date","f2_days_to_cashrewards_date",
+                    "f2_exchange_rate1","f2_exchange_rate2","f2_exchange_rate3","f2_exchange_rate4","f2_exchange_rate5","f2_exchange_rate6",
+                    "f2_slider1_iv","f2_slider1_fv",
+                    "f2_slider2_iv","f2_slider2_fv",
+                    "f2_slider3_iv","f2_slider3_fv",
+                    "f2_slider4_iv","f2_slider4_fv",
+                    "f2_slider5_iv","f2_slider5_fv",
+                    "f2_slider6_iv","f2_slider6_fv",
+                    "f3_days_to_sooner_date","f3_days_to_later_date","f3_days_to_cashrewards_date",
+                    "f3_exchange_rate1","f3_exchange_rate2","f3_exchange_rate3","f3_exchange_rate4","f3_exchange_rate5","f3_exchange_rate6",
+                    "f3_slider1_iv","f3_slider1_fv",
+                    "f3_slider2_iv","f3_slider2_fv",
+                    "f3_slider3_iv","f3_slider3_fv",
+                    "f3_slider4_iv","f3_slider4_fv",
+                    "f3_slider5_iv","f3_slider5_fv",
+                    "f3_slider6_iv","f3_slider6_fv",
+                    "f4_days_to_sooner_date","f4_days_to_later_date","f4_days_to_cashrewards_date",
+                    "f4_exchange_rate1","f4_exchange_rate2","f4_exchange_rate3","f4_exchange_rate4","f4_exchange_rate5","f4_exchange_rate6",
+                    "f4_slider1_iv","f4_slider1_fv",
+                    "f4_slider2_iv","f4_slider2_fv",
+                    "f4_slider3_iv","f4_slider3_fv",
+                    "f4_slider4_iv","f4_slider4_fv",
+                    "f4_slider5_iv","f4_slider5_fv",
+                    "f4_slider6_iv","f4_slider6_fv",
+                    "f5_days_to_sooner_date","f5_days_to_later_date","f5_days_to_cashrewards_date",
+                    "f5_exchange_rate1","f5_exchange_rate2","f5_exchange_rate3","f5_exchange_rate4","f5_exchange_rate5","f5_exchange_rate6",
+                    "f5_slider1_iv","f5_slider1_fv",
+                    "f5_slider2_iv","f5_slider2_fv",
+                    "f5_slider3_iv","f5_slider3_fv",
+                    "f5_slider4_iv","f5_slider4_fv",
+                    "f5_slider5_iv","f5_slider5_fv",
+                    "f5_slider6_iv","f5_slider6_fv",
+                    "f6_days_to_sooner_date","f6_days_to_later_date","f6_days_to_cashrewards_date",
+                    "f6_exchange_rate1","f6_exchange_rate2","f6_exchange_rate3","f6_exchange_rate4","f6_exchange_rate5","f6_exchange_rate6",
+                    "f6_slider1_iv","f6_slider1_fv",
+                    "f6_slider2_iv","f6_slider2_fv",
+                    "f6_slider3_iv","f6_slider3_fv",
+                    "f6_slider4_iv","f6_slider4_fv",
+                    "f6_slider5_iv","f6_slider5_fv",
+                    "f6_slider6_iv","f6_slider6_fv"
             };
             writer.writeNext(headers);
             Log.v("FILEWRITE","Wrote headers");
@@ -172,6 +217,46 @@ public class SurveyResults {
                 String.valueOf(gr1f.getSlider4Iv()),String.valueOf(gr1f.getSlider4Fv()),
                 String.valueOf(gr1f.getSlider5Iv()),String.valueOf(gr1f.getSlider5Fv()),
                 String.valueOf(gr1f.getSlider6Iv()),String.valueOf(gr1f.getSlider6Fv()),
+                String.valueOf(games.get(7).getNumberOfDaystoSoonerDate()),String.valueOf(games.get(7).getNumberOfDaystoLaterDate()),String.valueOf(games.get(7).getNumberOfDaystoCashRewardDate()),
+                String.valueOf(games.get(7).getExchangeRate1()),String.valueOf(games.get(7).getExchangeRate2()),String.valueOf(games.get(7).getExchangeRate3()),String.valueOf(games.get(7).getExchangeRate4()),String.valueOf(games.get(7).getExchangeRate5()),String.valueOf(games.get(7).getExchangeRate6()),
+                String.valueOf(gr2f.getSlider1Iv()),String.valueOf(gr2f.getSlider1Fv()),
+                String.valueOf(gr2f.getSlider2Iv()),String.valueOf(gr2f.getSlider2Fv()),
+                String.valueOf(gr2f.getSlider3Iv()),String.valueOf(gr2f.getSlider3Fv()),
+                String.valueOf(gr2f.getSlider4Iv()),String.valueOf(gr2f.getSlider4Fv()),
+                String.valueOf(gr2f.getSlider5Iv()),String.valueOf(gr2f.getSlider5Fv()),
+                String.valueOf(gr2f.getSlider6Iv()),String.valueOf(gr2f.getSlider6Fv()),
+                String.valueOf(games.get(8).getNumberOfDaystoSoonerDate()),String.valueOf(games.get(8).getNumberOfDaystoLaterDate()),String.valueOf(games.get(8).getNumberOfDaystoCashRewardDate()),
+                String.valueOf(games.get(8).getExchangeRate1()),String.valueOf(games.get(8).getExchangeRate2()),String.valueOf(games.get(8).getExchangeRate3()),String.valueOf(games.get(8).getExchangeRate4()),String.valueOf(games.get(8).getExchangeRate5()),String.valueOf(games.get(8).getExchangeRate6()),
+                String.valueOf(gr3f.getSlider1Iv()),String.valueOf(gr3f.getSlider1Fv()),
+                String.valueOf(gr3f.getSlider2Iv()),String.valueOf(gr3f.getSlider2Fv()),
+                String.valueOf(gr3f.getSlider3Iv()),String.valueOf(gr3f.getSlider3Fv()),
+                String.valueOf(gr3f.getSlider4Iv()),String.valueOf(gr3f.getSlider4Fv()),
+                String.valueOf(gr3f.getSlider5Iv()),String.valueOf(gr3f.getSlider5Fv()),
+                String.valueOf(gr3f.getSlider6Iv()),String.valueOf(gr3f.getSlider6Fv()),
+                String.valueOf(games.get(9).getNumberOfDaystoSoonerDate()),String.valueOf(games.get(9).getNumberOfDaystoLaterDate()),String.valueOf(games.get(9).getNumberOfDaystoCashRewardDate()),
+                String.valueOf(games.get(9).getExchangeRate1()),String.valueOf(games.get(9).getExchangeRate2()),String.valueOf(games.get(9).getExchangeRate3()),String.valueOf(games.get(9).getExchangeRate4()),String.valueOf(games.get(9).getExchangeRate5()),String.valueOf(games.get(9).getExchangeRate6()),
+                String.valueOf(gr4f.getSlider1Iv()),String.valueOf(gr4f.getSlider1Fv()),
+                String.valueOf(gr4f.getSlider2Iv()),String.valueOf(gr4f.getSlider2Fv()),
+                String.valueOf(gr4f.getSlider3Iv()),String.valueOf(gr4f.getSlider3Fv()),
+                String.valueOf(gr4f.getSlider4Iv()),String.valueOf(gr4f.getSlider4Fv()),
+                String.valueOf(gr4f.getSlider5Iv()),String.valueOf(gr4f.getSlider5Fv()),
+                String.valueOf(gr4f.getSlider6Iv()),String.valueOf(gr4f.getSlider6Fv()),
+                String.valueOf(games.get(10).getNumberOfDaystoSoonerDate()),String.valueOf(games.get(10).getNumberOfDaystoLaterDate()),String.valueOf(games.get(10).getNumberOfDaystoCashRewardDate()),
+                String.valueOf(games.get(10).getExchangeRate1()),String.valueOf(games.get(10).getExchangeRate2()),String.valueOf(games.get(10).getExchangeRate3()),String.valueOf(games.get(10).getExchangeRate4()),String.valueOf(games.get(10).getExchangeRate5()),String.valueOf(games.get(10).getExchangeRate6()),
+                String.valueOf(gr5f.getSlider1Iv()),String.valueOf(gr5f.getSlider1Fv()),
+                String.valueOf(gr5f.getSlider2Iv()),String.valueOf(gr5f.getSlider2Fv()),
+                String.valueOf(gr5f.getSlider3Iv()),String.valueOf(gr5f.getSlider3Fv()),
+                String.valueOf(gr5f.getSlider4Iv()),String.valueOf(gr5f.getSlider4Fv()),
+                String.valueOf(gr5f.getSlider5Iv()),String.valueOf(gr5f.getSlider5Fv()),
+                String.valueOf(gr5f.getSlider6Iv()),String.valueOf(gr5f.getSlider6Fv()),
+                String.valueOf(games.get(11).getNumberOfDaystoSoonerDate()),String.valueOf(games.get(11).getNumberOfDaystoLaterDate()),String.valueOf(games.get(11).getNumberOfDaystoCashRewardDate()),
+                String.valueOf(games.get(11).getExchangeRate1()),String.valueOf(games.get(11).getExchangeRate2()),String.valueOf(games.get(11).getExchangeRate3()),String.valueOf(games.get(11).getExchangeRate4()),String.valueOf(games.get(11).getExchangeRate5()),String.valueOf(games.get(11).getExchangeRate6()),
+                String.valueOf(gr6f.getSlider1Iv()),String.valueOf(gr6f.getSlider1Fv()),
+                String.valueOf(gr6f.getSlider2Iv()),String.valueOf(gr6f.getSlider2Fv()),
+                String.valueOf(gr6f.getSlider3Iv()),String.valueOf(gr6f.getSlider3Fv()),
+                String.valueOf(gr6f.getSlider4Iv()),String.valueOf(gr6f.getSlider4Fv()),
+                String.valueOf(gr6f.getSlider5Iv()),String.valueOf(gr6f.getSlider5Fv()),
+                String.valueOf(gr6f.getSlider6Iv()),String.valueOf(gr6f.getSlider6Fv()),
         };
         writer.writeNext(data);
         writer.close();

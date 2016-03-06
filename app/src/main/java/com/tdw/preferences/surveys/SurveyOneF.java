@@ -1,36 +1,27 @@
 package com.tdw.preferences.surveys;
 
 import android.content.Intent;
-import android.os.Environment;
-import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-import com.opencsv.CSVWriter;
 import com.squareup.timessquare.CalendarCellDecorator;
 import com.squareup.timessquare.CalendarPickerView;
 import com.tdw.preferences.R;
 import com.tdw.preferences.WelcomeScreen;
 import com.tdw.preferences.models.game;
 import com.tdw.preferences.models.gameResult;
-import com.tdw.preferences.models.user;
 import com.tdw.preferences.utils.CalendarDecorator;
 import com.tdw.preferences.utils.DataStore;
 import com.tdw.preferences.utils.InstructionsDialog;
 import com.tdw.preferences.utils.SurveyResults;
 
-import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
-import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
@@ -126,7 +117,7 @@ public class SurveyOneF extends AppCompatActivity {
 
 
         /*SeekBar Computation*/
-        mSlider1 = (SeekBar) findViewById(R.id.sbGame1FSlider1);
+        mSlider1 = (SeekBar) findViewById(R.id.sbGame2FSlider1);
         mSlider1InitialValue = (TextView) findViewById(R.id.tvGame1FSlider1Left);
         mSlider1FinalValue = (TextView) findViewById(R.id.tvGame1FSlider1Right);
         mSlider1ExchangeRateValue  = (TextView) findViewById(R.id.tvGame1FSlider1Center);
@@ -314,15 +305,18 @@ public class SurveyOneF extends AppCompatActivity {
     public void startNextGame (View view) throws IOException {
         gameResult gr = new gameResult(mSlider1InitialValue.getText().toString(),mSlider1FinalValue.getText().toString(),mSlider2InitialValue.getText().toString(),mSlider2FinalValue.getText().toString(),mSlider3InitialValue.getText().toString(),mSlider3FinalValue.getText().toString(),mSlider4InitialValue.getText().toString(),mSlider4FinalValue.getText().toString(),mSlider5InitialValue.getText().toString(),mSlider5FinalValue.getText().toString(),mSlider6InitialValue.getText().toString(),mSlider6FinalValue.getText().toString());
         DataStore.setSurveyOneFResult(gr);
+        Intent intent = new Intent(SurveyOneF.this,SurveyTwoF.class);
+        startActivity(intent);
 //        WriteResultsToFile();
 //        String android_id = Settings.Secure.getString(this.getContentResolver(), Settings.Secure.ANDROID_ID);
-        SurveyResults sr = new SurveyResults();
-        sr.writeToFile();
+//        SurveyResults sr = new SurveyResults();
+//        sr.writeToFile();
 
         //start-over - Just for BETA
-        Intent intent = new Intent(SurveyOneF.this,WelcomeScreen.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        startActivity(intent);
+//        Intent intent = new Intent(SurveyOneF.this,WelcomeScreen.class);
+//        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//        startActivity(intent);
+
     }
     public void showInstructionsDialog(View view){
         InstructionsDialog.showDialog(this,"F");

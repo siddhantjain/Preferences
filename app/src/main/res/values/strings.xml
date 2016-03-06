@@ -14,6 +14,12 @@
     <string name="game5_result">game5_result</string>
     <string name="game6_result">game6_result</string>
     <string name="game1f_result">game1f_result</string>
+    <string name="game2f_result">game2f_result</string>
+    <string name="game3f_result">game3f_result</string>
+    <string name="game4f_result">game4f_result</string>
+    <string name="game5f_result">game5f_result</string>
+    <string name="game6f_result">game6f_result</string>
+
 
     <!--Dialog box strings-->
     <string name="full_screen_popup">full_screen_popup</string>

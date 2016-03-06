@@ -73,11 +73,11 @@ public class UserInformation extends AppCompatActivity {
                         DataStore.setUserList(userList);
 
                         // Testing datastore logic
-                        userList = DataStore.getUserList();
-                        for(int i=0;i<userList.size();i++){
-                            System.out.println(userList.get(i).getName());
-                            System.out.println(userList.get(i).getLocation());
-                        }
+//                        userList = DataStore.getUserList();
+//                        for(int i=0;i<userList.size();i++){
+//                            System.out.println(userList.get(i).getName());
+//                            System.out.println(userList.get(i).getLocation());
+//                        }
 
                         List<game> gamesList = DataStore.getGameList();
                         System.out.println(gamesList.size());

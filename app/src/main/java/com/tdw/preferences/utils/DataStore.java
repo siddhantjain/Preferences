@@ -61,25 +61,25 @@ public class DataStore {
         List<game> gameList = getGameList();
         float[][] interestRatesSectionE = new float[][]{
                 {1.0f, 1.1f, 1.25f, 1.0f, 1.0f, 1.0f},
-                {1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f},
-                {1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f},
-                {1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f},
+                {1.0f, 1.1f, 1.25f, 1.0f, 1.0f, 1.0f},
+                {1.25f, 1.25f, 1.25f, 1.25f, 1.0f, 1.0f},
+                {1.25f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f},
                 {1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f},
                 {1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f}
         };
-        int[] soonerDatesSectionE = {7,7,7,7,7,7};
-        int[] laterDatesSectionE = {14,14,14,14,14,14};
+        int[] soonerDatesSectionE = {7,0,0,3,7,7};
+        int[] laterDatesSectionE = {14,7,14,5,14,14};
 
         float[][] interestRatesSectionF = new float[][]{
                 {1.0f, 1.1f, 1.25f, 1.0f, 1.0f, 1.0f},
-                {1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f},
-                {1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f},
-                {1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f},
+                {1.0f, 1.1f, 1.25f, 1.0f, 1.0f, 1.0f},
+                {1.25f, 1.25f, 1.25f, 1.25f, 1.0f, 1.0f},
+                {1.25f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f},
                 {1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f},
                 {1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f}
         };
-        int[] soonerDatesSectionF = {7,7,7,7,7,7};
-        int[] laterDatesSectionF = {14,14,14,14,14,14};
+        int[] soonerDatesSectionF = {7,0,0,3,7,7};
+        int[] laterDatesSectionF = {14,7,14,5,14,14};
         int[] cashRewardDatesSectionF = {28,28,28,28,28,28};
         for(int i=0;i<numberOfGames;i++){
             game tempGameE = new game(interestRatesSectionE[i][0],interestRatesSectionE[i][1],interestRatesSectionE[i][2],interestRatesSectionE[i][3],interestRatesSectionE[i][4],interestRatesSectionE[i][5]
@@ -250,6 +250,91 @@ public class DataStore {
         String gr1str = gson.toJson(gr);
         SharedPreferences.Editor SPEditor = gameDataStore.edit();
         SPEditor.putString(mContext.getString(R.string.game1f_result), gr1str);
+        SPEditor.commit();
+    }
+    public static gameResult getSurveyTwoFResult(){
+        if(!gameDataStore.contains(mContext.getString(R.string.game2f_result))){
+            gameResult gr = new gameResult();
+            gr.initToNull();
+            return gr;
+        }
+        Gson gson = new Gson();
+        String grstr = gameDataStore.getString(mContext.getString(R.string.game2f_result), null);
+        return gson.fromJson(grstr, gameResult.class);
+    }
+    public static void setSurveyTwoFResult(gameResult gr){
+        Gson gson = new Gson();
+        String gr1str = gson.toJson(gr);
+        SharedPreferences.Editor SPEditor = gameDataStore.edit();
+        SPEditor.putString(mContext.getString(R.string.game2f_result), gr1str);
+        SPEditor.commit();
+    }
+    public static gameResult getSurveyThreeFResult(){
+        if(!gameDataStore.contains(mContext.getString(R.string.game3f_result))){
+            gameResult gr = new gameResult();
+            gr.initToNull();
+            return gr;
+        }
+        Gson gson = new Gson();
+        String grstr = gameDataStore.getString(mContext.getString(R.string.game3f_result), null);
+        return gson.fromJson(grstr, gameResult.class);
+    }
+    public static void setSurveyThreeFResult(gameResult gr){
+        Gson gson = new Gson();
+        String gr1str = gson.toJson(gr);
+        SharedPreferences.Editor SPEditor = gameDataStore.edit();
+        SPEditor.putString(mContext.getString(R.string.game3f_result), gr1str);
+        SPEditor.commit();
+    }
+    public static gameResult getSurveyFourFResult(){
+        if(!gameDataStore.contains(mContext.getString(R.string.game4f_result))){
+            gameResult gr = new gameResult();
+            gr.initToNull();
+            return gr;
+        }
+        Gson gson = new Gson();
+        String grstr = gameDataStore.getString(mContext.getString(R.string.game4f_result), null);
+        return gson.fromJson(grstr, gameResult.class);
+    }
+    public static void setSurveyFourFResult(gameResult gr){
+        Gson gson = new Gson();
+        String gr1str = gson.toJson(gr);
+        SharedPreferences.Editor SPEditor = gameDataStore.edit();
+        SPEditor.putString(mContext.getString(R.string.game4f_result), gr1str);
+        SPEditor.commit();
+    }
+    public static gameResult getSurveyFiveFResult(){
+        if(!gameDataStore.contains(mContext.getString(R.string.game5f_result))){
+            gameResult gr = new gameResult();
+            gr.initToNull();
+            return gr;
+        }
+        Gson gson = new Gson();
+        String grstr = gameDataStore.getString(mContext.getString(R.string.game5f_result), null);
+        return gson.fromJson(grstr, gameResult.class);
+    }
+    public static void setSurveyFiveFResult(gameResult gr){
+        Gson gson = new Gson();
+        String gr1str = gson.toJson(gr);
+        SharedPreferences.Editor SPEditor = gameDataStore.edit();
+        SPEditor.putString(mContext.getString(R.string.game5f_result), gr1str);
+        SPEditor.commit();
+    }
+    public static gameResult getSurveySixFResult(){
+        if(!gameDataStore.contains(mContext.getString(R.string.game6f_result))){
+            gameResult gr = new gameResult();
+            gr.initToNull();
+            return gr;
+        }
+        Gson gson = new Gson();
+        String grstr = gameDataStore.getString(mContext.getString(R.string.game6f_result), null);
+        return gson.fromJson(grstr, gameResult.class);
+    }
+    public static void setSurveySixFResult(gameResult gr){
+        Gson gson = new Gson();
+        String gr1str = gson.toJson(gr);
+        SharedPreferences.Editor SPEditor = gameDataStore.edit();
+        SPEditor.putString(mContext.getString(R.string.game6f_result), gr1str);
         SPEditor.commit();
     }
     public static String getAndroidId(){
