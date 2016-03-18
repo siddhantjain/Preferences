@@ -13,9 +13,11 @@ import com.squareup.timessquare.CalendarCellDecorator;
 import com.squareup.timessquare.CalendarPickerView;
 import com.tdw.preferences.R;
 import com.tdw.preferences.models.game;
+import com.tdw.preferences.utils.CalendarDecorator;
 import com.tdw.preferences.utils.DataStore;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Collections;
 import java.util.Date;
@@ -61,7 +63,7 @@ public class SurveyZero extends AppCompatActivity {
         dates.add(mDateHolder.getTime());
         mDateHolder.add(Calendar.DATE, numDaysToLaterDate-numDaysToSoonerDate);
         dates.add(mDateHolder.getTime());
-        mCalendar.setDecorators(Collections.<CalendarCellDecorator>emptyList());
+        mCalendar.setDecorators(Arrays.<CalendarCellDecorator>asList(new CalendarDecorator()));
         mCalendar.init(new Date(), mNextMonth.getTime()) //
                 .inMode(CalendarPickerView.SelectionMode.MULTIPLE) //
                 .withSelectedDates(dates)

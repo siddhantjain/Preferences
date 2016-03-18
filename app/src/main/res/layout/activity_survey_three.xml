@@ -13,33 +13,34 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:weightSum="100">
+        android:weightSum="200">
         <com.squareup.timessquare.CalendarPickerView
             android:id="@+id/cvGame3CurrentMonth"
-            android:layout_width="300dp"
-            android:layout_height="200dp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_weight="20"
+            android:layout_weight="120"
             android:layout_marginBottom="20dp"
             android:visibility="invisible"
             />
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:visibility="invisible">
+            android:visibility="visible">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text = "Recharge in X days"
+                android:textSize="18dp"
                 android:layout_alignParentStart="true"
-                android:id = "@+id/tvGame3SoonerDateLabel"/>
+                android:id = "@+id/tvGame3Slider1SoonerDateLabel"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text = "Recharge in X days"
+                android:textSize="18dp"
                 android:layout_alignParentEnd="true"
-                android:id = "@+id/tvGame3LaterDateLabel"/>
-
+                android:id = "@+id/tvGame3Slider1LaterDateLabel"/>
         </RelativeLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -52,7 +53,7 @@
                 android:id="@+id/sbGame3Slider1"
                 android:progress="50"
                 android:max="100"
-                android:progressTint="@color/seekBarTint"
+                android:minHeight="3dip" android:maxHeight="3dip" android:progressDrawable="@drawable/custom_progress_bar"
                 />
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -68,7 +69,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:text = "Exchange Rate"
+                     android:text = "Exchange Rate" android:textStyle="bold"
                     android:id="@+id/tvGame3Slider1Center"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -87,13 +88,32 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_weight="10">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text = "Recharge in X days"
+                    android:textSize="18dp"
+                    android:layout_alignParentStart="true"
+                    android:id = "@+id/tvGame3Slider2SoonerDateLabel"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text = "Recharge in X days"
+                    android:textSize="18dp"
+                    android:layout_alignParentEnd="true"
+                    android:id = "@+id/tvGame3Slider2LaterDateLabel"/>
+            </RelativeLayout>
             <SeekBar
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/sbGame3Slider2"
                 android:progress="50"
                 android:max="100"
-                android:progressTint="@color/seekBarTint"
+                android:minHeight="3dip" android:maxHeight="3dip" android:progressDrawable="@drawable/custom_progress_bar"
                 />
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -109,7 +129,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:text = "Exchange Rate"
+                     android:text = "Exchange Rate" android:textStyle="bold"
                     android:id="@+id/tvGame3Slider2Center"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -128,13 +148,32 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_weight="10">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text = "Recharge in X days"
+                    android:textSize="18dp"
+                    android:layout_alignParentStart="true"
+                    android:id = "@+id/tvGame3Slider3SoonerDateLabel"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text = "Recharge in X days"
+                    android:textSize="18dp"
+                    android:layout_alignParentEnd="true"
+                    android:id = "@+id/tvGame3Slider3LaterDateLabel"/>
+            </RelativeLayout>
             <SeekBar
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/sbGame3Slider3"
                 android:progress="50"
                 android:max="100"
-                android:progressTint="@color/seekBarTint"
+                android:minHeight="3dip" android:maxHeight="3dip" android:progressDrawable="@drawable/custom_progress_bar"
                 />
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -150,7 +189,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:text = "Exchange Rate"
+                     android:text = "Exchange Rate" android:textStyle="bold"
                     android:id="@+id/tvGame3Slider3Center"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -169,13 +208,32 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_weight="10">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text = "Recharge in X days"
+                    android:textSize="18dp"
+                    android:layout_alignParentStart="true"
+                    android:id = "@+id/tvGame3Slider4SoonerDateLabel"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text = "Recharge in X days"
+                    android:textSize="18dp"
+                    android:layout_alignParentEnd="true"
+                    android:id = "@+id/tvGame3Slider4LaterDateLabel"/>
+            </RelativeLayout>
             <SeekBar
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/sbGame3Slider4"
                 android:progress="50"
                 android:max="100"
-                android:progressTint="@color/seekBarTint"
+                android:minHeight="3dip" android:maxHeight="3dip" android:progressDrawable="@drawable/custom_progress_bar"
                 />
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -191,7 +249,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:text = "Exchange Rate"
+                     android:text = "Exchange Rate" android:textStyle="bold"
                     android:id="@+id/tvGame3Slider4Center"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -215,7 +273,7 @@
                 android:id="@+id/sbGame3Slider5"
                 android:progress="50"
                 android:max="100"
-                android:progressTint="@color/seekBarTint"
+                android:minHeight="3dip" android:maxHeight="3dip" android:progressDrawable="@drawable/custom_progress_bar"
                 />
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -251,7 +309,7 @@
                 android:id="@+id/sbGame3Slider6"
                 android:progress="50"
                 android:max="100"
-                android:progressTint="@color/seekBarTint"
+                android:minHeight="3dip" android:maxHeight="3dip" android:progressDrawable="@drawable/custom_progress_bar"
                 />
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -283,7 +341,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:id = "@+id/btnGame3SubmitBtn"
-                android:text = "Submit"
+                android:text = "@string/submit"
                 android:layout_gravity="center"
                 android:onClick="startNextGame"
                 android:layout_weight="1"
@@ -293,7 +351,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:id = "@+id/btnGameInstructionsBtn"
-                android:text = "Instructions"
+                android:text = "@string/instructions"
                 android:layout_gravity="center"
                 android:onClick="showInstructionsDialog"
                 android:layout_weight="1"

@@ -13,13 +13,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:weightSum="100">
+        android:weightSum="200">
         <com.squareup.timessquare.CalendarPickerView
             android:id="@+id/cvGame1FCurrentMonth"
-            android:layout_width="300dp"
-            android:layout_height="200dp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_weight="20"
+            android:layout_weight="120"
             android:layout_marginBottom="20dp"
             />
 
@@ -35,14 +35,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text = "Steps on X days"
+                    android:textSize="18dp"
                     android:layout_alignParentStart="true"
-                    android:id = "@+id/tvGame1FSoonerDateLabel"/>
+                    android:id = "@+id/tvGame1FSlider1SoonerDateLabel"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text = "Steps on X days"
+                    android:textSize="18dp"
                     android:layout_alignParentEnd="true"
-                    android:id = "@+id/tvGame1FLaterDateLabel"/>
+                    android:id = "@+id/tvGame1FSlider1LaterDateLabel"/>
 
             </RelativeLayout>
             <SeekBar
@@ -51,7 +53,7 @@
                 android:id="@+id/sbGame2FSlider1"
                 android:progress="50"
                 android:max="100"
-                android:progressTint="@color/seekBarTint"
+               android:minHeight="3dip" android:maxHeight="3dip" android:progressDrawable="@drawable/custom_progress_bar"
                 />
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -67,7 +69,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:text = "Exchange Rate"
+                     android:text = "Exchange Rate" android:textStyle="bold"
                     android:id="@+id/tvGame1FSlider1Center"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -93,14 +95,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text = "Steps on X days"
+                    android:textSize="18dp"
                     android:layout_alignParentStart="true"
-                    android:id = "@+id/tvGame1FSoonerDateLabel"/>
+                    android:id = "@+id/tvGame1FSlider2SoonerDateLabel"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text = "Steps on X days"
+                    android:textSize="18dp"
                     android:layout_alignParentEnd="true"
-                    android:id = "@+id/tvGame1FLaterDateLabel"/>
+                    android:id = "@+id/tvGame1FSlider2LaterDateLabel"/>
 
             </RelativeLayout>
             <SeekBar
@@ -109,7 +113,7 @@
                 android:id="@+id/sbGame1FSlider2"
                 android:progress="50"
                 android:max="100"
-                android:progressTint="@color/seekBarTint"
+                android:minHeight="3dip" android:maxHeight="3dip" android:progressDrawable="@drawable/custom_progress_bar"
                 />
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -125,7 +129,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:text = "Exchange Rate"
+                     android:text = "Exchange Rate" android:textStyle="bold"
                     android:id="@+id/tvGame1FSlider2Center"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -151,14 +155,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text = "Steps on X days"
+                    android:textSize="18dp"
                     android:layout_alignParentStart="true"
-                    android:id = "@+id/tvGame1FSoonerDateLabel"/>
+                    android:id = "@+id/tvGame1FSlider3SoonerDateLabel"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text = "Steps on X days"
+                    android:textSize="18dp"
                     android:layout_alignParentEnd="true"
-                    android:id = "@+id/tvGame1FLaterDateLabel"/>
+                    android:id = "@+id/tvGame1FSlider3LaterDateLabel"/>
 
             </RelativeLayout>
             <SeekBar
@@ -167,7 +173,7 @@
                 android:id="@+id/sbGame1FSlider3"
                 android:progress="50"
                 android:max="100"
-                android:progressTint="@color/seekBarTint"
+                android:minHeight="3dip" android:maxHeight="3dip" android:progressDrawable="@drawable/custom_progress_bar"
                 />
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -183,7 +189,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:text = "Exchange Rate"
+                     android:text = "Exchange Rate" android:textStyle="bold"
                     android:id="@+id/tvGame1FSlider3Center"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -210,14 +216,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text = "Steps on X days"
+                    android:textSize="18dp"
                     android:layout_alignParentStart="true"
-                    android:id = "@+id/tvGame1FSoonerDateLabel"/>
+                    android:id = "@+id/tvGame1FSlider4SoonerDateLabel"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text = "Steps on X days"
+                    android:textSize="18dp"
                     android:layout_alignParentEnd="true"
-                    android:id = "@+id/tvGame1FLaterDateLabel"/>
+                    android:id = "@+id/tvGame1FSlider4LaterDateLabel"/>
 
             </RelativeLayout>
             <SeekBar
@@ -226,7 +234,7 @@
                 android:id="@+id/sbGame1FSlider4"
                 android:progress="50"
                 android:max="100"
-                android:progressTint="@color/seekBarTint"
+                android:minHeight="3dip" android:maxHeight="3dip" android:progressDrawable="@drawable/custom_progress_bar"
                 />
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -262,13 +270,13 @@
                     android:layout_height="wrap_content"
                     android:text = "Steps on X days"
                     android:layout_alignParentStart="true"
-                    android:id = "@+id/tvGame1FSoonerDateLabel"/>
+                    android:id = "@+id/tvGame1FSlider5SoonerDateLabel"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text = "Steps on X days"
                     android:layout_alignParentEnd="true"
-                    android:id = "@+id/tvGame1FLaterDateLabel"/>
+                    android:id = "@+id/tvGame1FSlider5LaterDateLabel"/>
 
             </RelativeLayout>
             <SeekBar
@@ -277,7 +285,7 @@
                 android:id="@+id/sbGame1FSlider5"
                 android:progress="50"
                 android:max="100"
-                android:progressTint="@color/seekBarTint"
+                android:minHeight="3dip" android:maxHeight="3dip" android:progressDrawable="@drawable/custom_progress_bar"
                 />
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -315,13 +323,13 @@
                     android:layout_height="wrap_content"
                     android:text = "Steps on X days"
                     android:layout_alignParentStart="true"
-                    android:id = "@+id/tvGame1FSoonerDateLabel"/>
+                    android:id = "@+id/tvGame1FSlider6SoonerDateLabel"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text = "Steps on X days"
                     android:layout_alignParentEnd="true"
-                    android:id = "@+id/tvGame1FLaterDateLabel"/>
+                    android:id = "@+id/tvGame1Slider6FLaterDateLabel"/>
 
             </RelativeLayout>
             <SeekBar
@@ -330,7 +338,7 @@
                 android:id="@+id/sbGame1FSlider6"
                 android:progress="50"
                 android:max="100"
-                android:progressTint="@color/seekBarTint"
+                android:minHeight="3dip" android:maxHeight="3dip" android:progressDrawable="@drawable/custom_progress_bar"
                 />
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -362,7 +370,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:id = "@+id/btnGame1FSubmitBtn"
-                android:text = "Submit"
+                android:text = "@string/submit"
                 android:layout_gravity="center"
                 android:onClick="startNextGame"
                 android:layout_weight="1"
@@ -372,7 +380,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:id = "@+id/btnGame1FInstructionsBtn"
-                android:text = "Instructions"
+                android:text = "@string/instructions"
                 android:layout_gravity="center"
                 android:onClick="showInstructionsDialog"
                 android:layout_weight="1"

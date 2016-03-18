@@ -13,13 +13,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:weightSum="100">
+        android:weightSum="200">
         <com.squareup.timessquare.CalendarPickerView
             android:id="@+id/cvGame4FCurrentMonth"
-            android:layout_width="300dp"
-            android:layout_height="200dp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_weight="20"
+            android:layout_weight="120"
             android:layout_marginBottom="20dp"
             />
         <RelativeLayout
@@ -50,7 +50,7 @@
                 android:id="@+id/sbGame4FSlider1"
                 android:progress="50"
                 android:max="100"
-                android:progressTint="@color/seekBarTint"
+                android:minHeight="3dip" android:maxHeight="3dip" android:progressDrawable="@drawable/custom_progress_bar"
                 />
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -66,7 +66,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:text = "Exchange Rate"
+                     android:text = "Exchange Rate" android:textStyle="bold"
                     android:id="@+id/tvGame4FSlider1Center"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -92,7 +92,7 @@
                 android:id="@+id/sbGame4FSlider2"
                 android:progress="50"
                 android:max="100"
-                android:progressTint="@color/seekBarTint"
+                android:minHeight="3dip" android:maxHeight="3dip" android:progressDrawable="@drawable/custom_progress_bar"
                 />
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -108,7 +108,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:text = "Exchange Rate"
+                     android:text = "Exchange Rate" android:textStyle="bold"
                     android:id="@+id/tvGame4FSlider2Center"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -134,7 +134,7 @@
                 android:id="@+id/sbGame4FSlider3"
                 android:progress="50"
                 android:max="100"
-                android:progressTint="@color/seekBarTint"
+                android:minHeight="3dip" android:maxHeight="3dip" android:progressDrawable="@drawable/custom_progress_bar"
                 />
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -150,7 +150,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:text = "Exchange Rate"
+                     android:text = "Exchange Rate" android:textStyle="bold"
                     android:id="@+id/tvGame4FSlider3Center"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -176,7 +176,7 @@
                 android:id="@+id/sbGame4FSlider4"
                 android:progress="50"
                 android:max="100"
-                android:progressTint="@color/seekBarTint"
+                android:minHeight="3dip" android:maxHeight="3dip" android:progressDrawable="@drawable/custom_progress_bar"
                 />
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -192,7 +192,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:text = "Exchange Rate"
+                     android:text = "Exchange Rate" android:textStyle="bold"
                     android:id="@+id/tvGame4FSlider4Center"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -216,7 +216,7 @@
                 android:id="@+id/sbGame4FSlider5"
                 android:progress="50"
                 android:max="100"
-                android:progressTint="@color/seekBarTint"
+                android:minHeight="3dip" android:maxHeight="3dip" android:progressDrawable="@drawable/custom_progress_bar"
                 />
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -252,7 +252,7 @@
                 android:id="@+id/sbGame4FSlider6"
                 android:progress="50"
                 android:max="100"
-                android:progressTint="@color/seekBarTint"
+                android:minHeight="3dip" android:maxHeight="3dip" android:progressDrawable="@drawable/custom_progress_bar"
                 />
             <RelativeLayout
                 android:layout_width="match_parent"

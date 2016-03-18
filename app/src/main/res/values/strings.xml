@@ -58,4 +58,9 @@
     <string name="test_user_result_two">test_user_result_two</string>
 
     <string name="surveyf_baseline_steps">surveyf_baseline_steps</string>
+
+
+    <!--common strings-->
+    <string name = "instructions">Instructions</string>
+    <string name = "submit">Submit</string>
 </resources>

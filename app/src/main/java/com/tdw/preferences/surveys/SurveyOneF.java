@@ -28,6 +28,15 @@ import java.util.List;
 public class SurveyOneF extends AppCompatActivity {
 
     private CalendarPickerView mCalendar;
+    private TextView mTVSlider1SoonerDate;
+    private TextView mTVSlider1LaterDate;
+    private TextView mTVSlider2SoonerDate;
+    private TextView mTVSlider2LaterDate;
+    private TextView mTVSlider3SoonerDate;
+    private TextView mTVSlider3LaterDate;
+    private TextView mTVSlider4SoonerDate;
+    private TextView mTVSlider4LaterDate;
+
     private TextView mTVSoonerDate;
     private TextView mTVLaterDate;
 
@@ -85,11 +94,17 @@ public class SurveyOneF extends AppCompatActivity {
         final float exchangeRateFive = currGame.getExchangeRate5();
         final float exchangeRateSix = currGame.getExchangeRate6();
 
+        mTVSlider1SoonerDate = (TextView) findViewById(R.id.tvGame1FSlider1SoonerDateLabel);
+        mTVSlider1LaterDate = (TextView) findViewById(R.id.tvGame1FSlider1LaterDateLabel);
+        mTVSlider2SoonerDate = (TextView) findViewById(R.id.tvGame1FSlider2SoonerDateLabel);
+        mTVSlider2LaterDate = (TextView) findViewById(R.id.tvGame1FSlider2LaterDateLabel);
+        mTVSlider3SoonerDate = (TextView) findViewById(R.id.tvGame1FSlider3SoonerDateLabel);
+        mTVSlider3LaterDate = (TextView) findViewById(R.id.tvGame1FSlider3LaterDateLabel);
 
         /*Calendar View Computation*/
         mCalendar = (CalendarPickerView) findViewById(R.id.cvGame1FCurrentMonth);
-        mTVSoonerDate = (TextView) findViewById(R.id.tvGame1FSoonerDateLabel);
-        mTVLaterDate = (TextView) findViewById(R.id.tvGame1FLaterDateLabel);
+        mTVSoonerDate = (TextView) findViewById(R.id.tvGame1FSlider1SoonerDateLabel);
+        mTVLaterDate = (TextView) findViewById(R.id.tvGame1FSlider1LaterDateLabel);
 
         Calendar mDateHolder = Calendar.getInstance();
         Calendar mNextMonth = Calendar.getInstance();
@@ -111,8 +126,14 @@ public class SurveyOneF extends AppCompatActivity {
                 .withSelectedDates(dates)
                 .displayOnly();
 
-        mTVSoonerDate.setText("Steps on " + Integer.toString(numDaysToSoonerDate) + " days");
-        mTVLaterDate.setText("Steps on " + Integer.toString(numDaysToLaterDate) + " days");
+        mTVSlider1SoonerDate.setText("Recharge in " + Integer.toString(numDaysToSoonerDate) + " days");
+        mTVSlider1LaterDate.setText("Recharge in " + Integer.toString(numDaysToLaterDate) + " days");
+        mTVSlider2SoonerDate.setText("Recharge in " + Integer.toString(numDaysToSoonerDate) + " days");
+        mTVSlider2LaterDate.setText("Recharge in " + Integer.toString(numDaysToLaterDate) + " days");
+        mTVSlider3SoonerDate.setText("Recharge in " + Integer.toString(numDaysToSoonerDate) + " days");
+        mTVSlider3LaterDate.setText("Recharge in " + Integer.toString(numDaysToLaterDate) + " days");
+
+
 
 
 

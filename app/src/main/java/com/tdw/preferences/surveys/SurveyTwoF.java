@@ -30,8 +30,14 @@ import java.util.List;
  */
 public class SurveyTwoF extends AppCompatActivity {
     private CalendarPickerView mCalendar;
-    private TextView mTVSoonerDate;
-    private TextView mTVLaterDate;
+    private TextView mTVSlider1SoonerDate;
+    private TextView mTVSlider1LaterDate;
+    private TextView mTVSlider2SoonerDate;
+    private TextView mTVSlider2LaterDate;
+    private TextView mTVSlider3SoonerDate;
+    private TextView mTVSlider3LaterDate;
+    private TextView mTVSlider4SoonerDate;
+    private TextView mTVSlider4LaterDate;
 
     private SeekBar mSlider1;
     private TextView mSlider1InitialValue;
@@ -90,8 +96,12 @@ public class SurveyTwoF extends AppCompatActivity {
 
         /*Calendar View Computation*/
         mCalendar = (CalendarPickerView) findViewById(R.id.cvGame2FCurrentMonth);
-        mTVSoonerDate = (TextView) findViewById(R.id.tvGame2FSoonerDateLabel);
-        mTVLaterDate = (TextView) findViewById(R.id.tvGame2FLaterDateLabel);
+        mTVSlider1SoonerDate = (TextView) findViewById(R.id.tvGame2FSlider1SoonerDateLabel);
+        mTVSlider1LaterDate = (TextView) findViewById(R.id.tvGame2FSlider1LaterDateLabel);
+        mTVSlider2SoonerDate = (TextView) findViewById(R.id.tvGame2FSlider2SoonerDateLabel);
+        mTVSlider2LaterDate = (TextView) findViewById(R.id.tvGame2FSlider2LaterDateLabel);
+        mTVSlider3SoonerDate = (TextView) findViewById(R.id.tvGame2FSlider3SoonerDateLabel);
+        mTVSlider3LaterDate = (TextView) findViewById(R.id.tvGame2FSlider3LaterDateLabel);
 
         Calendar mDateHolder = Calendar.getInstance();
         Calendar mNextMonth = Calendar.getInstance();
@@ -113,9 +123,12 @@ public class SurveyTwoF extends AppCompatActivity {
                 .withSelectedDates(dates)
                 .displayOnly();
 
-        mTVSoonerDate.setText("Steps on " + Integer.toString(numDaysToSoonerDate) + " days");
-        mTVLaterDate.setText("Steps on " + Integer.toString(numDaysToLaterDate) + " days");
-
+        mTVSlider1SoonerDate.setText("Recharge in " + Integer.toString(numDaysToSoonerDate) + " days");
+        mTVSlider1LaterDate.setText("Recharge in " + Integer.toString(numDaysToLaterDate) + " days");
+        mTVSlider2SoonerDate.setText("Recharge in " + Integer.toString(numDaysToSoonerDate) + " days");
+        mTVSlider2LaterDate.setText("Recharge in " + Integer.toString(numDaysToLaterDate) + " days");
+        mTVSlider3SoonerDate.setText("Recharge in " + Integer.toString(numDaysToSoonerDate) + " days");
+        mTVSlider3LaterDate.setText("Recharge in " + Integer.toString(numDaysToLaterDate) + " days");
 
 
         /*SeekBar Computation*/

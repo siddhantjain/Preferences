@@ -89,8 +89,8 @@ public class SurveySixF extends AppCompatActivity {
 
         /*Calendar View Computation*/
         mCalendar = (CalendarPickerView) findViewById(R.id.cvGame1FCurrentMonth);
-        mTVSoonerDate = (TextView) findViewById(R.id.tvGame1FSoonerDateLabel);
-        mTVLaterDate = (TextView) findViewById(R.id.tvGame1FLaterDateLabel);
+        mTVSoonerDate = (TextView) findViewById(R.id.tvGame1FSlider1SoonerDateLabel);
+        mTVLaterDate = (TextView) findViewById(R.id.tvGame1FSlider1LaterDateLabel);
 
         Calendar mDateHolder = Calendar.getInstance();
         Calendar mNextMonth = Calendar.getInstance();

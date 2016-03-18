@@ -14,9 +14,11 @@ import com.squareup.timessquare.CalendarPickerView;
 import com.tdw.preferences.R;
 import com.tdw.preferences.models.game;
 import com.tdw.preferences.models.gameResult;
+import com.tdw.preferences.utils.CalendarDecorator;
 import com.tdw.preferences.utils.DataStore;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Collections;
 import java.util.Date;
@@ -25,10 +27,13 @@ import java.util.List;
 public class SurveyFour extends AppCompatActivity {
 
     private CalendarPickerView mCalendar;
+    private TextView mTVSlider1SoonerDate;
+    private TextView mTVSlider1LaterDate;
 
     private SeekBar mSlider1;
     private TextView mSlider1InitialValue;
     private TextView mSlider1FinalValue;
+    private TextView mSlider1ExchangeRateValue;
 
     private SeekBar mSlider2;
     private TextView mSlider2InitialValue;
@@ -76,6 +81,8 @@ public class SurveyFour extends AppCompatActivity {
 
         /*Calendar View Computation*/
         mCalendar = (CalendarPickerView) findViewById(R.id.cvGame4CurrentMonth);
+        mTVSlider1SoonerDate = (TextView) findViewById(R.id.tvGame4Slider1SoonerDateLabel);
+        mTVSlider1LaterDate = (TextView) findViewById(R.id.tvGame4Slider1LaterDateLabel);
 
         Calendar mDateHolder = Calendar.getInstance();
         Calendar mNextMonth = Calendar.getInstance();
@@ -87,17 +94,20 @@ public class SurveyFour extends AppCompatActivity {
         dates.add(mDateHolder.getTime());
         mDateHolder.add(Calendar.DATE, numDaysToLaterDate-numDaysToSoonerDate);
         dates.add(mDateHolder.getTime());
-        mCalendar.setDecorators(Collections.<CalendarCellDecorator>emptyList());
+        mCalendar.setDecorators(Arrays.<CalendarCellDecorator>asList(new CalendarDecorator()));
         mCalendar.init(new Date(), mNextMonth.getTime()) //
                 .inMode(CalendarPickerView.SelectionMode.MULTIPLE) //
                 .withSelectedDates(dates)
                 .displayOnly();
 
+        mTVSlider1SoonerDate.setText("Recharge in " + Integer.toString(numDaysToSoonerDate) + " days");
+        mTVSlider1LaterDate.setText("Recharge in " + Integer.toString(numDaysToLaterDate) + " days");
 
         /*SeekBar Computation*/
         mSlider1 = (SeekBar) findViewById(R.id.sbGame4Slider1);
         mSlider1InitialValue = (TextView) findViewById(R.id.tvGame4Slider1Left);
         mSlider1FinalValue = (TextView) findViewById(R.id.tvGame4Slider1Right);
+        mSlider1ExchangeRateValue = (TextView) findViewById(R.id.tvGame4Slider1Center);
 
         mSlider2 = (SeekBar) findViewById(R.id.sbGame4Slider2);
         mSlider2InitialValue = (TextView) findViewById(R.id.tvGame4Slider2Left);
@@ -127,6 +137,7 @@ public class SurveyFour extends AppCompatActivity {
         int FV1OnStartup = (int)((double)fixedamount + ((double)variableamount*(double)proportion*(double)exchangeRateOne));
         mSlider1InitialValue.setText(Integer.toString(IV1OnStartup));
         mSlider1FinalValue.setText(Integer.toString(FV1OnStartup));
+        mSlider1ExchangeRateValue.setText("Exchange Rate: 1:" + Float.toString(exchangeRateOne));
 
         int initialSlider2Progress = mSlider2.getProgress();
         proportion = (double)initialSlider2Progress/(double)100;

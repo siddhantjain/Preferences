@@ -5,6 +5,9 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -40,8 +43,18 @@ import java.util.List;
 public class SurveyOne extends AppCompatActivity {
 
     private CalendarPickerView mCalendar;
-    private TextView mTVSoonerDate;
-    private TextView mTVLaterDate;
+    private TextView mTVSlider1SoonerDate;
+    private TextView mTVSlider1LaterDate;
+    private TextView mTVSlider2SoonerDate;
+    private TextView mTVSlider2LaterDate;
+    private TextView mTVSlider3SoonerDate;
+    private TextView mTVSlider3LaterDate;
+    private TextView mTVSlider4SoonerDate;
+    private TextView mTVSlider4LaterDate;
+    private TextView mTVSlider5SoonerDate;
+    private TextView mTVSlider5LaterDate;
+    private TextView mTVSlider6SoonerDate;
+    private TextView mTVSlider6LaterDate;
 
     private SeekBar mSlider1;
     private TextView mSlider1InitialValue;
@@ -110,8 +123,18 @@ public class SurveyOne extends AppCompatActivity {
 
         /*Calendar View Computation*/
         mCalendar = (CalendarPickerView) findViewById(R.id.cvGame1CurrentMonth);
-        mTVSoonerDate = (TextView) findViewById(R.id.tvGame1SoonerDateLabel);
-        mTVLaterDate = (TextView) findViewById(R.id.tvGame1LaterDateLabel);
+        mTVSlider1SoonerDate = (TextView) findViewById(R.id.tvGame1Slider1SoonerDateLabel);
+        mTVSlider1LaterDate = (TextView) findViewById(R.id.tvGame1Slider1LaterDateLabel);
+        mTVSlider2SoonerDate = (TextView) findViewById(R.id.tvGame1Slider2SoonerDateLabel);
+        mTVSlider2LaterDate = (TextView) findViewById(R.id.tvGame1Slider2LaterDateLabel);
+        mTVSlider3SoonerDate = (TextView) findViewById(R.id.tvGame1Slider3SoonerDateLabel);
+        mTVSlider3LaterDate = (TextView) findViewById(R.id.tvGame1Slider3LaterDateLabel);
+        mTVSlider4SoonerDate = (TextView) findViewById(R.id.tvGame1Slider4SoonerDateLabel);
+        mTVSlider4LaterDate = (TextView) findViewById(R.id.tvGame1Slider4LaterDateLabel);
+        mTVSlider5SoonerDate = (TextView) findViewById(R.id.tvGame1Slider5SoonerDateLabel);
+        mTVSlider5LaterDate = (TextView) findViewById(R.id.tvGame1Slider5LaterDateLabel);
+        mTVSlider6SoonerDate = (TextView) findViewById(R.id.tvGame1Slider6SoonerDateLabel);
+        mTVSlider6LaterDate = (TextView) findViewById(R.id.tvGame1Slider6LaterDateLabel);
 
 
         Calendar mDateHolder = Calendar.getInstance();
@@ -122,7 +145,7 @@ public class SurveyOne extends AppCompatActivity {
         ArrayList<Date> dates = new ArrayList<Date>();
         mDateHolder.add(Calendar.DATE, numDaysToSoonerDate);
         dates.add(mDateHolder.getTime());
-        //temp hack. Lock in to why is the delta behaving weirdly.
+
         mDateHolder.add(Calendar.DATE, numDaysToLaterDate - numDaysToSoonerDate);
         dates.add(mDateHolder.getTime());
         mCalendar.setDecorators(Arrays.<CalendarCellDecorator>asList(new CalendarDecorator()));
@@ -131,8 +154,18 @@ public class SurveyOne extends AppCompatActivity {
                 .withSelectedDates(dates)
                 .displayOnly();
 
-        mTVSoonerDate.setText("Recharge in " + Integer.toString(numDaysToSoonerDate) + " days");
-        mTVLaterDate.setText("Recharge in " + Integer.toString(numDaysToLaterDate) + " days");
+        mTVSlider1SoonerDate.setText("Recharge in " + Integer.toString(numDaysToSoonerDate) + " days");
+        mTVSlider1LaterDate.setText("Recharge in " + Integer.toString(numDaysToLaterDate) + " days");
+        mTVSlider2SoonerDate.setText("Recharge in " + Integer.toString(numDaysToSoonerDate) + " days");
+        mTVSlider2LaterDate.setText("Recharge in " + Integer.toString(numDaysToLaterDate) + " days");
+        mTVSlider3SoonerDate.setText("Recharge in " + Integer.toString(numDaysToSoonerDate) + " days");
+        mTVSlider3LaterDate.setText("Recharge in " + Integer.toString(numDaysToLaterDate) + " days");
+        mTVSlider4SoonerDate.setText("Recharge in " + Integer.toString(numDaysToSoonerDate) + " days");
+        mTVSlider4LaterDate.setText("Recharge in " + Integer.toString(numDaysToLaterDate) + " days");
+        mTVSlider5SoonerDate.setText("Recharge in " + Integer.toString(numDaysToSoonerDate) + " days");
+        mTVSlider5LaterDate.setText("Recharge in " + Integer.toString(numDaysToLaterDate) + " days");
+        mTVSlider6SoonerDate.setText("Recharge in " + Integer.toString(numDaysToSoonerDate) + " days");
+        mTVSlider6LaterDate.setText("Recharge in " + Integer.toString(numDaysToLaterDate) + " days");
 
 
         /*SeekBar Computation*/
