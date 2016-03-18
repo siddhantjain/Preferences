@@ -23,25 +23,29 @@ public class CalendarDecorator implements CalendarCellDecorator {
 
 
         if(cellView.isSooner()){
-            SpannableString string = new SpannableString(dateString + "\nSoon");
+            /*SpannableString string = new SpannableString(dateString + "\nSoon");
             string.setSpan(new RelativeSizeSpan(0.5f), 0, dateString.length(),
                     Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
-            cellView.setText(string);
+            cellView.setText(string);*/
                 cellView.setBackgroundColor(Color.BLUE);
         }
-        if(cellView.isLater()) {
-            SpannableString string = new SpannableString(dateString + "\nLate");
-            string.setSpan(new RelativeSizeSpan(0.5f), 0, dateString.length(),
-                    Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
-            cellView.setText(string);
+        else if(cellView.isLater()) {
+//            SpannableString string = new SpannableString(dateString + "\nLate");
+//            string.setSpan(new RelativeSizeSpan(0.5f), 0, dateString.length(),
+//                    Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
+//            cellView.setText(string);
                 cellView.setBackgroundColor(Color.RED);
         }
-        if(cellView.isCashRewards()) {
-            SpannableString string = new SpannableString(dateString + "\nCash");
+        else if(cellView.isCashRewards()) {
+           /* SpannableString string = new SpannableString(dateString + "\nCash");
             string.setSpan(new RelativeSizeSpan(0.5f), 0, dateString.length(),
                     Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
-            cellView.setText(string);
+            cellView.setText(string);*/
                 cellView.setBackgroundColor(Color.GREEN);
+        }
+        else
+        {
+            cellView.setBackgroundResource(R.drawable.calendar_bg_selector);
         }
 
     }
