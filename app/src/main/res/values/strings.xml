@@ -46,9 +46,10 @@
     <string name="instructions_test_body"> 1. Use the sliders to allocate your mobile recharge gift between 7 and 28 days from today.\n\n 2. The base recharge is 20 INR each day; the extra gift can be divided between the “Sooner” and “Later” date according to the Exchange Rate.
 \n\n 3. When you are finished with the first two choices, please hand the surveyor back the tablet for review.
 </string>
-    <string name="instructions_body">1. Use the sliders to allocate your mobile recharge gift between today and the Later date in each question.\n\n2. The base recharge is 20 INR each day.\n\n3. Please be sure to complete the decisions in each group before submitting. You can go back and change the answers before submission.</string>
+    <string name="instructions_body">1. Use the sliders to allocate your mobile recharge gift between the sooner and the later dates according to the exchange rate.\n\n2. The base recharge is 20 INR each day.\n\n3. Please be sure to complete the decisions in each group before submitting. You can go back and change the answers before submission.</string>
     <string name="instructions_button_text">Close</string>
-    <string name="instructions_f_body">1. Use the sliders to allocate your steps between Sooner and Later days.\n\n2. The base steps are 4000 steps each day.\n\n3. You would receive 2000 INR cash in exchange for completing the steps as specified.\n\n4. Please be sure to complete the decisions in each group before submitting. You can go back and change the answers before submission.</string>
+    <string name="instructions_f_body">1. Use the sliders to allocate your steps between Sooner and Later dates according to the exchange rate.\n\n2. The base steps are </string>
+    <string name="instructions_f_body2"> steps each day.\n\n3. You would receive 2000 INR cash in 21 days in exchange for completing the steps as specified.\n\n4. Please be sure to complete the decisions in each group before submitting. You can go back and change the answers before submission.</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
@@ -58,8 +59,9 @@
     <string name="test_user_result_two">test_user_result_two</string>
 
     <string name="surveyf_baseline_steps">surveyf_baseline_steps</string>
-
-
+    <string name="e0_instruction_pt1">\n\nRespondent has </string>
+    <string name="e0_instruction_pt2"> try left.\n\nDoes the respondent understand their allocation?</string>
+    <string name="e0_instruction_pt3">\n\nStarting survey now. Please hand the device to the respondent</string>
     <!--common strings-->
     <string name = "instructions">Instructions</string>
     <string name = "submit">Submit</string>

@@ -294,13 +294,15 @@ public class SurveyFour extends AppCompatActivity {
 //        startActivity(intent);
         AlertDialog alertDialog = new AlertDialog.Builder(this).create();
         alertDialog.setTitle(getApplicationContext().getString(R.string.instructions_title));
-        alertDialog.setMessage(getApplicationContext().getString(R.string.instructions_f_body));
+        String instPart1 = getApplicationContext().getString(R.string.instructions_f_body);
+        String instPart2 = getApplicationContext().getString(R.string.instructions_f_body2);
+        alertDialog.setMessage(instPart1+" "+String.valueOf(DataStore.getSurveyFBaselineSteps())+" "+instPart2);
         alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "Continue",
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();
                         //For the Beta version
-                        Intent intent = new Intent(SurveyFour.this,SurveyOneF.class);
+                        Intent intent = new Intent(SurveyFour.this, SurveyOneF.class);
                         startActivity(intent);
                     }
                 });

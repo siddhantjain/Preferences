@@ -202,10 +202,12 @@ public class TestUserUnderstanding extends AppCompatActivity {
                         /*old stuff*/
                         dialog.dismiss();
                         if(currTry < maxTriesTest) {
-                            surveyorDialogBodyReference += "\n\nRespondent has " + String.valueOf(maxTriesTest - currTry) + " try left.\n\nDoes the respondent understand their allocation?";
+                            //surveyorDialogBodyReference += "\n\nRespondent has " + String.valueOf(maxTriesTest - currTry) + " try left.\n\nDoes the respondent understand their allocation?";
+                            surveyorDialogBodyReference += getApplicationContext().getString(R.string.e0_instruction_pt1)+" " + String.valueOf(maxTriesTest - currTry) + " " + getApplicationContext().getString(R.string.e0_instruction_pt2);
                             DataStore.setTestUserResultOne(testUserResult);
                         }else{
-                            surveyorDialogBodyReference += "\n\nStarting survey now. Please hand the device to the respondent";
+                            //surveyorDialogBodyReference += "\n\nStarting survey now. Please hand the device to the respondent";
+                            surveyorDialogBodyReference += getApplicationContext().getString(R.string.e0_instruction_pt3);
                             DataStore.setTestUserResultTwo(testUserResult);
                         }
                         showFODialog();

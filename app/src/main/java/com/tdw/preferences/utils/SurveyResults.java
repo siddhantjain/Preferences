@@ -4,6 +4,7 @@ import android.os.Environment;
 import android.util.Log;
 
 import com.opencsv.CSVWriter;
+import com.tdw.preferences.models.TestUserResult;
 import com.tdw.preferences.models.game;
 import com.tdw.preferences.models.gameResult;
 import com.tdw.preferences.models.user;
@@ -20,6 +21,8 @@ import java.util.List;
  */
 public class SurveyResults {
     public void writeToFile() throws IOException {
+        TestUserResult tur1 = DataStore.getTestUserResultOne();
+        TestUserResult tur2 = DataStore.getTestUserResultTwo();
         gameResult gr1 = DataStore.getSurveyOneResult();
         gameResult gr2 = DataStore.getSurveyTwoResult();
         gameResult gr3 = DataStore.getSurveyThreeResult();
@@ -59,6 +62,14 @@ public class SurveyResults {
             writer = new CSVWriter(new FileWriter(f));
             String[] headers = {"timestamp",
                     "user_id","user_name","user_location",
+                    "e0r1_days_to_sooner_date","e0r1_days_to_later_date",
+                    "e0r1_exchange_rate1","e0r1_exchange_rate2",
+                    "e0r1_slider1_iv","e0r1_slider1_fv",
+                    "e0r1_slider2_iv","e0r1_slider2_fv",
+                    "e0r2_days_to_sooner_date","e0r2_days_to_later_date",
+                    "e0r2_exchange_rate1","e0r2_exchange_rate2",
+                    "e0r2_slider1_iv","e0r2_slider1_fv",
+                    "e0r2_slider2_iv","e0r2_slider2_fv",
                     "e1_days_to_sooner_date","e1_days_to_later_date",
                     "e1_exchange_rate1","e1_exchange_rate2","e1_exchange_rate3","e1_exchange_rate4","e1_exchange_rate5","e1_exchange_rate6",
                     "e1_slider1_iv","e1_slider1_fv",
@@ -161,6 +172,14 @@ public class SurveyResults {
         }
         String[] data = {String.valueOf(datestr),
                 String.valueOf(u.getId()),String.valueOf(u.getName()),String.valueOf(u.getLocation()),
+                "7","28",
+                "1.0","1.25",
+                String.valueOf(tur1.getSlider1Iv()),String.valueOf(tur1.getSlider1Fv()),
+                String.valueOf(tur1.getSlider2Iv()),String.valueOf(tur1.getSlider2Fv()),
+                "7","28",
+                "1.0","1.25",
+                String.valueOf(tur2.getSlider1Iv()),String.valueOf(tur2.getSlider1Fv()),
+                String.valueOf(tur2.getSlider2Iv()),String.valueOf(tur2.getSlider2Fv()),
                 String.valueOf(games.get(0).getNumberOfDaystoSoonerDate()),String.valueOf(games.get(0).getNumberOfDaystoLaterDate()),
                 String.valueOf(games.get(0).getExchangeRate1()),String.valueOf(games.get(0).getExchangeRate2()),String.valueOf(games.get(0).getExchangeRate3()),String.valueOf(games.get(0).getExchangeRate4()),String.valueOf(games.get(0).getExchangeRate5()),String.valueOf(games.get(0).getExchangeRate6()),
                 String.valueOf(gr1.getSlider1Iv()),String.valueOf(gr1.getSlider1Fv()),

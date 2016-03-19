@@ -17,7 +17,9 @@ public class InstructionsDialog {
             alertDialog.setMessage(mContext.getString(R.string.instructions_body));
         }
         else if(section.equalsIgnoreCase("F")){
-            alertDialog.setMessage(mContext.getString(R.string.instructions_f_body));
+            String instPart1 = mContext.getString(R.string.instructions_f_body);
+            String instPart2 = mContext.getString(R.string.instructions_f_body2);
+            alertDialog.setMessage(instPart1+" "+String.valueOf(DataStore.getSurveyFBaselineSteps())+" "+instPart2);
         }
         alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, mContext.getString(R.string.instructions_button_text),
                 new DialogInterface.OnClickListener() {
