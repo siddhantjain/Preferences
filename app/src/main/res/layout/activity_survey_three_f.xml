@@ -29,14 +29,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text = "Recharge in X days"
+                android:text = "Steps in X days"
                 android:textSize="18dp"
                 android:layout_alignParentStart="true"
                 android:id = "@+id/tvGame3FSlider1SoonerDateLabel"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text = "Recharge in X days"
+                android:text = "Steps in X days"
                 android:textSize="18dp"
                 android:layout_alignParentEnd="true"
                 android:id = "@+id/tvGame3FSlider1LaterDateLabel"/>
@@ -93,14 +93,14 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text = "Recharge in X days"
+                    android:text = "Steps in X days"
                     android:textSize="18dp"
                     android:layout_alignParentStart="true"
                     android:id = "@+id/tvGame3FSlider2SoonerDateLabel"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text = "Recharge in X days"
+                    android:text = "Steps in X days"
                     android:textSize="18dp"
                     android:layout_alignParentEnd="true"
                     android:id = "@+id/tvGame3FSlider2LaterDateLabel"/>
@@ -152,14 +152,14 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text = "Recharge in X days"
+                    android:text = "Steps in X days"
                     android:textSize="18dp"
                     android:layout_alignParentStart="true"
                     android:id = "@+id/tvGame3FSlider3SoonerDateLabel"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text = "Recharge in X days"
+                    android:text = "Steps in X days"
                     android:textSize="18dp"
                     android:layout_alignParentEnd="true"
                     android:id = "@+id/tvGame3FSlider3LaterDateLabel"/>
@@ -211,14 +211,14 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text = "Recharge in X days"
+                    android:text = "Steps in X days"
                     android:textSize="18dp"
                     android:layout_alignParentStart="true"
                     android:id = "@+id/tvGame3FSlider4SoonerDateLabel"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text = "Recharge in X days"
+                    android:text = "Steps in X days"
                     android:textSize="18dp"
                     android:layout_alignParentEnd="true"
                     android:id = "@+id/tvGame3FSlider4LaterDateLabel"/>

@@ -14,6 +14,7 @@ import com.tdw.preferences.models.game;
 import com.tdw.preferences.models.gameResult;
 import com.tdw.preferences.utils.CalendarDecorator;
 import com.tdw.preferences.utils.DataStore;
+import com.tdw.preferences.utils.InstructionsDialog;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -172,7 +173,7 @@ public class SurveyTwo extends AppCompatActivity {
         int FV1OnStartup = (int)((double)fixedamount + ((double)variableamount*(double)proportion*(double)exchangeRateOne));
         mSlider1InitialValue.setText(Integer.toString(IV1OnStartup));
         mSlider1FinalValue.setText(Integer.toString(FV1OnStartup));
-        mSlider1ExchangeRateValue.setText("Exchange Rate: 1:" + Float.toString(exchangeRateOne));
+        mSlider1ExchangeRateValue.setText("Choice 1:  Exchange Rate: 1:" + Float.toString(exchangeRateOne));
 
         int initialSlider2Progress = mSlider2.getProgress();
         proportion = (double)initialSlider2Progress/(double)100;
@@ -180,7 +181,7 @@ public class SurveyTwo extends AppCompatActivity {
         int FV2OnStartup = (int) ((double)fixedamount + ((double)variableamount*(double)proportion*(double)exchangeRateTwo));
         mSlider2InitialValue.setText(Integer.toString(IV2OnStartup));
         mSlider2FinalValue.setText(Integer.toString(FV2OnStartup));
-        mSlider2ExchangeRateValue.setText("Exchange Rate: 1:" + Float.toString(exchangeRateTwo));
+        mSlider2ExchangeRateValue.setText("Choice 2: Exchange Rate: 1:" + Float.toString(exchangeRateTwo));
 
         int initialSlider3Progress = mSlider3.getProgress();
         proportion = (double)initialSlider3Progress/(double)100;
@@ -188,7 +189,7 @@ public class SurveyTwo extends AppCompatActivity {
         int FV3OnStartup = (int) ((double)fixedamount + ((double)variableamount*(double)proportion*(double)exchangeRateThree));
         mSlider3InitialValue.setText(Integer.toString(IV3OnStartup));
         mSlider3FinalValue.setText(Integer.toString(FV3OnStartup));
-        mSlider3ExchangeRateValue.setText("Exchange Rate: 1:" + Float.toString(exchangeRateThree));
+        mSlider3ExchangeRateValue.setText("Choice 3:  Exchange Rate: 1:" + Float.toString(exchangeRateThree));
 
         int initialSlider4Progress = mSlider4.getProgress();
         proportion = (double)initialSlider4Progress/(double)100;
@@ -196,7 +197,7 @@ public class SurveyTwo extends AppCompatActivity {
         int FV4OnStartup = (int) ((double)fixedamount + ((double)variableamount*(double)proportion*(double)exchangeRateFour));
         mSlider4InitialValue.setText(Integer.toString(IV4OnStartup));
         mSlider4FinalValue.setText(Integer.toString(FV4OnStartup));
-        //mSlider4ExchangeRateValue.setText("Exchange Rate: 1:" + Float.toString(exchangeRateFour));
+        //mSlider4ExchangeRateValue.setText("Choice 4: Exchange Rate: 1:" + Float.toString(exchangeRateFour));
 
         int initialSlider5Progress = mSlider5.getProgress();
         proportion = (double)initialSlider5Progress/(double)100;
@@ -331,5 +332,8 @@ public class SurveyTwo extends AppCompatActivity {
         DataStore.setSurveyTwoResult(gr);
         Intent intent = new Intent(SurveyTwo.this,SurveyThree.class);
         startActivity(intent);
+    }
+    public void showInstructionsDialog(View view){
+        InstructionsDialog.showDialog(this, "E");
     }
 }
