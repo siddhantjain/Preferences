@@ -23,7 +23,7 @@
 
     <!--Dialog box strings-->
     <string name="full_screen_popup">full_screen_popup</string>
-    <string name="instructions_title">Instructions</string>
+    <string name="instructions_title">Recharge Allocation between Sooner and Later Dates</string>
     <string name="E0C_title">Are you the surveyor?</string>
     <string name="E0C_body">Press continue if you are the surveyor\n\nPlease hand over the tablet to the surveyor if you are not the surveyor</string>
     <string name="E0D_title">Instructions</string>
