@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:weightSum="200">
+        android:weightSum="230">
         <com.squareup.timessquare.CalendarPickerView
             android:id="@+id/cvGame1CurrentMonth"
             android:layout_width="200dp"
@@ -27,7 +27,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_weight="10">
+            android:layout_weight="20"
+            >
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -58,7 +59,8 @@
                 />
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -88,7 +90,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_weight="10">
+            android:layout_weight="20"
+            >
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -118,7 +121,8 @@
                 />
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -143,12 +147,12 @@
 
 
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_weight="10">
+            android:layout_weight="20"
+            >
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -178,7 +182,8 @@
                 />
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -206,9 +211,9 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0px"
             android:orientation="vertical"
-            android:layout_weight="10"
+            android:layout_weight="0"
             android:visibility="invisible">
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -256,12 +261,11 @@
 
             </RelativeLayout>
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0px"
             android:orientation="vertical"
-            android:layout_weight="10"
+            android:layout_weight="0"
             android:visibility="invisible">
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -311,12 +315,11 @@
 
 
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0px"
             android:orientation="vertical"
-            android:layout_weight="10"
+            android:layout_weight="0"
             android:visibility="invisible">
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -366,6 +369,7 @@
 
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
