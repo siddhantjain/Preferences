@@ -60,7 +60,7 @@ public class SurveyResults {
         else {
             Log.v("FILEWRITE","New file created");
             writer = new CSVWriter(new FileWriter(f));
-            String[] headers = {"timestamp",
+            String[] headers = {"timestamp","device_android_id",
                     "user_id","user_name","user_location",
                     "e0r1_days_to_sooner_date","e0r1_days_to_later_date",
                     "e0r1_exchange_rate1","e0r1_exchange_rate2",
@@ -171,7 +171,7 @@ public class SurveyResults {
             writer.writeNext(headers);
             Log.v("FILEWRITE","Wrote headers");
         }
-        String[] data = {String.valueOf(datestr),
+        String[] data = {String.valueOf(datestr),String.valueOf(DataStore.getAndroidId()),
                 String.valueOf(u.getId()),String.valueOf(u.getName()),String.valueOf(u.getLocation()),
                 "7","28",
                 "1.0","1.25",
