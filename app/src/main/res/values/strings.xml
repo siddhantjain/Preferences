@@ -43,13 +43,13 @@
 \n\nAlso, the respondent chose less “later” recharge in E0b than in E0a, even though they could start from the same amount of later recharge as the had in E0a and still get more sooner recharge than they had in E0a.)
 
 </string>
-    <string name="instructions_test_body"> 1. Use the sliders to allocate your mobile recharge gift between 7 and 28 days from today.\n\n 2. The base recharge is 20 INR each day; the extra gift can be divided between the “Sooner” and “Later” date according to the Exchange Rate.
-\n\n 3. When you are finished with the first two choices, please hand the surveyor back the tablet for review.
+    <string name="instructions_test_body"> 1. இன்று முதல் 7 நாட்கள் மற்றும் 28 நாட்கள் இடையே உங்கள் மொபைல் ரீசார்ஜ் பரிசை ஒதுக்க ஸ்லைடர்களை பயன்படுத்தவும்.\n\n 2. அடிப்படை ரீசார்ஜ் தினமும் ரூபாய் 20 இரண்டு தேதிகளிலும் வழங்கப்படும், கூடுதல் ரீசார்ஜ் பரிசை “விரைவான” மற்றும் “தாமதமான” இரண்டு தேதிகளுக்கிடையில் பரிமாற்றவிகிதம்படி நீங்கள் பகிர்ந்தளிக்களாம்.\n\n 3. நீங்கள் முதல் இரண்டு தேர்வுகள் முடிந்ததும், தயவுசெய்து .
+ சர்வேயரிடம் டப்லட்டை பரிசீலனைக்கு கொடுக்கவும்.
 </string>
-    <string name="instructions_body">1. Use the sliders to allocate your mobile recharge gift between the sooner and the later dates according to the exchange rate.\n\n2. The base recharge is 20 INR each day.\n\n3. Please be sure to complete the decisions in each group before submitting. You can go back and change the answers before submission.</string>
+    <string name="instructions_body">1. பரிமாற்ற விகிதத்திற்கு ஏற்ப உங்களது மொபைல் ரீசார்ஜ் பரிசுகளை விரைவான மற்றும் தாமதமான தேதிகளுக்கிடையில் பகிர்ந்தளிக்க ஸ்லைடர்களை உபயோகிக் கவும்.\n\n 2. சமர்பிப்பதற்கு முன்பாக ஒவ்வொரு பிரிவிலும் உள்ள பதில்களை நிறைவு செய்வதற்கு கவனமாக இருங்கள்.  சமர்பிப்பதற்கு முன்பாக நீங்கள் மீண்டும் ஒரு முறை சென்று பதில்களை மாற்றலாம்</string>
     <string name="instructions_button_text">Close</string>
-    <string name="instructions_f_body">1. Use the sliders to allocate your steps between Sooner and Later dates according to the exchange rate.\n\n2. The base steps are </string>
-    <string name="instructions_f_body2"> steps each day.\n\n3. You would receive 2000 INR cash in 21 days in exchange for completing the steps as specified.\n\n4. Please be sure to complete the decisions in each group before submitting. You can go back and change the answers before submission.</string>
+    <string name="instructions_f_body">1. பரிமாற்ற விகிதத்திற்கு ஏற்ப உங்களது நடை அடிகளை விரைவான மற்றும் தாமதமான தேதிகளுக்கிடையில் பகிர்ந்தளிக்க ஸ்லைடர்களை உபயோகிக்கவும்.  ஒவ்வொரு நாளுக்கான அடிப்படை நடை அடிகள் </string>
+    <string name="instructions_f_body2"> ஆகும்.  குறிப்பிடப்பட்டுள்ள நடை அடிகளை (தூரத்தை) நிறைவு செய்தால் அதற்கு பதிலாக உங்களுக்கு 21 நாட்களில் ரூபாய் 2000/- வழங்கப்படும்.\n\n 2. சமர்பிப்பதற்கு முன்பாக ஒவ்வொரு பிரிவிலும் உள்ள பதில்களை நிறைவு செய்வதற்கு கவனமாக இருங்கள்.  சமர்பிப்பதற்கு முன்பாக நீங்கள் மீண்டும் ஒரு முறை சென்று பதில்களை மாற்றலாம்.</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
@@ -64,5 +64,5 @@
     <string name="e0_instruction_pt3">\n\nStarting survey now. Please hand the device to the respondent</string>
     <!--common strings-->
     <string name = "instructions">Instructions</string>
-    <string name = "submit">Submit</string>
+    <string name = "submit">சமர்பி</string>
 </resources>
