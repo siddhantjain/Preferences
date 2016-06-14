@@ -288,7 +288,8 @@ public class SurveyFour extends AppCompatActivity {
     }
 
     public void startNextGame (View view) {
-        gameResult gr = new gameResult(mSlider1InitialValue.getText().toString(),mSlider1FinalValue.getText().toString(),mSlider2InitialValue.getText().toString(),mSlider2FinalValue.getText().toString(),mSlider3InitialValue.getText().toString(),mSlider3FinalValue.getText().toString(),mSlider4InitialValue.getText().toString(),mSlider4FinalValue.getText().toString(),mSlider5InitialValue.getText().toString(),mSlider5FinalValue.getText().toString(),mSlider6InitialValue.getText().toString(),mSlider6FinalValue.getText().toString());
+        //gameResult gr = new gameResult(mSlider1InitialValue.getText().toString(),mSlider1FinalValue.getText().toString(),mSlider2InitialValue.getText().toString(),mSlider2FinalValue.getText().toString(),mSlider3InitialValue.getText().toString(),mSlider3FinalValue.getText().toString(),mSlider4InitialValue.getText().toString(),mSlider4FinalValue.getText().toString(),mSlider5InitialValue.getText().toString(),mSlider5FinalValue.getText().toString(),mSlider6InitialValue.getText().toString(),mSlider6FinalValue.getText().toString());
+        gameResult gr = new gameResult(mSlider1InitialValue.getText().toString(),mSlider1FinalValue.getText().toString(),"","","","","","","","","","");
         DataStore.setSurveyFourResult(gr);
 //        Intent intent = new Intent(SurveyFour.this,SurveyFive.class);
 //        startActivity(intent);
