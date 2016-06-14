@@ -14,7 +14,6 @@ import com.tdw.preferences.models.game;
 import com.tdw.preferences.models.gameResult;
 import com.tdw.preferences.utils.CalendarDecorator;
 import com.tdw.preferences.utils.DataStore;
-import com.tdw.preferences.utils.InstructionsDialog;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -123,14 +122,14 @@ public class SurveyThree extends AppCompatActivity {
 
 
 
-        mTVSlider1SoonerDate.setText("Recharge in " + Integer.toString(numDaysToSoonerDate) + " days");
-        mTVSlider1LaterDate.setText("Recharge in " + Integer.toString(5) + " days");
-        mTVSlider2SoonerDate.setText("Recharge in " + Integer.toString(numDaysToSoonerDate) + " days");
-        mTVSlider2LaterDate.setText("Recharge in " + Integer.toString(3) + " days");
-        mTVSlider3SoonerDate.setText("Recharge in " + Integer.toString(numDaysToSoonerDate) + " days");
-        mTVSlider3LaterDate.setText("Recharge in " + Integer.toString(2) + " days");
-        mTVSlider4SoonerDate.setText("Recharge in " + Integer.toString(numDaysToSoonerDate) + " days");
-        mTVSlider4LaterDate.setText("Recharge in " + Integer.toString(1) + " days");
+        mTVSlider1SoonerDate.setText(Integer.toString(numDaysToSoonerDate) + " நாட்களிலான ரீசார்ஜ்");
+        mTVSlider1LaterDate.setText(Integer.toString(numDaysToLaterDate) + " நாட்களிலான ரீசார்ஜ்");
+        mTVSlider2SoonerDate.setText(Integer.toString(numDaysToSoonerDate) + " நாட்களிலான ரீசார்ஜ்");
+        mTVSlider2LaterDate.setText(Integer.toString(numDaysToLaterDate) + " நாட்களிலான ரீசார்ஜ்");
+        mTVSlider3SoonerDate.setText(Integer.toString(numDaysToSoonerDate) + " நாட்களிலான ரீசார்ஜ்");
+        mTVSlider3LaterDate.setText(Integer.toString(numDaysToLaterDate) + " நாட்களிலான ரீசார்ஜ்");
+        mTVSlider4SoonerDate.setText(Integer.toString(numDaysToSoonerDate) + " நாட்களிலான ரீசார்ஜ்");
+        mTVSlider4LaterDate.setText(Integer.toString(numDaysToLaterDate) + " நாட்களிலான ரீசார்ஜ்");
 
         /*SeekBar Computation*/
         mSlider1 = (SeekBar) findViewById(R.id.sbGame3Slider1);
@@ -165,7 +164,7 @@ public class SurveyThree extends AppCompatActivity {
         int FV1OnStartup = (int)((double)fixedamount + ((double)variableamount*(double)proportion*(double)exchangeRateOne));
         mSlider1InitialValue.setText(Integer.toString(IV1OnStartup));
         mSlider1FinalValue.setText(Integer.toString(FV1OnStartup));
-        mSlider1ExchangeRateValue.setText("Choice 1:  Exchange Rate: 1:" + Float.toString(exchangeRateOne));
+        mSlider1ExchangeRateValue.setText("பரிமாற்ற விகிதம்: 1:" + Float.toString(exchangeRateOne));
 
         int initialSlider2Progress = mSlider2.getProgress();
         proportion = (double)initialSlider2Progress/(double)100;
@@ -173,7 +172,7 @@ public class SurveyThree extends AppCompatActivity {
         int FV2OnStartup = (int) ((double)fixedamount + ((double)variableamount*(double)proportion*(double)exchangeRateTwo));
         mSlider2InitialValue.setText(Integer.toString(IV2OnStartup));
         mSlider2FinalValue.setText(Integer.toString(FV2OnStartup));
-        mSlider2ExchangeRateValue.setText("Choice 2: Exchange Rate: 1:" + Float.toString(exchangeRateTwo));
+        mSlider2ExchangeRateValue.setText("பரிமாற்ற விகிதம்: 1:" + Float.toString(exchangeRateTwo));
 
         int initialSlider3Progress = mSlider3.getProgress();
         proportion = (double)initialSlider3Progress/(double)100;
@@ -181,7 +180,7 @@ public class SurveyThree extends AppCompatActivity {
         int FV3OnStartup = (int) ((double)fixedamount + ((double)variableamount*(double)proportion*(double)exchangeRateThree));
         mSlider3InitialValue.setText(Integer.toString(IV3OnStartup));
         mSlider3FinalValue.setText(Integer.toString(FV3OnStartup));
-        mSlider3ExchangeRateValue.setText("Choice 3:  Exchange Rate: 1:" + Float.toString(exchangeRateThree));
+        mSlider3ExchangeRateValue.setText("பரிமாற்ற விகிதம்: 1:" + Float.toString(exchangeRateThree));
 
 
         int initialSlider4Progress = mSlider4.getProgress();
@@ -190,7 +189,7 @@ public class SurveyThree extends AppCompatActivity {
         int FV4OnStartup = (int) ((double)fixedamount + ((double)variableamount*(double)proportion*(double)exchangeRateFour));
         mSlider4InitialValue.setText(Integer.toString(IV4OnStartup));
         mSlider4FinalValue.setText(Integer.toString(FV4OnStartup));
-        mSlider4ExchangeRateValue.setText("Choice 4: Exchange Rate: 1:" + Float.toString(exchangeRateFour));
+        mSlider4ExchangeRateValue.setText("பரிமாற்ற விகிதம்: 1:" + Float.toString(exchangeRateFour));
 
         int initialSlider5Progress = mSlider5.getProgress();
         proportion = (double)initialSlider5Progress/(double)100;
@@ -324,9 +323,5 @@ public class SurveyThree extends AppCompatActivity {
         DataStore.setSurveyThreeResult(gr);
         Intent intent = new Intent(SurveyThree.this,SurveyFour.class);
         startActivity(intent);
-    }
-
-    public void showInstructionsDialog(View view){
-        InstructionsDialog.showDialog(this, "E");
     }
 }

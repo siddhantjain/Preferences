@@ -21,7 +21,6 @@ import com.tdw.preferences.models.user;
 import com.tdw.preferences.utils.CalendarDecorator;
 import com.tdw.preferences.utils.DataStore;
 import com.tdw.preferences.surveys.SurveyOneF;
-import com.tdw.preferences.utils.InstructionsDialog;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -306,8 +305,5 @@ public class SurveySix extends AppCompatActivity {
                     }
                 });
         alertDialog.show();
-    }
-    public void showInstructionsDialog(View view){
-        InstructionsDialog.showDialog(this, "E");
     }
 }

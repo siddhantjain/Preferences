@@ -14,7 +14,6 @@ import com.tdw.preferences.models.game;
 import com.tdw.preferences.models.gameResult;
 import com.tdw.preferences.utils.CalendarDecorator;
 import com.tdw.preferences.utils.DataStore;
-import com.tdw.preferences.utils.InstructionsDialog;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -282,9 +281,5 @@ public class SurveyFive extends AppCompatActivity {
         DataStore.setSurveyFiveResult(gr);
         Intent intent = new Intent(SurveyFive.this,SurveySix.class);
         startActivity(intent);
-    }
-
-    public void showInstructionsDialog(View view){
-        InstructionsDialog.showDialog(this, "E");
     }
 }
