@@ -99,7 +99,7 @@ public class TestUserUnderstanding extends AppCompatActivity {
         int FV1OnStartup = (int)((double)fixedamount + ((double)variableamount*(double)proportion*(double)exchangeRateOne));
         mSlider1InitialValue.setText(Integer.toString(IV1OnStartup));
         mSlider1FinalValue.setText(Integer.toString(FV1OnStartup));
-        mSlider1ExchangeRateValue.setText("பரிமாற்ற விகிதம்: 1:" + Float.toString(exchangeRateOne));
+        mSlider1ExchangeRateValue.setText("Choice 1:  Exchange Rate: 1:" + Float.toString(exchangeRateOne));
 
         int initialSlider2Progress = mSlider2.getProgress();
         proportion = (double)initialSlider2Progress/(double)100;
@@ -107,7 +107,7 @@ public class TestUserUnderstanding extends AppCompatActivity {
         int FV2OnStartup = (int) ((double)fixedamount + ((double)variableamount*(double)proportion*(double)exchangeRateTwo));
         mSlider2InitialValue.setText(Integer.toString(IV2OnStartup));
         mSlider2FinalValue.setText(Integer.toString(FV2OnStartup));
-        mSlider2ExchangeRateValue.setText("பரிமாற்ற விகிதம்: 1:" + Float.toString(exchangeRateTwo));
+        mSlider2ExchangeRateValue.setText("Choice 2: Exchange Rate: 1:" + Float.toString(exchangeRateTwo));
 
         mSlider1.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             int progress = 0;
