@@ -113,8 +113,8 @@ public class SurveyFourF extends AppCompatActivity {
                 .withSelectedDates(dates)
                 .displayOnly();
 
-        mTVSoonerDate.setText("Steps on " + Integer.toString(numDaysToSoonerDate) + " days");
-        mTVLaterDate.setText("Steps on " + Integer.toString(numDaysToLaterDate) + " days");
+        mTVSoonerDate.setText(Integer.toString(numDaysToSoonerDate) + " நாட்களிலான நடை அடிகள்");
+        mTVLaterDate.setText(Integer.toString(numDaysToLaterDate) + " நாட்களிலான நடை அடிகள்");
 
 
 
@@ -154,7 +154,7 @@ public class SurveyFourF extends AppCompatActivity {
         int FV1OnStartup = (int)((double)fixedamount + ((double)variableamount*(double)proportion*(double)exchangeRateOne));
         mSlider1InitialValue.setText(Integer.toString(IV1OnStartup));
         mSlider1FinalValue.setText(Integer.toString(FV1OnStartup));
-        mSlider1ExchangeRateValue.setText("Choice 1:  Exchange Rate: 1:" + Float.toString(exchangeRateOne));
+        mSlider1ExchangeRateValue.setText("Choice 1:  பரிமாற்ற விகிதம்: 1:" + Float.toString(exchangeRateOne));
 
         int initialSlider2Progress = mSlider2.getProgress();
         proportion = (double)initialSlider2Progress/(double)100;
@@ -162,7 +162,7 @@ public class SurveyFourF extends AppCompatActivity {
         int FV2OnStartup = (int) ((double)fixedamount + ((double)variableamount*(double)proportion*(double)exchangeRateTwo));
         mSlider2InitialValue.setText(Integer.toString(IV2OnStartup));
         mSlider2FinalValue.setText(Integer.toString(FV2OnStartup));
-        mSlider2ExchangeRateValue.setText("Choice 2: Exchange Rate: 1:" + Float.toString(exchangeRateTwo));
+        mSlider2ExchangeRateValue.setText("Choice 2: பரிமாற்ற விகிதம்: 1:" + Float.toString(exchangeRateTwo));
 
         int initialSlider3Progress = mSlider3.getProgress();
         proportion = (double)initialSlider3Progress/(double)100;
@@ -170,7 +170,7 @@ public class SurveyFourF extends AppCompatActivity {
         int FV3OnStartup = (int) ((double)fixedamount + ((double)variableamount*(double)proportion*(double)exchangeRateThree));
         mSlider3InitialValue.setText(Integer.toString(IV3OnStartup));
         mSlider3FinalValue.setText(Integer.toString(FV3OnStartup));
-        mSlider3ExchangeRateValue.setText("Choice 3:  Exchange Rate: 1:" + Float.toString(exchangeRateThree));
+        mSlider3ExchangeRateValue.setText("Choice 3:  பரிமாற்ற விகிதம்: 1:" + Float.toString(exchangeRateThree));
 
         int initialSlider4Progress = mSlider4.getProgress();
         proportion = (double)initialSlider4Progress/(double)100;
