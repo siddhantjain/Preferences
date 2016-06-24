@@ -27,6 +27,7 @@ import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
+
 public class TestUserUnderstanding extends AppCompatActivity {
 
     private CalendarPickerView mCalendar;
@@ -152,7 +153,7 @@ public class TestUserUnderstanding extends AppCompatActivity {
     public void showInstructionsDialog(View view)
     {
         AlertDialog alertDialog = new AlertDialog.Builder(this).create();
-        alertDialog.setTitle(getApplicationContext().getString(R.string.instructions_title));
+        alertDialog.setTitle(getApplicationContext().getString(R.string.instructions_title_e));
         alertDialog.setMessage(getApplicationContext().getString(R.string.instructions_test_body));
         alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "Ok",
                 new DialogInterface.OnClickListener() {

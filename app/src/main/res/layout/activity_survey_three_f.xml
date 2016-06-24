@@ -16,7 +16,7 @@
         android:weightSum="200">
         <com.squareup.timessquare.CalendarPickerView
             android:id="@+id/cvGame3FCurrentMonth"
-            android:layout_width="200dp"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="120"
@@ -61,7 +61,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
-                    android:text = "leftvalue"
+                    android:text = "leftValue"  android:textSize = "18dp"
                     android:id="@+id/tvGame3FSlider1Left"
                     />
                 <TextView
@@ -75,7 +75,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"
                     android:layout_alignParentEnd="true"
-                    android:text = "rightvalue"
+                    android:text = "rightValue"  android:textSize = "18dp"
                     android:id="@+id/tvGame3FSlider1Right"
                     />
             </RelativeLayout>
@@ -120,7 +120,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
-                    android:text = "leftValue"
+                    android:text = "leftValue"  android:textSize = "18dp"
                     android:id="@+id/tvGame3FSlider2Left"
                     />
                 <TextView
@@ -132,7 +132,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text = "rightValue"
+                    android:text = "rightValue"  android:textSize = "18dp"
                     android:id="@+id/tvGame3FSlider2Right"
                     android:layout_alignParentEnd="true" />
 
@@ -179,7 +179,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
-                    android:text = "leftValue"
+                    android:text = "leftValue"  android:textSize = "18dp"
                     android:id="@+id/tvGame3FSlider3Left"
                     />
                 <TextView
@@ -191,7 +191,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text = "rightValue"
+                    android:text = "rightValue"  android:textSize = "18dp"
                     android:id="@+id/tvGame3FSlider3Right"
                     android:layout_alignParentEnd="true" />
 
@@ -238,7 +238,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
-                    android:text = "leftValue"
+                    android:text = "leftValue"  android:textSize = "18dp"
                     android:id="@+id/tvGame3FSlider4Left"
                     />
                 <TextView
@@ -250,7 +250,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text = "rightValue"
+                    android:text = "rightValue"  android:textSize = "18dp"
                     android:id="@+id/tvGame3FSlider4Right"
                     android:layout_alignParentEnd="true" />
 
@@ -278,13 +278,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
-                    android:text = "leftValue"
+                    android:text = "leftValue"  android:textSize = "18dp"
                     android:id="@+id/tvGame3FSlider5Left"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text = "rightValue"
+                    android:text = "rightValue"  android:textSize = "18dp"
                     android:id="@+id/tvGame3FSlider5Right"
                     android:layout_alignParentEnd="true" />
 
@@ -314,13 +314,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
-                    android:text = "leftValue"
+                    android:text = "leftValue"  android:textSize = "18dp"
                     android:id="@+id/tvGame3FSlider6Left"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text = "rightValue"
+                    android:text = "rightValue"  android:textSize = "18dp"
                     android:id="@+id/tvGame3FSlider6Right"
                     android:layout_alignParentEnd="true" />
 
@@ -337,7 +337,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:id = "@+id/btnGame3FSubmitBtn"
-                android:text = "@string/submit"
+                android:text = "@string/submit"  android:textSize = "18dp"
                 android:layout_gravity="center"
                 android:onClick="startNextGame"
                 android:layout_weight="1"
@@ -347,7 +347,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:id = "@+id/btnGame3FInstructionsBtn"
-                android:text = "@string/instructions"
+                android:text = "@string/instructions" android:textSize = "18dp"
                 android:layout_gravity="center"
                 android:onClick="showInstructionsDialog"
                 android:layout_weight="1"

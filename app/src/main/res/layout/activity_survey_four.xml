@@ -16,7 +16,7 @@
         android:weightSum="200">
         <com.squareup.timessquare.CalendarPickerView
             android:id="@+id/cvGame4CurrentMonth"
-            android:layout_width="200dp"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="120"
@@ -61,7 +61,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
-                    android:text = "leftvalue"
+                    android:text = "leftValue"  android:textSize = "18dp"
                     android:id="@+id/tvGame4Slider1Left"
                     />
                 <TextView
@@ -75,7 +75,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"
                     android:layout_alignParentEnd="true"
-                    android:text = "rightvalue"
+                    android:text = "rightValue"  android:textSize = "18dp"
                     android:id="@+id/tvGame4Slider1Right"
                     />
             </RelativeLayout>
@@ -103,7 +103,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
-                    android:text = "leftValue"
+                    android:text = "leftValue"  android:textSize = "18dp"
                     android:id="@+id/tvGame4Slider2Left"
                     />
                 <TextView
@@ -115,7 +115,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text = "rightValue"
+                    android:text = "rightValue"  android:textSize = "18dp"
                     android:id="@+id/tvGame4Slider2Right"
                     android:layout_alignParentEnd="true" />
 
@@ -145,7 +145,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
-                    android:text = "leftValue"
+                    android:text = "leftValue"  android:textSize = "18dp"
                     android:id="@+id/tvGame4Slider3Left"
                     />
                 <TextView
@@ -157,7 +157,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text = "rightValue"
+                    android:text = "rightValue"  android:textSize = "18dp"
                     android:id="@+id/tvGame4Slider3Right"
                     android:layout_alignParentEnd="true" />
 
@@ -187,13 +187,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
-                    android:text = "leftValue"
+                    android:text = "leftValue"  android:textSize = "18dp"
                     android:id="@+id/tvGame4Slider4Left"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text = "rightValue"
+                    android:text = "rightValue"  android:textSize = "18dp"
                     android:id="@+id/tvGame4Slider4Right"
                     android:layout_alignParentEnd="true" />
 
@@ -221,13 +221,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
-                    android:text = "leftValue"
+                    android:text = "leftValue"  android:textSize = "18dp"
                     android:id="@+id/tvGame4Slider5Left"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text = "rightValue"
+                    android:text = "rightValue"  android:textSize = "18dp"
                     android:id="@+id/tvGame4Slider5Right"
                     android:layout_alignParentEnd="true" />
 
@@ -257,13 +257,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
-                    android:text = "leftValue"
+                    android:text = "leftValue"  android:textSize = "18dp"
                     android:id="@+id/tvGame4Slider6Left"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text = "rightValue"
+                    android:text = "rightValue"  android:textSize = "18dp"
                     android:id="@+id/tvGame4Slider6Right"
                     android:layout_alignParentEnd="true" />
 
@@ -280,7 +280,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:id = "@+id/btnGame4SubmitBtn"
-                android:text = "@string/submit"
+                android:text = "@string/submit"  android:textSize = "18dp"
                 android:layout_gravity="center"
                 android:onClick="startNextGame"
                 android:layout_weight="1"
@@ -290,7 +290,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:id = "@+id/btnGameInstructionsBtn"
-                android:text = "@string/instructions"
+                android:text = "@string/instructions" android:textSize = "18dp"
                 android:layout_gravity="center"
                 android:onClick="showInstructionsDialog"
                 android:layout_weight="1"

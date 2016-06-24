@@ -12,11 +12,13 @@ import com.tdw.preferences.R;
 public class InstructionsDialog {
     public static void showDialog(Context mContext,String section){
         AlertDialog alertDialog = new AlertDialog.Builder(mContext).create();
-        alertDialog.setTitle(mContext.getString(R.string.instructions_title));
+
         if(section.equalsIgnoreCase("E")){
+            alertDialog.setTitle(mContext.getString(R.string.instructions_title_e));
             alertDialog.setMessage(mContext.getString(R.string.instructions_body));
         }
         else if(section.equalsIgnoreCase("F")){
+            alertDialog.setTitle(mContext.getString(R.string.instructions_title_f));
             String instPart1 = mContext.getString(R.string.instructions_f_body);
             String instPart2 = mContext.getString(R.string.instructions_f_body2);
             alertDialog.setMessage(instPart1+" "+String.valueOf(DataStore.getSurveyFBaselineSteps())+" "+instPart2);

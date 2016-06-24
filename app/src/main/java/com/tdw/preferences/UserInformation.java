@@ -34,7 +34,7 @@ public class UserInformation extends AppCompatActivity {
 
     public void startGames (View view) {
         AlertDialog alertDialog = new AlertDialog.Builder(this).create();
-        alertDialog.setTitle(getApplicationContext().getString(R.string.instructions_title));
+        alertDialog.setTitle(getApplicationContext().getString(R.string.instructions_title_e));
         alertDialog.setMessage(getApplicationContext().getString(R.string.instructions_test_body));
         alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "Continue",
                 new DialogInterface.OnClickListener() {

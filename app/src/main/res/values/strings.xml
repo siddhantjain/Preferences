@@ -23,7 +23,8 @@
 
     <!--Dialog box strings-->
     <string name="full_screen_popup">full_screen_popup</string>
-    <string name="instructions_title">Recharge Allocation between Sooner and Later Dates</string>
+    <string name="instructions_title_e">விரைவான மற்றும் தாமதமான தேதிகளுக்கிடையில் ரீசார்ஜ்களை பகிர்ந்து அளித்தல்: அறிவுரைகள்</string>
+    <string name="instructions_title_f">விரைவான மற்றும் தாமதமான தேதிகளுக்கிடையில் நடை அடிகளை பகிர்ந்து அளித்தல்: அறிவுரைகள்்</string>
     <string name="E0C_title">Are you the surveyor?</string>
     <string name="E0C_body">Press continue if you are the surveyor\n\nPlease hand over the tablet to the surveyor if you are not the surveyor</string>
     <string name="E0D_title">Instructions</string>
@@ -37,7 +38,7 @@
 \n\n(FO, note: The respondent chose less later recharge in E0b than in E0a, even though they could start from the same amount of later recharge as the had in E0a and still get more sooner recharge than they had in E0a.)
 
 </string>
-    <string name="E0G_title">Instructions</string>
+    <string name="E0G_title">Instructions்</string>
     <string name="E0G_body">FO, ask: How much recharge did you decide to receive in 7 days when the exchange rate was 1:1.25 (i.e. in question E0b), and how much in 28 days?
 \n\n(FO, note: The allocation to the later date is quite large in E0a. Please make sure the respondent understands this and has a reason.
 \n\nAlso, the respondent chose less “later” recharge in E0b than in E0a, even though they could start from the same amount of later recharge as the had in E0a and still get more sooner recharge than they had in E0a.)
@@ -63,6 +64,6 @@
     <string name="e0_instruction_pt2"> try left.\n\nDoes the respondent understand their allocation?</string>
     <string name="e0_instruction_pt3">\n\nStarting survey now. Please hand the device to the respondent</string>
     <!--common strings-->
-    <string name = "instructions">Instructions</string>
+    <string name = "instructions">வழிமுறைகள்</string>
     <string name = "submit">சமர்பி</string>
 </resources>

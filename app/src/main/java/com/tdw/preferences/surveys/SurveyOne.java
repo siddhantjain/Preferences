@@ -97,7 +97,7 @@ public class SurveyOne extends AppCompatActivity {
         /*showing instructions*/
 
         AlertDialog alertDialog = new AlertDialog.Builder(this).create();
-        alertDialog.setTitle(getApplicationContext().getString(R.string.instructions_title));
+        alertDialog.setTitle(getApplicationContext().getString(R.string.instructions_title_e));
         alertDialog.setMessage(getApplicationContext().getString(R.string.instructions_body));
         alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "Continue",
                 new DialogInterface.OnClickListener() {
