@@ -23,30 +23,31 @@
 
     <!--Dialog box strings-->
     <string name="full_screen_popup">full_screen_popup</string>
+
     <string name="instructions_title_e">விரைவான மற்றும் தாமதமான தேதிகளுக்கிடையில் ரீசார்ஜ்களை பகிர்ந்து அளித்தல்: அறிவுரைகள்</string>
     <string name="instructions_title_f">விரைவான மற்றும் தாமதமான தேதிகளுக்கிடையில் நடை அடிகளை பகிர்ந்து அளித்தல்: அறிவுரைகள்்</string>
+
     <string name="E0C_title">Are you the surveyor?</string>
     <string name="E0C_body">Press continue if you are the surveyor\n\nPlease hand over the tablet to the surveyor if you are not the surveyor</string>
+
     <string name="E0D_title">Instructions</string>
-    <string name="E0D_body">FO, ask: How much recharge did you decide to receive in 7 days when the exchange rate was 1:1.25 (i.e. in question E0b), and how much in 28 days? </string>
+    <string name="E0D_body">பகுதி அமைப்பாளர் கேட்க வேண்டியது: பரிமாற்ற விகிதம் 1:1.25 (அதாவது, கேள்வி E0b) -ஆக இருக்கும் போது 7 நாட்களில் எவ்வளவு ரீசார்ஜும் மற்றும் 28 நாட்களில் எவ்வளவு ரீசார்ஜும் பெறுவதற்கு நீங்கள் தீர்மானம் செய்-தீர்கள்?</string>
+
     <string name="E0E_title">Instructions</string>
-    <string name="E0E_body">FO, ask: How much recharge did you decide to receive in 7 days when the exchange rate was 1:1.25 (i.e. in question E0b), and how much in 28 days?
-\n\n(FO, note: The allocation to the later date is quite large in E0a. Please make sure the respondent understands this and has a reason.
-</string>
+<string name="E0E_body">பகுதி அமைப்பாளர் கேட்க வேண்டியது: பரிமாற்ற விகிதம் 1:1.25 (அதாவது, கேள்வி E0b) -ஆக இருக்கும் போது 7 நாட்களில் எவ்வளவு ரீசார்ஜும் மற்-றும் 28 நாட்களில் எவ்வளவு ரீசார்ஜும் பெறுவதற்கு நீங்கள் தீர்மானம் செய்-தீர்கள்?
+\n\n(பகுதி அமைப்பாளர் குறிப்பு: தாமத தேதிக்கான ஒதுக்கீடு, E0a வில் சிறிது அதிகமாக இருக்கிறது. பிரதிவாதி இதனை புரிந்துக்கொண்டு ஒரு கார-ணத்தை கொண்டிருப்பதை உறுதி செய்-யவும்.)</string>
+
     <string name="E0F_title">Instructions</string>
-    <string name="E0F_body">FO, ask: How much recharge did you decide to receive in 7 days when the exchange rate was 1:1.25 (i.e. in question E0b), and how much in 28 days?
-\n\n(FO, note: The respondent chose less later recharge in E0b than in E0a, even though they could start from the same amount of later recharge as the had in E0a and still get more sooner recharge than they had in E0a.)
+<string name="E0F_body">பகுதி அமைப்பாளர் கேட்க வேண்டியது: பரிமாற்ற விகிதம் 1:1.25 (அதாவது, கேள்வி E0b) -ஆக இருக்கும் போது 7 நாட்களில் எவ்வளவு ரீசார்ஜும் மற்றும் 28 நாட்களில் எவ்வளவு ரீசார்ஜும் பெறுவதற்கு நீங்கள் தீர்மானம் செய்-தீர்கள்?
+\n\n(பகுதி அமைப்பாளர் குறிப்பு: E0a வில் இருந்ததைப் போன்றே அதே தொகை கொண்ட தாமத ரீசார்ஜில் அவர்கள் தொடங்கி E0a வில் பெற்றதைப் போன்றே அதிக விரைவு ரீசார்ஜ்களை பெற வாய்ப்பிருந்தும் பிரதிவாதி E0a -வை விட குறைவான மதிப்புடைய தாமத ரீசார்ஜை E0b யை தேர்வு செய்தார்.)</string>
 
-</string>
-    <string name="E0G_title">Instructions்</string>
-    <string name="E0G_body">FO, ask: How much recharge did you decide to receive in 7 days when the exchange rate was 1:1.25 (i.e. in question E0b), and how much in 28 days?
-\n\n(FO, note: The allocation to the later date is quite large in E0a. Please make sure the respondent understands this and has a reason.
-\n\nAlso, the respondent chose less “later” recharge in E0b than in E0a, even though they could start from the same amount of later recharge as the had in E0a and still get more sooner recharge than they had in E0a.)
-
-</string>
-    <string name="instructions_test_body"> 1. இன்று முதல் 7 நாட்கள் மற்றும் 28 நாட்கள் இடையே உங்கள் மொபைல் ரீசார்ஜ் பரிசை ஒதுக்க ஸ்லைடர்களை பயன்படுத்தவும்.\n\n 2. அடிப்படை ரீசார்ஜ் தினமும் ரூபாய் 20 இரண்டு தேதிகளிலும் வழங்கப்படும், கூடுதல் ரீசார்ஜ் பரிசை “விரைவான” மற்றும் “தாமதமான” இரண்டு தேதிகளுக்கிடையில் பரிமாற்றவிகிதம்படி நீங்கள் பகிர்ந்தளிக்களாம்.\n\n 3. நீங்கள் முதல் இரண்டு தேர்வுகள் முடிந்ததும், தயவுசெய்து .
- சர்வேயரிடம் டப்லட்டை பரிசீலனைக்கு கொடுக்கவும்.
-</string>
+    <string name="E0G_title">Instructions</string>
+<string name="E0G_body">பகுதி அமைப்பாளர் கேட்க வேண்டியது: பரிமாற்ற விகிதம் 1:1.25 (அதாவது, கேள்வி E0b) -ஆக இருக்கும் போது 7 நாட்களில் எவ்வளவு ரீசார்ஜும் மற்-றும் 28 நாட்களில் எவ்வளவு ரீசார்ஜும் பெறுவதற்கு நீங்கள் தீர்மானம் செய்-தீர்கள்?
+\n\n(பகுதி அமைப்பாளர் குறிப்பு: தாமத தேதிக்கான ஒதுக்கீடு, E0a வில் சிறிது அதிகமாக இருக்கிறது. பிரதிவாதி இதனை புரிந்துக்கொண்டு ஒரு கார-ணத்தை கொண்டிருப்பதை உறுதி செய்-யவும்.
+மேலும், E0a வில் இருந்ததைப் போன்றே அதே தொகை கொண்ட தாமத ரீசார்ஜில் அவர்கள் தொடங்கி E0a வில் பெற்றதைப் போன்றே அதிக விரைவு ரீசார்ஜ்களை பெற வாய்ப்பிருந்தும் பிரதிவாதி E0a -வை விட குறைவான மதிப்புடைய “தாமத” ரீசார்ஜை E0b யை தேர்வு செய்தார்)</string>
+   
+ <string name="instructions_test_body"> 1. இன்று முதல் 7 நாட்கள் மற்றும் 28 நாட்கள் இடையே உங்கள் மொபைல் ரீசார்ஜ் பரிசை ஒதுக்க ஸ்லைடர்களை பயன்படுத்தவும்.\n\n 2. அடிப்படை ரீசார்ஜ் தினமும் ரூபாய் 20 இரண்டு தேதிகளிலும் வழங்கப்படும், கூடுதல் ரீசார்ஜ் பரிசை “விரைவான” மற்றும் “தாமதமான” இரண்டு தேதிகளுக்கிடையில் பரிமாற்றவிகிதம்படி நீங்கள் பகிர்ந்தளிக்களாம்.\n\n 3. நீங்கள் முதல் இரண்டு தேர்வுகள் முடிந்ததும், தயவுசெய்து .
+ சர்வேயரிடம் டப்லட்டை பரிசீலனைக்கு கொடுக்கவும்.</string>
     <string name="instructions_body">1. பரிமாற்ற விகிதத்திற்கு ஏற்ப உங்களது மொபைல் ரீசார்ஜ் பரிசுகளை விரைவான மற்றும் தாமதமான தேதிகளுக்கிடையில் பகிர்ந்தளிக்க ஸ்லைடர்களை உபயோகிக் கவும்.\n\n 2. சமர்பிப்பதற்கு முன்பாக ஒவ்வொரு பிரிவிலும் உள்ள பதில்களை நிறைவு செய்வதற்கு கவனமாக இருங்கள்.  சமர்பிப்பதற்கு முன்பாக நீங்கள் மீண்டும் ஒரு முறை சென்று பதில்களை மாற்றலாம்</string>
     <string name="instructions_button_text">Close</string>
     <string name="instructions_f_body">1. பரிமாற்ற விகிதத்திற்கு ஏற்ப உங்களது நடை அடிகளை விரைவான மற்றும் தாமதமான தேதிகளுக்கிடையில் பகிர்ந்தளிக்க ஸ்லைடர்களை உபயோகிக்கவும்.  ஒவ்வொரு நாளுக்கான அடிப்படை நடை அடிகள் </string>
@@ -61,9 +62,9 @@
 
     <string name="surveyf_baseline_steps">surveyf_baseline_steps</string>
     <string name="e0_instruction_pt1">\n\nRespondent has </string>
-    <string name="e0_instruction_pt2"> try left.\n\nDoes the respondent understand their allocation?</string>
+    <string name="e0_instruction_pt2"> try left.\n\nபிரதிவாதி தனக்கான ஒதுக்-கீட்டை குறித்து புரிந்துக்-கொண்டுள்ளாரா?</string>
     <string name="e0_instruction_pt3">\n\nStarting survey now. Please hand the device to the respondent</string>
     <!--common strings-->
-    <string name = "instructions">வழிமுறைகள்</string>
-    <string name = "submit">சமர்பி</string>
+    <string name = "instructions">Instructions</string>
+    <string name = "submit">Submit</string>
 </resources>

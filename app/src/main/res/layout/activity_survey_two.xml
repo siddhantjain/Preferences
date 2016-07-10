@@ -61,7 +61,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
-                    android:text = "leftValue"  android:textSize = "18dp"
+                    android:text = "leftValue" android:textStyle="bold"  android:textSize = "18dp"
                     android:id="@+id/tvGame2Slider1Left"
                     />
                 <TextView
@@ -75,7 +75,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"
                     android:layout_alignParentEnd="true"
-                    android:text = "rightValue"  android:textSize = "18dp"
+                    android:text = "rightValue" android:textStyle="bold"  android:textSize = "18dp"
                     android:id="@+id/tvGame2Slider1Right"
                     />
             </RelativeLayout>
@@ -120,7 +120,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
-                    android:text = "leftValue"  android:textSize = "18dp"
+                    android:text = "leftValue" android:textStyle="bold"  android:textSize = "18dp"
                     android:id="@+id/tvGame2Slider2Left"
                     />
                 <TextView
@@ -132,7 +132,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text = "rightValue"  android:textSize = "18dp"
+                    android:text = "rightValue" android:textStyle="bold"  android:textSize = "18dp"
                     android:id="@+id/tvGame2Slider2Right"
                     android:layout_alignParentEnd="true" />
 
@@ -179,7 +179,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
-                    android:text = "leftValue"  android:textSize = "18dp"
+                    android:text = "leftValue" android:textStyle="bold"  android:textSize = "18dp"
                     android:id="@+id/tvGame2Slider3Left"
                     />
                 <TextView
@@ -191,7 +191,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text = "rightValue"  android:textSize = "18dp"
+                    android:text = "rightValue" android:textStyle="bold"  android:textSize = "18dp"
                     android:id="@+id/tvGame2Slider3Right"
                     android:layout_alignParentEnd="true" />
 
@@ -239,13 +239,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
-                    android:text = "leftValue"  android:textSize = "18dp"
+                    android:text = "leftValue" android:textStyle="bold"  android:textSize = "18dp"
                     android:id="@+id/tvGame2Slider4Left"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text = "rightValue"  android:textSize = "18dp"
+                    android:text = "rightValue" android:textStyle="bold"  android:textSize = "18dp"
                     android:id="@+id/tvGame2Slider4Right"
                     android:layout_alignParentEnd="true" />
 
@@ -291,13 +291,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
-                    android:text = "leftValue"  android:textSize = "18dp"
+                    android:text = "leftValue" android:textStyle="bold"  android:textSize = "18dp"
                     android:id="@+id/tvGame2Slider5Left"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text = "rightValue"  android:textSize = "18dp"
+                    android:text = "rightValue" android:textStyle="bold"  android:textSize = "18dp"
                     android:id="@+id/tvGame2Slider5Right"
                     android:layout_alignParentEnd="true" />
 
@@ -345,13 +345,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
-                    android:text = "leftValue"  android:textSize = "18dp"
+                    android:text = "leftValue" android:textStyle="bold"  android:textSize = "18dp"
                     android:id="@+id/tvGame2Slider6Left"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text = "rightValue"  android:textSize = "18dp"
+                    android:text = "rightValue" android:textStyle="bold"  android:textSize = "18dp"
                     android:id="@+id/tvGame2Slider6Right"
                     android:layout_alignParentEnd="true" />
 
