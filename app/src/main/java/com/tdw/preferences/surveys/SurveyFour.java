@@ -295,7 +295,7 @@ public class SurveyFour extends AppCompatActivity {
 //        Intent intent = new Intent(SurveyFour.this,SurveyFive.class);
 //        startActivity(intent);
         AlertDialog alertDialog = new AlertDialog.Builder(this).create();
-        alertDialog.setTitle(getApplicationContext().getString(R.string.instructions_title_e));
+        alertDialog.setTitle(getApplicationContext().getString(R.string.instructions_title_f));
         String instPart1 = getApplicationContext().getString(R.string.instructions_f_body);
         String instPart2 = getApplicationContext().getString(R.string.instructions_f_body2);
         alertDialog.setMessage(instPart1+" "+String.valueOf(DataStore.getSurveyFBaselineSteps())+" "+instPart2);
