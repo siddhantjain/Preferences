@@ -124,14 +124,14 @@ public class SurveyThreeF extends AppCompatActivity{
                 .withSelectedDates(dates)
                 .displayOnly();
 
-        mTVSlider1SoonerDate.setText(Integer.toString(numDaysToSoonerDate) + " நாட்களிலான நடை அடிகள்");
-        mTVSlider1LaterDate.setText(Integer.toString(5) + " நாட்களிலான நடை அடிகள்");
-        mTVSlider2SoonerDate.setText(Integer.toString(numDaysToSoonerDate) + " நாட்களிலான நடை அடிகள்");
-        mTVSlider2LaterDate.setText(Integer.toString(3) + " நாட்களிலான நடை அடிகள்");
-        mTVSlider3SoonerDate.setText(Integer.toString(numDaysToSoonerDate) + " நாட்களிலான நடை அடிகள்");
-        mTVSlider3LaterDate.setText(Integer.toString(2) + " நாட்களிலான நடை அடிகள்");
-        mTVSlider4SoonerDate.setText(Integer.toString(numDaysToSoonerDate) + " நாட்களிலான நடை அடிகள்");
-        mTVSlider4LaterDate.setText(Integer.toString(1) + " நாட்களிலான நடை அடிகள்");
+        mTVSlider1SoonerDate.setText(Integer.toString(numDaysToSoonerDate) + " ஆம் நாளுக்கான நடை அடிகள்");
+        mTVSlider1LaterDate.setText(Integer.toString(5) + " ஆம் நாளுக்கான நடை அடிகள்");
+        mTVSlider2SoonerDate.setText(Integer.toString(numDaysToSoonerDate) + " ஆம் நாளுக்கான நடை அடிகள்");
+        mTVSlider2LaterDate.setText(Integer.toString(3) + " ஆம் நாளுக்கான நடை அடிகள்");
+        mTVSlider3SoonerDate.setText(Integer.toString(numDaysToSoonerDate) + " ஆம் நாளுக்கான நடை அடிகள்");
+        mTVSlider3LaterDate.setText(Integer.toString(2) + " ஆம் நாளுக்கான நடை அடிகள்");
+        mTVSlider4SoonerDate.setText(Integer.toString(numDaysToSoonerDate) + " ஆம் நாளுக்கான நடை அடிகள்");
+        mTVSlider4LaterDate.setText(Integer.toString(1) + " ஆம் நாளுக்கான நடை அடிகள்");
 
 
         /*SeekBar Computation*/

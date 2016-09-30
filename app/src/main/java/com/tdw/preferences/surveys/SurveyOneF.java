@@ -126,12 +126,12 @@ public class SurveyOneF extends AppCompatActivity {
                 .withSelectedDates(dates)
                 .displayOnly();
 
-        mTVSlider1SoonerDate.setText(Integer.toString(numDaysToSoonerDate) + " நாட்களிலான நடை அடிகள்");
-        mTVSlider1LaterDate.setText(Integer.toString(numDaysToLaterDate) + " நாட்களிலான நடை அடிகள்");
-        mTVSlider2SoonerDate.setText(Integer.toString(numDaysToSoonerDate) + " நாட்களிலான நடை அடிகள்");
-        mTVSlider2LaterDate.setText(Integer.toString(numDaysToLaterDate) + " நாட்களிலான நடை அடிகள்");
-        mTVSlider3SoonerDate.setText(Integer.toString(numDaysToSoonerDate) + " நாட்களிலான நடை அடிகள்");
-        mTVSlider3LaterDate.setText(Integer.toString(numDaysToLaterDate) + " நாட்களிலான நடை அடிகள்");
+        mTVSlider1SoonerDate.setText(Integer.toString(numDaysToSoonerDate) + " ஆம் நாளுக்கான நடை அடிகள்");
+        mTVSlider1LaterDate.setText(Integer.toString(numDaysToLaterDate) + " ஆம் நாளுக்கான நடை அடிகள்");
+        mTVSlider2SoonerDate.setText(Integer.toString(numDaysToSoonerDate) + " ஆம் நாளுக்கான நடை அடிகள்");
+        mTVSlider2LaterDate.setText(Integer.toString(numDaysToLaterDate) + " ஆம் நாளுக்கான நடை அடிகள்");
+        mTVSlider3SoonerDate.setText(Integer.toString(numDaysToSoonerDate) + " ஆம் நாளுக்கான நடை அடிகள்");
+        mTVSlider3LaterDate.setText(Integer.toString(numDaysToLaterDate) + " ஆம் நாளுக்கான நடை அடிகள்");
 
 
 

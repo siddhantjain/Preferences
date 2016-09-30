@@ -154,18 +154,18 @@ public class SurveyOne extends AppCompatActivity {
                 .withSelectedDates(dates)
                 .displayOnly();
 
-        mTVSlider1SoonerDate.setText(Integer.toString(numDaysToSoonerDate) + " நாட்களிலான ரீசார்ஜ்");
-        mTVSlider1LaterDate.setText(Integer.toString(numDaysToLaterDate) + " நாட்களிலான ரீசார்ஜ்");
-        mTVSlider2SoonerDate.setText(Integer.toString(numDaysToSoonerDate) + " நாட்களிலான ரீசார்ஜ்");
-        mTVSlider2LaterDate.setText(Integer.toString(numDaysToLaterDate) + " நாட்களிலான ரீசார்ஜ்");
-        mTVSlider3SoonerDate.setText(Integer.toString(numDaysToSoonerDate) + " நாட்களிலான ரீசார்ஜ்");
-        mTVSlider3LaterDate.setText(Integer.toString(numDaysToLaterDate) + " நாட்களிலான ரீசார்ஜ்");
-        mTVSlider4SoonerDate.setText(Integer.toString(numDaysToSoonerDate) + " நாட்களிலான ரீசார்ஜ்");
-        mTVSlider4LaterDate.setText(Integer.toString(numDaysToLaterDate) + " நாட்களிலான ரீசார்ஜ்");
-        mTVSlider5SoonerDate.setText(Integer.toString(numDaysToSoonerDate) + " நாட்களிலான ரீசார்ஜ்");
-        mTVSlider5LaterDate.setText(Integer.toString(numDaysToLaterDate) + " நாட்களிலான ரீசார்ஜ்");
-        mTVSlider6SoonerDate.setText(Integer.toString(numDaysToSoonerDate) + " நாட்களிலான ரீசார்ஜ்");
-        mTVSlider6LaterDate.setText(Integer.toString(numDaysToLaterDate) + " நாட்களிலான ரீசார்ஜ்");
+        mTVSlider1SoonerDate.setText(Integer.toString(numDaysToSoonerDate) + " ஆம் நாளுக்கான ரீசார்ஜ்");
+        mTVSlider1LaterDate.setText(Integer.toString(numDaysToLaterDate) + " ஆம் நாளுக்கான ரீசார்ஜ்");
+        mTVSlider2SoonerDate.setText(Integer.toString(numDaysToSoonerDate) + " ஆம் நாளுக்கான ரீசார்ஜ்");
+        mTVSlider2LaterDate.setText(Integer.toString(numDaysToLaterDate) + " ஆம் நாளுக்கான ரீசார்ஜ்");
+        mTVSlider3SoonerDate.setText(Integer.toString(numDaysToSoonerDate) + " ஆம் நாளுக்கான ரீசார்ஜ்");
+        mTVSlider3LaterDate.setText(Integer.toString(numDaysToLaterDate) + " ஆம் நாளுக்கான ரீசார்ஜ்");
+        mTVSlider4SoonerDate.setText(Integer.toString(numDaysToSoonerDate) + " ஆம் நாளுக்கான ரீசார்ஜ்");
+        mTVSlider4LaterDate.setText(Integer.toString(numDaysToLaterDate) + " ஆம் நாளுக்கான ரீசார்ஜ்");
+        mTVSlider5SoonerDate.setText(Integer.toString(numDaysToSoonerDate) + " ஆம் நாளுக்கான ரீசார்ஜ்");
+        mTVSlider5LaterDate.setText(Integer.toString(numDaysToLaterDate) + " ஆம் நாளுக்கான ரீசார்ஜ்");
+        mTVSlider6SoonerDate.setText(Integer.toString(numDaysToSoonerDate) + " ஆம் நாளுக்கான ரீசார்ஜ்");
+        mTVSlider6LaterDate.setText(Integer.toString(numDaysToLaterDate) + " ஆம் நாளுக்கான ரீசார்ஜ்");
 
 
         /*SeekBar Computation*/

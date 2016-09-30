@@ -101,8 +101,8 @@ public class SurveyFour extends AppCompatActivity {
                 .withSelectedDates(dates)
                 .displayOnly();
 
-        mTVSlider1SoonerDate.setText(Integer.toString(numDaysToSoonerDate) + " நாட்களிலான ரீசார்ஜ்");
-        mTVSlider1LaterDate.setText(Integer.toString(numDaysToLaterDate) + " நாட்களிலான ரீசார்ஜ்");
+        mTVSlider1SoonerDate.setText(Integer.toString(numDaysToSoonerDate) + " ஆம் நாளுக்கான ரீசார்ஜ்");
+        mTVSlider1LaterDate.setText(Integer.toString(numDaysToLaterDate) + " ஆம் நாளுக்கான ரீசார்ஜ்");
 
         /*SeekBar Computation*/
         mSlider1 = (SeekBar) findViewById(R.id.sbGame4Slider1);

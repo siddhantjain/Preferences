@@ -113,8 +113,8 @@ public class SurveyFourF extends AppCompatActivity {
                 .withSelectedDates(dates)
                 .displayOnly();
 
-        mTVSoonerDate.setText(Integer.toString(numDaysToSoonerDate) + " நாட்களிலான நடை அடிகள்");
-        mTVLaterDate.setText(Integer.toString(numDaysToLaterDate) + " நாட்களிலான நடை அடிகள்");
+        mTVSoonerDate.setText(Integer.toString(numDaysToSoonerDate) + " ஆம் நாளுக்கான நடை அடிகள்");
+        mTVLaterDate.setText(Integer.toString(numDaysToLaterDate) + " ஆம் நாளுக்கான நடை அடிகள்");
 
 
 
